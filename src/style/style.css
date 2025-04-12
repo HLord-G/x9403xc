@@ -33,11 +33,8 @@
 
     .mycodedisplay{
         flex: 5;
-        @apply snap-y snap-mandatory scroll-smooth overflow-auto bg-base-300 p-[20px] mask-t-from-70% mask-b-from-75%  py-[190px];
+        @apply snap-y snap-mandatory scroll-smooth overflow-auto bg-base-300 p-[20px] mask-t-from-90% mask-b-from-70%  py-[190px];
 
-        scroll-timeline: none; /* optional for future compatibility */
-        scroll-snap-stop: always;
-        scroll-duration: 1000ms; /* This won't work directly – need JS for real timing */
 
 
         .tempholder{
@@ -61,7 +58,12 @@
                     }
                 }
                 .temp_view{
-                    @apply border-b border-r border-l border-base-content/10 py-[40px];
+                    @apply border-b border-r border-l border-base-content/10 py-[5px];
+
+
+                    .temp_sample{
+                        @apply scale-[.8] border border-base-content/5 p-[6px];
+                    }
                 }
             }
 
