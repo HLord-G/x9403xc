@@ -1,0 +1,357 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+.container_layout_e{
+    @apply flex flex-col items-center justify-center min-h-screen;
+
+    .laytouts_a{
+        @apply  flex flex-row w-full h-full overflow-hidden;
+
+        flex:1.20;
+        width:100%;
+        height:100%;
+
+        .icon_area{
+            flex: 1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            min-height:300px;
+        }
+        .site_name_short_name{
+            @apply flex justify-center items-center overflow-hidden relative;
+
+            .shadow{
+                position: absolute;
+                top:-70px;
+                left: -30px;
+                opacity: .2;
+                color: rgba(255, 255, 255, 0.226);
+                @apply text-[370px];
+            }
+
+            h1{
+                @apply text-9xl font-black px-[20px] py-[10px];
+            }
+
+            flex: 2;
+        }
+
+        @media(max-width:768px){
+            &{
+                @apply flex-col;
+            }
+        }
+    }
+
+
+    .laytouts_b{
+        @apply  flex flex-row flex-[2] w-full h-full;
+ 
+ 
+        .alayouts{
+            @apply w-full flex-2 p-[10px] bg-base-300 flex justify-center items-center;
+
+            .cards_center{
+                @apply mt-[20px] flex flex-col w-[80%] gap-[30px] my-[20px]; 
+
+                h1{
+                    @apply text-5xl font-bold my-[20px];
+                }
+
+                p{
+                    @apply my-[20px];
+                }
+
+                .btn_area{
+                    @apply my-[20px] flex flex-row gap-[10px];
+
+                    .btn_calla{
+                        @apply py-[5px] px-[10px] bg-base-content text-base-300 font-bold; 
+                    }
+                    .btn_callb{
+                        @apply py-[5px] px-[10px] bg-info hover:bg-info-content; 
+                    }
+                }
+            }
+        }
+
+        .blayouts{
+            @apply w-full flex-[2];
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        @media(max-width:768px){
+            &{
+                @apply flex-col;
+
+                .blayouts{
+                    min-height:300px;
+                }
+
+                .alayouts{
+                    @apply order-2 py-[30px] gap-[40px];
+                 }
+            }
+        }
+
+    }
+}
+
+
+
+.container_layout_f{
+    @apply flex flex-row min-h-screen;
+
+    .layouts_a{
+        @apply flex-1 flex flex-col justify-center items-center;
+        
+        .center_point{
+            @apply w-[80%];
+
+            h1{
+                @apply text-6xl font-bold my-[40px] mb-[20px];
+                text-transform: uppercase
+            }
+
+            p{
+                @apply  my-[40px];
+            }
+
+            & :is(.divider_center){
+                @apply flex justify-center items-center my-[10px];
+            }
+
+            & :is(.divider_center > .divider_line){
+                @apply w-[.10px] bg-warning h-[96px];
+            }
+
+
+            & :is(.btn_center){
+                @apply flex justify-center items-center mt-[30px] mb-[40px];
+
+                button{
+                    @apply px-[15px] py-[5px] bg-base-content text-base-300 uppercase;
+                }
+            }
+
+
+ 
+        }  
+    }
+    .layouts_b{
+        @apply flex-1 relative; 
+        background-position:top;
+        background-size: cover;
+
+        .title_float{
+            bottom: 0;
+            left:0;
+            writing-mode: vertical-rl; /* vertical Right to Left */
+            text-orientation: upright;
+            @apply  bg-base-300 font-bold text-3xl p-[20px] absolute;
+        }
+    }
+
+
+    @media(max-width:768px){
+        &{
+            @apply flex flex-col-reverse;
+
+            .layouts_b{
+                min-height:500px;
+            }
+        }
+    }
+}
+
+
+
+
+.container_layout_g{
+    @apply flex flex-col min-h-screen relative;
+    clear: both;
+
+    &::after{
+        content: "";  
+        @apply p-[20px] h-[50%] w-full left-0 top-0 absolute bg-base-300;
+
+    }
+
+    &::before{
+        content: "";  
+        @apply p-[20px] h-[50%] w-full left-0 bottom-0 absolute  bg-base-100;
+    }
+   
+    .b_layoff{
+        @apply w-[100%] flex flex-col justify-center items-center;
+
+            flex: 1;
+            padding:20px;
+            z-index:99;
+            gap:20px;
+
+            p{
+                @apply py-[20px] text-center italic;
+            }
+
+            h1{
+                @apply py-[20px] mb-[20px] text-2xl font-bold text-center;
+            }
+
+            .center_image{
+                @apply min-h-[300px] w-[70%] ;
+                border: none;
+                outline:0;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+    }
+}
+
+
+
+
+.container_layout_h{
+    @apply flex flex-col min-h-screen relative my-[20px];
+
+
+    .alays{
+        @apply flex flex-row py-[10px]; 
+        flex: 1;
+
+        .text_sections{
+            flex: 1.35;
+            @apply flex flex-col justify-center items-center p-[5px]; 
+
+
+            h1{
+                @apply text-7xl font-bold p-[0] m-[0] pl-[40px]; 
+
+                @media(max-width:768px){
+                    @apply p-[0px]; 
+                }
+
+
+                @media(max-width:556px){
+                    @apply text-5xl; 
+                }
+            }
+        }
+        .teamdis{
+            flex: 1;
+            padding-right: 30px;
+            @apply flex flex-row gap-[20px] justify-center items-center; 
+            
+
+            .teambox{
+                @apply shadow-xl max-w-[230px] min-w-[230px] flex-1 min-h-[320px] relative;
+
+                img{
+                    @apply h-[300px] w-[230px] object-cover object-top;
+                }
+
+                .namebox{
+                    background-position: center;
+                    background-size: cover;
+                    @apply absolute bottom-0 w-full bg-base-300 flex flex-col justify-center items-center font-bold  left-0 p-[10px];
+                }
+            }
+        }
+
+
+        @media(max-width:768px){
+            &{
+                @apply flex-col;
+            }
+
+            & :is(.text_sections){
+                @apply my-[30px] p-[0px];
+            }
+
+            & :is(h1){
+                @apply text-center p-[0px];
+            }
+
+
+            & :is(.teamdis){
+                @apply p-[0px] flex-wrap;
+            }
+        }
+    }
+
+    .blays{
+        @apply flex flex-row pl-[30px] my-[20px];
+        flex: 1;
+
+        .personal_image{
+            @apply px-[20px] py-[10px];
+
+
+            img{
+                @apply max-w-[230px] min-w-[230px] flex-1 min-h-[320px] shadow-xl;
+            }
+        }
+        .content_personal{
+            @apply flex flex-col px-[10px] justify-center;
+            
+            @apply py-[20px];
+            flex: 2;
+
+            .person_name{
+                @apply  text-2xl font-bold block mb-[10px];
+
+                span{
+                    @apply bg-base-300 px-[10px] py-[5px] ;
+                }
+            }
+
+            .title_italic{
+                @apply mb-[20px] italic;
+            }
+
+
+            .person_tals{
+                @apply w-[80%];
+            }
+
+        }
+
+
+        @media(max-width:684px){
+
+            .personal_image{
+                @apply p-[0px] m-[0px] gap-[20px];
+            }
+
+            @apply flex-col justify-center items-center pl-[0px];
+
+            .content_personal{
+                @apply  items-center justify-center;
+
+                .person_name{
+                    margin-top: 20px;
+                }
+                .person_tals{
+                    @apply  text-justify;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+.container_layout_i{
+    @apply flex flex-col min-h-screen relative;
+
+}
+

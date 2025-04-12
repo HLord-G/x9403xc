@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* mask-t-from-50% */
+
+
+.content{
+    @apply flex flex-row h-[100vh] w-full shadow-2xl bg-base-100;
+
+    .sidecontent{
+        @apply w-[229px] p-[10px] flex flex-col justify-between items-center;
+
+        hr{
+            @apply opacity-[.3] my-[15px];
+        }
+
+        .top{
+            @apply w-full flex flex-col gap-[3px];
+
+            .title_icon{
+                @apply py-[4px] border border-base-100 px-[6px] text-2xl uppercase;
+                
+            }
+
+            .sidebtn{
+                @apply text-[13px] cursor-pointer flex flex-row justify-start rounded-[6px] items-center gap-[10px] py-[4px] border border-base-100 px-[6px] hover:bg-base-200 hover:border-gray-100/50 hover:border;
+                transition: .3s;
+            }
+        }
+
+        
+    }
+
+    .mycodedisplay{
+        flex: 5;
+        @apply snap-y snap-mandatory scroll-smooth overflow-auto bg-base-300 p-[20px] mask-t-from-70% mask-b-from-75%  py-[190px];
+
+        scroll-timeline: none; /* optional for future compatibility */
+        scroll-snap-stop: always;
+        scroll-duration: 1000ms; /* This won't work directly – need JS for real timing */
+
+
+        .tempholder{
+            @apply p-[20px] my-[20px] snap-center flex flex-col justify-center items-center;
+
+            .temp{
+
+                @apply flex flex-col w-full shadow-2xl;
+
+                .temp_title{
+                    @apply w-full flex flex-row justify-start items-end;
+                }
+                .temp_header{
+                    @apply flex p-[10px] flex-row border border-base-content/10;
+
+                    .btnleft{
+                        @apply flex-1 flex flex-row justify-start items-start;
+                    }
+                    .btnright{
+                        @apply flex-1 flex flex-row justify-end items-end;
+                    }
+                }
+                .temp_view{
+                    @apply border-b border-r border-l border-base-content/10 py-[40px];
+                }
+            }
+
+        }
+    }
+}
