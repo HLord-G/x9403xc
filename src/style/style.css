@@ -33,7 +33,7 @@
 
     .mycodedisplay{
         flex: 5;
-        @apply snap-y snap-mandatory scroll-smooth overflow-auto bg-base-300 p-[20px] mask-t-from-90% mask-b-from-70%  py-[190px];
+        @apply  overflow-auto bg-base-300 p-[20px] mask-t-from-90% mask-b-from-70%  py-[190px];
 
 
 
@@ -62,7 +62,11 @@
 
 
                     .temp_sample{
-                        @apply scale-[.8] border border-base-content/5 p-[6px];
+                        @apply  border border-base-content/5 p-[6px]  relative flex flex-row justify-center items-center;
+
+                        iframe{
+                            @apply w-[768px] scale-[.8];
+                        }
                     }
                 }
             }
