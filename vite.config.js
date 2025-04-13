@@ -5,7 +5,11 @@ export default defineConfig({
   base: './', // optional, useful kung static deployment like Vercel or GitHub Pages\
   plugins: [
     tailwindcss()
-  ]
+  ],
+  server:{
+    port:"8888",
+    host: '0.0.0.0'
+  }
 });
 
  
