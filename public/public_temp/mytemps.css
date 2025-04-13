@@ -9,15 +9,15 @@ body{
 }
 
 
-@layer utilities {
+/* @layer utilities {
     *[shadow] {
       @apply shadow-xl;
     }
   }
-
+ */
 
 .widget_holder{
-    @apply w-full min-h-[50vh] relative flex flex-col justify-center items-center my-[120px];
+    @apply w-full min-h-[50vh] relative flex flex-col justify-center items-center my-[120px] ;
 }
 
 
@@ -1406,7 +1406,7 @@ body{
 
 
 .container_layout_o{
-    @apply w-full min-h-[100vh] relative flex flex-col overflow-x-hidden;
+    @apply w-full min-h-[100vh] py-[20px] relative flex flex-col overflow-x-hidden;
 
     .layoutsa{
         @apply relative flex flex-row;
