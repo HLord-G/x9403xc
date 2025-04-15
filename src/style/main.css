@@ -59,7 +59,7 @@
         @apply w-full p-[10px] py-[20px] shadow-2xl;
 
         .temp_name{
-            @apply text-xs;
+            @apply text-xs italic;
         }
 
         .temp_controller{
