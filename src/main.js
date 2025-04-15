@@ -1,5 +1,6 @@
 import './style/style.css';
 import './style/mytemps.css';
+import './style/main.css';
 import {loadmore} from "./libs/loadmore.js"
 
 

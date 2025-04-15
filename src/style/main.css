@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+
+.lutao{
+    @apply flex flex-col cursor-pointer justify-center items-center p-[10px] absolute z-[10] rounded-tr-2xl rounded-br-2xl bg-base-300;
+    top: 50%;
+    /* left: 1%; */
+    left: 300px;
+
+    transform: translate(-50%, -50%);
+
+
+    .line_menu{
+        @apply w-[3px] rounded-2xl h-[200px] bg-base-content;
+    }
+}
+
+.lutao:hover .line_menu{
+    @apply w-[4px]; 
+}
+
+
+.menu_view{
+    @apply flex flex-col justify-center items-center h-screen overflow-y-auto bg-base-300 z-[9] absolute;
+    top: 50%;
+    left: 0%;
+    width:300px;
+    transform: translate(-0%, -50%); 
+
+    .views_menu_selection{
+        @apply w-full h-full p-[20px];
+
+        #selectiontoggle{
+            hr{
+                @apply opacity-[.3] my-[15px];
+            }
+    
+            button{
+                @apply flex flex-row justify-start items-center;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.template_container{
+    @apply h-screen bg-base-100  overflow-auto p-[20px] mask-t-from-90% mask-b-from-60% py-[190px];
+
+    .template{
+        @apply w-full p-[10px] py-[20px] shadow-2xl;
+
+        .temp_name{
+            @apply text-xs;
+        }
+
+        .temp_controller{
+            @apply 
+                w-full 
+                flex
+                flex-row
+                justify-between
+                items-center
+                min-h-[10px] 
+                p-[10px] 
+                px-[20px]
+                border 
+                border-1 
+                border-base-content/50;
+        }
+
+        .temp_displayer{
+            @apply w-full min-h-[10px] border border-1  border-base-content/50 min-h-[50vh];
+
+        }
+
+        @media(max-width:326px){
+            @apply p-[0px];
+        }
+    }
+
+
+    @media(max-width:425px){
+        @apply p-[0px] py-[190px];
+    }
+}

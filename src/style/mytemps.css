@@ -8,7 +8,14 @@ body{
     }
 }
 
- 
+
+@layer utilities {
+    *[shadow] {
+      @apply shadow-xl;
+    }
+  }
+
+
 .widget_holder{
     @apply w-full min-h-[50vh] relative flex flex-col justify-center items-center my-[120px];
 }
@@ -1399,7 +1406,7 @@ body{
 
 
 .container_layout_o{
-    @apply w-full min-h-[100vh] relative flex flex-col overflow-x-hidden;
+    @apply w-full min-h-[100vh] py-[20px] relative flex flex-col overflow-x-hidden;
 
     .layoutsa{
         @apply relative flex flex-row;
@@ -1699,7 +1706,7 @@ body{
 
 
 .widget_d{
-    @apply flex flex-col gap-[10px]; 
+    @apply flex flex-col gap-[10px] ; 
 
     .cardtags{
         @apply max-w-[300px] min-w-[300px] relative p-[10px] px-[20px]  card flex flex-row gap-[20px] card shadow-xl bg-base-300;
@@ -1841,3 +1848,131 @@ body{
     }
 
 }
+
+
+
+
+.widget_i{
+    @apply 
+        max-w-[425px] 
+        min-w-[300px] 
+        overflow-hidden
+        relative 
+        border border-base-content/10  
+        min-h-[270px] 
+        flex flex-col  
+        card 
+        bg-base-200 
+        min-[320px]:m-[10px] ;
+
+        .section_a{
+            @apply bg-top bg-cover bg-no-repeat h-[120px];
+        }
+        .section_b{
+            @apply flex flex-col justify-center items-center h-[0px];
+        }
+        .section_c{
+            @apply py-[30px] flex-[1.1] flex flex-col justify-center items-center;
+
+            .block_holder{
+
+                @apply flex flex-col justify-center items-center;
+
+                .layey_title{
+                    @apply mt-[25px];
+                    h1{
+                        @apply text-2xl text-center;
+                    }
+                }
+
+                .layer_subs{
+                    @apply mt-[5px];
+                    p{
+                        @apply italic ;
+                    }
+                }
+
+                .layer_btn{
+                    @apply mt-[15px];
+
+                }
+            }
+        }
+        
+}
+
+
+
+
+
+.widget_j{
+    @apply 
+        max-w-[425px] 
+        min-w-[300px] 
+        overflow-hidden
+        relative 
+        border border-base-content/10  
+        min-h-[270px] 
+        p-[10px]
+        w-full
+        flex flex-col  
+        card 
+        bg-base-200 
+        min-[320px]:m-[10px];
+
+        .section_items{
+            @apply flex flex-row w-full p-[5px] card bg-base-300  border border-base-content/10  my-[1px];   
+
+            .layer_a{
+                @apply p-[10px];
+            }
+
+            .layer_b{
+
+                @apply px-[10px] w-full  flex flex-col justify-center items-start;
+                flex: 2;
+
+                .unit_title{
+                    @apply flex flex-row w-full justify-between items-center;
+                    
+                    h1{
+                        @apply font-bold line-clamp-1;
+                    }
+
+                    small{
+                        @apply italic opacity-[.7];
+                    }
+                }
+                .unit_subs{
+
+                    @apply flex flex-row w-full justify-between items-center;
+
+                    p{
+                        @apply text-xs line-clamp-1;
+                    }
+                }
+            }
+
+        }
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
