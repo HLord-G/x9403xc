@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+:root {
+    --layout-height: 15vh;
+  }
+
+
+
+html, body {
+    height: 100%;
+  }
+
+
+  
+.choicelayout{
+    @apply opacity-5;
+}
+
+
+.layout_full{
+    @apply min-h-[var(--layout-height)] border border-1 flex flex-col justify-center items-center border-red-600 relative bg-base-300;
+}
+
+
+.layout_half{
+    @apply w-full flex flex-row justify-center flex-wrap items-center relative bg-base-300;
+
+    .row{
+        @apply flex-1 h-full  min-w-[320px]  min-h-[var(--layout-height)] flex flex-col justify-center items-center;
+        border: 1px solid red;
+    }
+}
+
+
+
+
+.layout_3row{
+    @apply w-full flex flex-row justify-center flex-wrap items-center relative bg-base-300;
+
+    .row{
+        @apply flex-1 h-full min-w-[320px]  min-h-[var(--layout-height)] flex flex-col justify-center items-center;
+        border: 1px solid red;
+    }
+}
+
+
+.layout_1half{
+    @apply w-full flex flex-row flex-wrap justify-center items-center relative bg-base-300;
+
+    .row:nth-child(1){
+        @apply flex-[1] min-w-[320px]  h-full min-h-[var(--layout-height)] flex flex-col justify-center items-center;
+        border: 1px solid red;
+    }
+
+    .row:nth-child(2){
+        @apply flex-[2] h-full  min-w-[320px]  min-h-[var(--layout-height)] flex flex-col justify-center items-center;
+        border: 1px solid red;
+    }
+}
+
+
+
+
+
+.layout_half1{
+    @apply w-full flex flex-row justify-center flex-wrap items-center relative bg-base-300;
+
+    .row:nth-child(1){
+        @apply flex-[2] h-full  min-w-[320px]  min-h-[var(--layout-height)] flex flex-col justify-center items-center;
+        border: 1px solid red;
+    }
+
+    .row:nth-child(2){
+        @apply flex-[1] h-full  min-w-[320px]  min-h-[var(--layout-height)] flex flex-col justify-center items-center;
+        border: 1px solid red;
+    }
+}
