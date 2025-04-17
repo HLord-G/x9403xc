@@ -1,3 +1,4 @@
+import "./style/lordggripes_ds.css";
 import { tempholder } from "./templates";
 
 
