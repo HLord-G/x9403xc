@@ -7,10 +7,54 @@ export const tempholder = () => {
             label: 'Full block',
             category: 'Sections',
             media: '<svg viewBox="0 0 24 24"><path d="M21 3H3c-.6 0-1 .4-1 1v6c0 .6.4 1 1 1h18c.6 0 1-.4 1-1V4c0-.6-.4-1-1-1m0 10H3c-.6 0-1 .4-1 1v6c0 .6.4 1 1 1h18c.6 0 1-.4 1-1v-6c0-.6-.4-1-1-1Z"/></svg>',
-            content: `<section class="bg-base-300 p-[20px]">
-              Simple section
-              <h1> sdfgdsfgsdrgdsrg </h1>
-              </section>`,
+            content: `    <section class="container_layout_b">
+        <div class="onelayouts lay_a">
+
+        </div>
+
+        <div class="onelayouts lay_b">
+            <div class="o_centera_o">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, quis?
+            </div>
+        </div>
+        
+        <div class="lay_c"> 
+          <div class="onelayouts blay_a">
+              <div class="items">
+                  <div class="card">
+                    <div class="avatar">
+                      <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    <div class="content">
+                      <h1>Lorem ipsum dolor sit amet.</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illum accusamus enim, rem unde tempore!
+                      </p>
+                    </div>
+                  </div>
+              </div>
+              <div class="items">
+                  <div class="card">
+                    <div class="avatar">
+                      <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    <div class="content">
+                      <h1>Lorem ipsum dolor sit amet.</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illum accusamus enim, rem unde tempore!
+                      </p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="onelayouts blay_b" style="background-image: url(https://images.pexels.com/photos/1662159/pexels-photo-1662159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);"></div>
+        </div>
+    </section>
+`,
             // Full width block
             // full: true
             attributes: { class: 'custom-class' }
