@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build:css": "npx tailwindcss -i ./public/public_temp/mytemps.css -o ./public/public_temp/mytemps_out.css --minify",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
