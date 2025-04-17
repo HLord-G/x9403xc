@@ -1,36 +1,53 @@
-import './style/mytemps.css';
-import './style/main.css';
-import {filterTemplatesWithPagination} from "./libs/loadmore.js"
-import './libs/animation.js';
-
-
-// Initial Load (show all)
-document.addEventListener("DOMContentLoaded", () => {
-    filterTemplatesWithPagination("all", 0, 5); // change loadcount if needed
-});
-
- 
+import { tempholder } from "./templates";
 
 
 
 
 
-// document.querySelectorAll('.tempload').forEach(tempholder => {
-//     const sample = tempholder.querySelector('.temp_displayer');
-//     const size1 = tempholder.querySelector('.size1');
-//     const size2 = tempholder.querySelector('.size2');
-//     const size3 = tempholder.querySelector('.size3');
-  
-//     size1.addEventListener('click', () => {
-//       sample.style.width = '375px'; // Android
-//     });
-  
-//     size2.addEventListener('click', () => {
-//       sample.style.width = '768px'; // Tablet
-//     });
-  
-//     size3.addEventListener('click', () => {
-//       sample.style.width = '100%'; // Window
-//     });
-//   });
-  
+
+
+        let scriptHolder = "script"
+        GrapesJsStudioSDK.createStudioEditor({
+          root: '#studio',
+          blocks: {
+          default: tempholder()
+          },
+
+          project: {
+            default: {
+              type: 'web',
+
+              custom: {
+                  globalPageSettings: {
+                    generator:"FlexBoy Studio",
+                    title: 'FlexBoy Web Design',
+                    description: 'FlexBoy description',
+                    customCodeHead: `
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<${scriptHolder} src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></${scriptHolder}>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+                    `,
+                    // customCodeBody: '<div>de</div>',
+                  }
+                },
+
+
+              pages: [
+                {
+                  name: 'index',
+                  component: `<h1 class="p-[2rem] text-center">
+                    Hello Welcome to FlexBoy Web Design 👋 
+                  </h1>`,
+                  styles: '#comp3 { color: blue }',
+                } 
+              ],
+            },
+          } 
+        });
+
+
+
+
+setTimeout(() => {
+    console.clear()
+}, 1000);
