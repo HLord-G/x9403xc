@@ -1,1978 +1,1670 @@
-@import "tailwindcss";
-@plugin "daisyui";
-
-
-body{
-    @media(max-width:319px){
-        opacity: 0;
-    }
+/* layer: preflights */
+*,
+::before,
+::after {
+  --un-rotate: 0;
+  --un-rotate-x: 0;
+  --un-rotate-y: 0;
+  --un-rotate-z: 0;
+  --un-scale-x: 1;
+  --un-scale-y: 1;
+  --un-scale-z: 1;
+  --un-skew-x: 0;
+  --un-skew-y: 0;
+  --un-translate-x: 0;
+  --un-translate-y: 0;
+  --un-translate-z: 0;
+  --un-pan-x: ;
+  --un-pan-y: ;
+  --un-pinch-zoom: ;
+  --un-scroll-snap-strictness: proximity;
+  --un-ordinal: ;
+  --un-slashed-zero: ;
+  --un-numeric-figure: ;
+  --un-numeric-spacing: ;
+  --un-numeric-fraction: ;
+  --un-border-spacing-x: 0;
+  --un-border-spacing-y: 0;
+  --un-ring-offset-shadow: 0 0 rgb(0 0 0 / 0);
+  --un-ring-shadow: 0 0 rgb(0 0 0 / 0);
+  --un-shadow-inset: ;
+  --un-shadow: 0 0 rgb(0 0 0 / 0);
+  --un-ring-inset: ;
+  --un-ring-offset-width: 0px;
+  --un-ring-offset-color: #fff;
+  --un-ring-width: 0px;
+  --un-ring-color: rgb(147 197 253 / 0.5);
+  --un-blur: ;
+  --un-brightness: ;
+  --un-contrast: ;
+  --un-drop-shadow: ;
+  --un-grayscale: ;
+  --un-hue-rotate: ;
+  --un-invert: ;
+  --un-saturate: ;
+  --un-sepia: ;
+  --un-backdrop-blur: ;
+  --un-backdrop-brightness: ;
+  --un-backdrop-contrast: ;
+  --un-backdrop-grayscale: ;
+  --un-backdrop-hue-rotate: ;
+  --un-backdrop-invert: ;
+  --un-backdrop-opacity: ;
+  --un-backdrop-saturate: ;
+  --un-backdrop-sepia: ;
 }
-
-
-/* @layer utilities {
-    *[shadow] {
-      @apply shadow-xl;
+::backdrop {
+  --un-rotate: 0;
+  --un-rotate-x: 0;
+  --un-rotate-y: 0;
+  --un-rotate-z: 0;
+  --un-scale-x: 1;
+  --un-scale-y: 1;
+  --un-scale-z: 1;
+  --un-skew-x: 0;
+  --un-skew-y: 0;
+  --un-translate-x: 0;
+  --un-translate-y: 0;
+  --un-translate-z: 0;
+  --un-pan-x: ;
+  --un-pan-y: ;
+  --un-pinch-zoom: ;
+  --un-scroll-snap-strictness: proximity;
+  --un-ordinal: ;
+  --un-slashed-zero: ;
+  --un-numeric-figure: ;
+  --un-numeric-spacing: ;
+  --un-numeric-fraction: ;
+  --un-border-spacing-x: 0;
+  --un-border-spacing-y: 0;
+  --un-ring-offset-shadow: 0 0 rgb(0 0 0 / 0);
+  --un-ring-shadow: 0 0 rgb(0 0 0 / 0);
+  --un-shadow-inset: ;
+  --un-shadow: 0 0 rgb(0 0 0 / 0);
+  --un-ring-inset: ;
+  --un-ring-offset-width: 0px;
+  --un-ring-offset-color: #fff;
+  --un-ring-width: 0px;
+  --un-ring-color: rgb(147 197 253 / 0.5);
+  --un-blur: ;
+  --un-brightness: ;
+  --un-contrast: ;
+  --un-drop-shadow: ;
+  --un-grayscale: ;
+  --un-hue-rotate: ;
+  --un-invert: ;
+  --un-saturate: ;
+  --un-sepia: ;
+  --un-backdrop-blur: ;
+  --un-backdrop-brightness: ;
+  --un-backdrop-contrast: ;
+  --un-backdrop-grayscale: ;
+  --un-backdrop-hue-rotate: ;
+  --un-backdrop-invert: ;
+  --un-backdrop-opacity: ;
+  --un-backdrop-saturate: ;
+  --un-backdrop-sepia: ;
+}
+/* layer: icons */
+.i-carbon-logo-github,
+[i-carbon-logo-github=''] {
+  --un-icon: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 32 32' width='1.2em' height='1.2em' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M16 2a14 14 0 0 0-4.43 27.28c.7.13 1-.3 1-.67v-2.38c-3.89.84-4.71-1.88-4.71-1.88a3.7 3.7 0 0 0-1.62-2.05c-1.27-.86.1-.85.1-.85a2.94 2.94 0 0 1 2.14 1.45a3 3 0 0 0 4.08 1.16a2.93 2.93 0 0 1 .88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4 5.4 0 0 1 1.44-3.76a5 5 0 0 1 .14-3.7s1.17-.38 3.85 1.43a13.3 13.3 0 0 1 7 0c2.67-1.81 3.84-1.43 3.84-1.43a5 5 0 0 1 .14 3.7a5.4 5.4 0 0 1 1.44 3.76c0 5.38-3.27 6.56-6.39 6.91a3.33 3.33 0 0 1 .95 2.59v3.84c0 .46.25.81 1 .67A14 14 0 0 0 16 2'/%3E%3C/svg%3E");
+  -webkit-mask: var(--un-icon) no-repeat;
+  mask: var(--un-icon) no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  background-color: currentColor;
+  color: inherit;
+  width: 1.2em;
+  height: 1.2em;
+}
+/* layer: default */
+.absolute,
+[absolute=''] {
+  position: absolute;
+}
+.bottom-5,
+[bottom-5=''] {
+  bottom: 1.25rem;
+}
+.left-0,
+[left-0=''] {
+  left: 0;
+}
+.right-0,
+[right-0=''] {
+  right: 0;
+}
+.m2,
+[m2=''] {
+  margin: 0.5rem;
+}
+[m1=''] {
+  margin: 0.25rem;
+}
+[ma=''] {
+  margin: auto;
+}
+.h-full,
+[h-full=''] {
+  height: 100%;
+}
+.flex,
+[flex=''] {
+  display: flex;
+}
+@keyframes bounce-alt {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+.animate-bounce-alt,
+[animate-bounce-alt=''] {
+  animation: bounce-alt 1s linear infinite;
+  transform-origin: center bottom;
+}
+[animate-duration-1s=''] {
+  animation-duration: 1s;
+}
+.animate-count-infinite,
+[animate-count-infinite=''] {
+  animation-iteration-count: infinite;
+}
+.select-none,
+[select-none=''] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+.justify-center,
+[justify-center=''] {
+  justify-content: center;
+}
+.text-center,
+[text-center=''] {
+  text-align: center;
+}
+.text-2xl,
+[text-2xl=''] {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-5xl,
+[text-5xl=''] {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-lg,
+[text-lg=''] {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-inherit,
+[text-inherit=''] {
+  color: inherit;
+}
+.fw100,
+[fw100=''] {
+  font-weight: 100;
+}
+.fw300,
+[fw300=''] {
+  font-weight: 300;
+}
+.op30,
+[op30=''] {
+  opacity: 0.3;
+}
+.op80 {
+  opacity: 0.8;
+}
+[hover~='op80']:hover {
+  opacity: 0.8;
+}
+[all\:transition-400=''] * {
+  transition-property: color, background-color, border-color, outline-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+/* layer: playground */
+@import 'tailwindcss';
+@plugin "daisyui";
+body {
+  @media (max-width: 319px) {
+    opacity: 0;
+  }
+}
+.widget_holder {
+  @apply w-full min-h-[50vh] relative flex flex-col justify-center items-center my-[120px];
+}
+.container_layout_a {
+  @apply w-full min-h-[100vh] relative;
+  .background {
+    @apply top-0 left-0 w-full h-full absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .menus_buttom {
+    @apply absolute 
+top-0 
+left-0  
+w-full 
+flex 
+flex-row
+justify-center 
+items-center;
+    & :is(.title_social) {
+      @apply bg-base-100 px-[18px];
+      text-transform: uppercase;
+    }
+    .center_menu {
+      @apply flex 
+flex-row
+bg-base-300;
+    }
+    menu
+      :where(
+        .menu_list:nth-child(5),
+        .menu_list:nth-child(6),
+        .menu_list:nth-child(7),
+        .menu_list:nth-child(8),
+        .menu_list:nth-child(9),
+        .menu_list:nth-child(10)
+      ) {
+      display: none !important;
+    }
+    .center_menu :is(menu) {
+      @apply flex 
+flex-row
+max-[409px]:pl-[0px];
+      @media (max-width: 768px) {
+        @apply pl-[20px];
+      }
+      @media (max-width: 440px) {
+        @apply flex 
+flex-row
+justify-end
+items-end
+w-full
+max-[409px]:pl-[0px];
+      }
+    }
+    .center_menu :is(menu > .menu_list) {
+      @apply flex
+justify-center
+items-center
+px-[20px] 
+py-[10px];
+      @media (max-width: 768px) {
+        @apply px-[10px];
+      }
+    }
+    .center_menu :is(menu > .mastermenulist) {
+      @apply max-[440px]:hidden;
+    }
+    .center_menu :is(.title_social) {
+      @apply justify-center items-center flex px-[20px];
+    }
+    .center_menu :is(.title_social > .bs_name) {
+      @apply font-bold text-base-content max-w-[150px] min-w-[50px]  overflow-hidden truncate;
+    }
+    .center_menu :is(.title_social > .bs_icon) {
+      @apply font-bold text-base-content overflow-hidden truncate mr-[15px];
+    }
+    .center_menu :is(.title_social > .social_icons) {
+      @apply flex flex-row px-[20px];
+    }
+    & :is(.social_links) {
+      @apply font-bold text-base-content  hover:text-blue-600 px-[8px];
+    }
+    &
+      :where(
+        .social_links:nth-child(4),
+        .social_links:nth-child(5),
+        .social_links:nth-child(6),
+        .social_links:nth-child(7),
+        .social_links:nth-child(8),
+        .social_links:nth-child(9),
+        .social_links:nth-child(10)
+      ) {
+      display: none !important;
+    }
+    & :is(.menu_list > a) {
+      @apply font-bold text-base-content hover:text-info;
+    }
+    & :is(.menu_list_menu) {
+      @apply relative
+font-bold 
+text-base-content 
+hidden  
+justify-center
+items-center
+px-[20px] 
+py-[10px]
+hover:text-info;
+    }
+    & :is(.icontext) {
+      @media (max-width: 440px) {
+        display: none;
+      }
+    }
+    & :is(.icontextmini) {
+      @apply relative
+font-bold 
+hidden  
+justify-center
+items-center
+px-[20px] 
+py-[10px]
+hover:text-info;
+      @media (max-width: 440px) {
+        display: flex;
+      }
+    }
+    & :is(.icon) {
+      @apply hidden;
+      @media (max-width: 768px) {
+        @apply flex;
+      }
+    }
+    & :is(.text) {
+      @media (max-width: 768px) {
+        @apply hidden;
+      }
     }
   }
- */
-
-.widget_holder{
-    @apply w-full min-h-[50vh] relative flex flex-col justify-center items-center my-[120px];
-}
-
-
-.container_layout_a{
-    @apply w-full min-h-[100vh] relative;
-
-    .background{
-        @apply top-0 left-0 w-full h-full absolute;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    & :is(.menus_buttom) {
+      @apply absolute 
+top-0 
+left-0  
+w-full 
+flex 
+flex-row
+justify-center 
+items-center;
+      .center_menu {
+      }
     }
-
-    .menus_buttom{
-        @apply 
-            absolute 
-            top-0 
-            left-0  
-            w-full 
-            flex 
-            flex-row
-            justify-center 
-            items-center;
-        
-        & :is(.title_social){
-            @apply bg-base-100 px-[18px];
-            text-transform: uppercase
+  }
+  @media (max-width: 558px) {
+    & :is(.menus_buttom) {
+      .center_menu {
+        @apply w-full;
+      }
+    }
+  }
+  @media (max-width: 570px) {
+    & :is(.bs_name) {
+      @apply hidden;
+    }
+  }
+  @media (max-width: 409px) {
+    & :is(.social_icons, .social_links, .threemasterlink) {
+      @apply hidden;
+      display: none !important;
+    }
+    & :is(.title_social) {
+      @apply flex flex-row justify-center items-center;
+    }
+    & :where(.mastermenulist) {
+      @apply hidden;
+      display: none;
+    }
+  }
+}
+.container_layout_b {
+  @apply w-full min-h-[100vh] relative flex flex-row;
+  @media (max-width: 1008px) {
+    @apply flex-col;
+    height: auto;
+    min-height: auto;
+  }
+  .onelayouts {
+  }
+  .lay_a {
+    @apply min-w-[60px];
+    @media (max-width: 1008px) {
+      padding: 20px;
+      min-width: 100%;
+    }
+  }
+  .lay_b {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    @apply bg-base-200;
+    .o_centera_o {
+      @apply font-bold text-4xl pr-[20px];
+      text-align: right;
+      width: 70%;
+    }
+    @media (max-width: 1008px) {
+      .o_centera_o {
+        width: 50%;
+        @apply py-[200px];
+      }
+    }
+    @media (max-width: 506px) {
+      .o_centera_o {
+        width: 90%;
+      }
+    }
+  }
+  .lay_c {
+    flex: 2;
+    @apply flex flex-row;
+    .blay_a {
+      flex: 1;
+      @apply flex flex-col items-center justify-center;
+      .items {
+        @apply flex-1 flex flex-col items-center justify-center;
+      }
+      & :is(.items > .card) {
+        width: 50%;
+        scale: 0.9;
+        @apply flex-1 flex flex-col items-center justify-center min-w-[300px];
+        h1 {
+          @apply text-2xl text-center line-clamp-[2] mt-[15px];
         }
-
-        .center_menu{
-            @apply
-            flex 
-            flex-row
-            bg-base-300;
+        p {
+          @apply text-center line-clamp-[3];
         }
-
-        menu :where(.menu_list:nth-child(5),.menu_list:nth-child(6),.menu_list:nth-child(7),.menu_list:nth-child(8),.menu_list:nth-child(9),.menu_list:nth-child(10)){
-            display:none !important;
+      }
+      @media (max-width: 1008px) {
+        & :is(.items > .card) {
+          @apply py-[50px];
         }
-
-        .center_menu :is(menu){
-            @apply
-            flex 
-            flex-row
-            max-[409px]:pl-[0px];
-
-            @media(max-width:768px){
-                @apply pl-[20px];
-            }
-
-            @media(max-width:440px){
-                @apply
-                flex 
-                flex-row
-                justify-end
-                items-end
-                w-full
-                max-[409px]:pl-[0px];
-              }
+      }
+    }
+    .blay_b {
+      flex: 1;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media (max-width: 1008px) {
+        & {
+          @apply min-h-[100vh];
         }
-
-        .center_menu :is(menu > .menu_list){
-            @apply 
-            flex
-            justify-center
-            items-center
-            px-[20px] 
-            py-[10px];
-
-
-            @media(max-width:768px){
-                @apply px-[10px];
-            }
+      }
+    }
+    @media (max-width: 610px) {
+      & {
+        @apply flex-col;
+      }
+    }
+  }
+}
+.container_layout_c {
+  @apply w-full min-h-[100vh] relative flex flex-col;
+  .onedesign {
+  }
+  .lay_a {
+    flex: 2;
+    @apply relative flex flex-row;
+    .ondedesign_a {
+    }
+    .aa_lay {
+      flex: 1;
+      @apply relative flex flex-row justify-center items-center;
+      .content_holder {
+        width: 90%;
+        text-align: center;
+        h1 {
+          margin-bottom: 20px;
+          @apply text-2xl font-bold;
+          @apply line-clamp-[3];
         }
-
-        .center_menu :is(menu > .mastermenulist){
-            @apply max-[440px]:hidden;
+        hr {
+          @apply bg-base-content w-[20%];
         }
-
-        .center_menu :is(.title_social){
-            @apply  justify-center items-center flex px-[20px] ; 
+        p {
+          margin-top: 20px;
+          @apply line-clamp-[5];
+        }
+      }
+    }
+    .ba_lay {
+      flex: 2;
+    }
+    @media (max-width: 960px) {
+      & {
+        @apply flex-col;
+      }
+      .aa_lay {
+        @apply py-[100px];
+      }
+      .ba_lay {
+        min-height: 80vh;
+      }
+    }
+  }
+  .lay_b {
+    flex: 1;
+    @apply relative flex flex-row;
+    .onelayoutdesign {
+      flex: 1.4;
+      @apply relative flex flex-row justify-center items-center;
+      .center_items {
+        @apply relative flex flex-row justify-start items-start p-[20px] scale-[.8];
+        .icon_area {
+          @apply relative flex flex-[.3] h-full w-full flex-col justify-center items-center;
+        }
+        .content_area {
+          flex: 1;
+          h3 {
+            @apply text-left mb-[10px] font-bold;
           }
-
-        .center_menu :is(.title_social > .bs_name){
-          @apply  font-bold text-base-content max-w-[150px] min-w-[50px]  overflow-hidden truncate; 
-        }
-        .center_menu :is(.title_social > .bs_icon){
-            @apply  font-bold text-base-content overflow-hidden truncate mr-[15px]; 
-        }
-
-
-        .center_menu :is(.title_social > .social_icons){
-            @apply  flex flex-row px-[20px]; 
+          p {
+            @apply text-left;
           }
-
-        & :is(.social_links){
-            @apply  font-bold text-base-content  hover:text-blue-600 px-[8px]; 
         }
-
-        & :where(.social_links:nth-child(4), .social_links:nth-child(5),.social_links:nth-child(6),.social_links:nth-child(7),.social_links:nth-child(8),.social_links:nth-child(9),.social_links:nth-child(10)){
-            display:none !important;
-        }
-
-        & :is(.menu_list > a){
-          @apply  font-bold text-base-content hover:text-info; 
-        }
-
-        & :is(.menu_list_menu){
-          @apply  
-            relative
-            font-bold 
-            text-base-content 
-            hidden  
-            justify-center
-            items-center
-            px-[20px] 
-            py-[10px]
-            hover:text-info;
-        }
-
-        & :is(.icontext){
-            @media(max-width:440px){
-                display:none;
-              }
-        }
-
-        & :is(.icontextmini){
-            @apply  
-            relative
-            font-bold 
-            hidden  
-            justify-center
-            items-center
-            px-[20px] 
-            py-[10px]
-            hover:text-info;
-
-            @media(max-width:440px){
-              display:flex;
-            }
-        }
-
-
-        & :is(.icon){
-                @apply hidden;
-
-                @media(max-width:768px){
-                    @apply flex;
-                }
-        }
-
-        & :is(.text){
-            @media(max-width:768px){
-                @apply hidden;
-            }
-        }
-        
+      }
+      @media (max-width: 768px) {
+        @apply py-[20px]  scale-[1];
+      }
     }
-
-
-    @media(max-width:768px){
-        & :is(.menus_buttom){
-            @apply 
-            absolute 
-            top-0 
-            left-0  
-            w-full 
-            flex 
-            flex-row
-            justify-center 
-            items-center;
-
-
-            .center_menu{
-                /* @apply w-full; */
-            }
-        }
+    &
+      :is(
+        .onelayoutdesign:nth-child(4),
+        .onelayoutdesign:nth-child(5),
+        .onelayoutdesign:nth-child(6),
+        .onelayoutdesign:nth-child(7),
+        .onelayoutdesign:nth-child(8),
+        .onelayoutdesign:nth-child(9),
+        .onelayoutdesign:nth-child(10)
+      ) {
+      display: none !important;
     }
-
-    @media(max-width:558px){
-        & :is(.menus_buttom){
-            .center_menu{
-                @apply w-full;
-            }
-        }
-    }
-
-    @media(max-width:570px){
-        & :is( .bs_name){
-                @apply hidden;
-        }
-    }
-
-    @media(max-width:409px){
-        & :is(.social_icons, .social_links, .threemasterlink){
-                @apply hidden;
-                display:none !important;
-        }
-
-        & :is(.title_social){
-                @apply flex flex-row justify-center items-center;
-        }
-
-        & :where(.mastermenulist){
-            @apply hidden;
-            display:none;
-        }
-    }
-
-}
-
-
-.container_layout_b{
-    @apply w-full min-h-[100vh] relative flex flex-row;
-    
-    @media(max-width:1008px) {
+    @media (max-width: 768px) {
+      & {
         @apply flex-col;
-        height:auto;
-        min-height: auto;
+      }
     }
-
-    .onelayouts{
-        /* border: 1px solid red; */
-    }
-
-    .lay_a{
-        @apply min-w-[60px];
-
-        @media(max-width:1008px) {   
-            padding:20px;
-            min-width:100%;
-         }
-    }
-
-
-    .lay_b{
-        flex:1;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-
-
-        @apply bg-base-200;
-
-        .o_centera_o{
-            @apply font-bold text-4xl pr-[20px];
-            text-align: right;
-            width:70%;
-        }
-
-        @media(max-width:1008px) {
-            .o_centera_o{
-                width:50%;
-                
-                @apply py-[200px];
-            }
-        } 
-
-        @media(max-width:506px) {
-            .o_centera_o{
-                width:90%;
-            }
-        } 
-    }
-
-
-    .lay_c{
-        flex:2;
-        @apply flex flex-row;
-
-        .blay_a{
-            flex: 1;
-            @apply flex flex-col items-center justify-center;
-
-            .items{
-                @apply flex-1 flex flex-col items-center justify-center;
-            }
-
-            & :is(.items > .card){
-                width:50%;
-                scale:.9;
-                @apply flex-1 flex flex-col items-center justify-center min-w-[300px];
-
-                h1{
-                    @apply text-2xl text-center line-clamp-[2] mt-[15px];
-                }
-
-                p{
-                    @apply  text-center line-clamp-[3];  
-                }
-
-            }
-
-
-            @media(max-width:1008px) {
-                & :is(.items > .card){
-                    @apply py-[50px];
-                }
-            } 
-
-
-
-
-        }
-
-        .blay_b{
-            flex: 1;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-
-
-            @media(max-width:1008px) {
-                &{
-                    @apply min-h-[100vh];
-                }
-            }     
-        }
-
-
-
-        @media(max-width:610px) {
-            &{
-                @apply flex-col;
-            }
-        } 
-
-    }
+  }
 }
-
-
-.container_layout_c{
-    @apply w-full min-h-[100vh] relative flex flex-col;
-
-    .onedesign{
-        /* border: 1px solid red; */
+.container_layout_d {
+  @apply w-full min-h-[100vh] relative flex flex-col;
+  .layout_a {
+    @apply flex flex-row flex-2;
+    .a_lays {
+      @apply flex-1 bg-base-200 flex relative pb-[20px] flex-col justify-start items-center;
+      h1 {
+        @apply font-bold text-4xl mt-[60px] sticky top-[0] w-[70%];
+        @media (max-width: 768px) {
+          @apply text-center mt-[0px];
+        }
+      }
+      @media (max-width: 768px) {
+        @apply py-[80px] justify-center;
+      }
     }
-    
-
-    .lay_a{
-        flex: 2;
-        @apply  relative flex flex-row;
-
-
-        .ondedesign_a{
-            /* border: 1px solid red; */
-        }
-
-        .aa_lay{
-            flex: 1;
-            @apply  relative flex flex-row justify-center items-center;
-
-            .content_holder{
-                width:90%;
-                text-align: center;
-                h1{
-                    margin-bottom:20px;
-                    @apply text-2xl font-bold;
-                    @apply line-clamp-[3];
-                }
-
-                hr{
-                    @apply bg-base-content w-[20%];
-                }
-
-                p{
-                    margin-top: 20px;
-                    @apply line-clamp-[5];
-                }
-            }
-        }
-
-        .ba_lay{
-            flex: 2;
-        }
-
-
-
-        @media(max-width:960px){
-            &{
-                @apply flex-col;
-            }
-
-            .aa_lay{
-                @apply py-[100px];
-            }
-
-            .ba_lay{
-                min-height: 80vh;
-            }
-        }
-
+    .b_lays {
+      @apply flex-2 flex  bg-base-300 flex-col justify-center items-center;
+      article {
+        @apply gap-[20px] w-[90%] flex flex-col my-[40px];
+      }
+      @media (max-width: 768px) {
+        @apply pb-[100px] pt-[40px];
+      }
     }
-    .lay_b{
-        flex: 1;
-        @apply  relative flex flex-row;
-
-        .onelayoutdesign{
-            /* border: 1px solid red; */
-            flex: 1.40;
-
-            @apply  relative flex flex-row justify-center items-center;
-
-            .center_items{
-                @apply  relative flex flex-row justify-start items-start p-[20px] scale-[.8];
-
-                .icon_area{
-                    @apply  relative flex flex-[.3] h-full w-full flex-col justify-center items-center;
-                }
-                
-                .content_area{
-                    flex: 1;
-
-                   h3{
-                    @apply  text-left mb-[10px] font-bold;
-                   }
-                   p{
-                    @apply  text-left;
-                   }
-                }
-            }
-
-            @media (max-width:768px){
-                @apply py-[20px]  scale-[1];
-            }
-
-        }
-
-        & :is(.onelayoutdesign:nth-child(4), 
-              .onelayoutdesign:nth-child(5),
-              .onelayoutdesign:nth-child(6),
-              .onelayoutdesign:nth-child(7),
-              .onelayoutdesign:nth-child(8),
-              .onelayoutdesign:nth-child(9),
-              .onelayoutdesign:nth-child(10)){
-            display: none !important;
-        }
-        /*  */
-
-        @media(max-width:768px){
-            &{
-                @apply flex-col;
-            }
-        }
-
+    @media (max-width: 768px) {
+      @apply flex-col;
     }
-}
-
-.container_layout_d{
-    @apply w-full min-h-[100vh] relative flex flex-col;
-
-    .layout_a{
-        @apply flex flex-row flex-2;  
-
-        .a_lays{
-            @apply  flex-1 bg-base-200 flex relative pb-[20px] flex-col justify-start items-center;  
-            
-            h1{
-                @apply  font-bold text-4xl mt-[60px] sticky top-[0] w-[70%];  
-
-                @media(max-width:768px){
-                    @apply text-center mt-[0px];
-                }
-            }
-
-            @media(max-width:768px){
-                    @apply py-[80px] justify-center;
-            }
-        }
-        .b_lays{
-            @apply  flex-2 flex  bg-base-300 flex-col justify-center items-center;
-            
-            article{
-                @apply gap-[20px] w-[90%] flex flex-col my-[40px];
-            }
-
-            
-            @media(max-width:768px){
-                @apply pb-[100px] pt-[40px];
-            }
-            
-        }
-
-        @media(max-width:768px){
-            @apply flex-col;
-        }
-    }
-    .layout_b{
-        @apply flex flex-col h-[215px]; 
-        background-size: cover; 
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
-
-.container_layout_e{
-    @apply flex flex-col items-center justify-center min-h-screen;
-
-    .laytouts_a{
-        @apply  flex flex-row w-full h-full overflow-hidden;
-
-        flex:1.20;
-        width:100%;
-        height:100%;
-
-        .icon_area{
-            flex: 1;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            min-height:300px;
-        }
-        .site_name_short_name{
-            @apply flex justify-center items-center overflow-hidden relative;
-
-            .shadow{
-                position: absolute;
-                top:-70px;
-                left: -30px;
-                opacity: .2;
-                color: rgba(255, 255, 255, 0.226);
-                @apply text-[370px];
-            }
-
-            h1{
-                @apply text-9xl font-black px-[20px] py-[10px];
-            }
-
-            flex: 2;
-        }
-
-        @media(max-width:768px){
-            &{
-                @apply flex-col;
-            }
-        }
-    }
-
-
-    .laytouts_b{
-        @apply  flex flex-row flex-[2] w-full h-full;
- 
- 
-        .alayouts{
-            @apply w-full flex-2 p-[10px] bg-base-300 flex justify-center items-center;
-
-            .cards_center{
-                @apply mt-[20px] flex flex-col w-[80%] gap-[30px] my-[20px]; 
-
-                h1{
-                    @apply text-5xl font-bold my-[20px];
-                }
-
-                p{
-                    @apply my-[20px];
-                }
-
-                .btn_area{
-                    @apply my-[20px] flex flex-row gap-[10px];
-
-                    .btn_calla{
-                        @apply py-[5px] px-[10px] bg-base-content text-base-300 font-bold; 
-                    }
-                    .btn_callb{
-                        @apply py-[5px] px-[10px] bg-base-200 hover:bg-base-100; 
-                    }
-                }
-            }
-        }
-
-        .blayouts{
-            @apply w-full flex-[2];
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-
-        @media(max-width:768px){
-            &{
-                @apply flex-col;
-
-                .blayouts{
-                    min-height:300px;
-                }
-
-                .alayouts{
-                    @apply order-2 py-[30px] gap-[40px];
-                 }
-            }
-        }
-
-    }
-}
-
-
-
-.container_layout_f{
-    @apply flex flex-row min-h-screen;
-
-    .layouts_a{
-        @apply flex-1 flex flex-col justify-center items-center;
-        
-        .center_point{
-            @apply w-[80%];
-
-            h1{
-                @apply text-6xl font-bold my-[40px] mb-[20px];
-                text-transform: uppercase
-            }
-
-            p{
-                @apply  my-[40px];
-            }
-
-            & :is(.divider_center){
-                @apply flex justify-center items-center my-[10px];
-            }
-
-            & :is(.divider_center > .divider_line){
-                @apply w-[.10px] bg-warning h-[96px];
-            }
-
-
-            & :is(.btn_center){
-                @apply flex justify-center items-center mt-[30px] mb-[40px];
-
-                button{
-                    @apply px-[15px] py-[5px] bg-base-content text-base-300 uppercase;
-                }
-            }
-
-
- 
-        }  
-    }
-    .layouts_b{
-        @apply flex-1 relative; 
-        background-position:top;
-        background-size: cover;
-
-        .title_float{
-            bottom: 0;
-            left:0;
-            writing-mode: vertical-rl; /* vertical Right to Left */
-            text-orientation: upright;
-            @apply  bg-base-300 font-bold text-3xl p-[20px] absolute;
-        }
-    }
-
-
-    @media(max-width:768px){
-        &{
-            @apply flex flex-col-reverse;
-
-            .layouts_b{
-                min-height:500px;
-            }
-        }
-    }
-}
-
-
-
-
-.container_layout_g{
-    @apply flex flex-col min-h-screen relative;
-    clear: both;
-
-    &::after{
-        content: "";  
-        @apply p-[20px] h-[50%] w-full left-0 top-0 absolute bg-base-300;
-
-    }
-
-    &::before{
-        content: "";  
-        @apply p-[20px] h-[50%] w-full left-0 bottom-0 absolute  bg-base-100;
-    }
-   
-    .b_layoff{
-        @apply w-[100%] flex flex-col justify-center items-center;
-
-            flex: 1;
-            padding:20px;
-            z-index:99;
-            gap:20px;
-
-            p{
-                @apply py-[20px] text-center italic;
-            }
-
-            h1{
-                @apply py-[20px] mb-[20px] text-2xl font-bold text-center;
-            }
-
-            .center_image{
-                @apply min-h-[300px] w-[70%] ;
-                border: none;
-                outline:0;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-
-    }
-}
-
-
-
-.container_layout_h{
-    @apply flex flex-col min-h-screen relative my-[20px];
-
-
-    .alays{
-        @apply flex flex-row py-[10px]; 
-        flex: 1;
-
-        .text_sections{
-            flex: 1.35;
-            @apply flex flex-col justify-center items-center p-[5px]; 
-
-
-            h1{
-                @apply text-7xl font-bold p-[0] m-[0] pl-[40px]; 
-
-                @media(max-width:768px){
-                    @apply p-[0px]; 
-                }
-
-
-                @media(max-width:556px){
-                    @apply text-5xl; 
-                }
-            }
-        }
-        .teamdis{
-            flex: 1;
-            padding-right: 30px;
-            @apply flex flex-row gap-[20px] justify-center items-center; 
-            
-
-            .teambox{
-                @apply shadow-xl max-w-[230px] min-w-[230px] flex-1 min-h-[320px] relative;
-
-                img{
-                    @apply h-[300px] w-[230px] object-cover object-top;
-                }
-
-                .namebox{
-                    background-position: center;
-                    background-size: cover;
-                    @apply absolute bottom-0 w-full bg-base-300 flex flex-col justify-center items-center font-bold  left-0 p-[10px];
-                }
-            }
-        }
-
-
-        @media(max-width:768px){
-            &{
-                @apply flex-col;
-            }
-
-            & :is(.text_sections){
-                @apply my-[30px] p-[0px];
-            }
-
-            & :is(h1){
-                @apply text-center p-[0px];
-            }
-
-
-            & :is(.teamdis){
-                @apply p-[0px] flex-wrap;
-            }
-        }
-    }
-
-    .blays{
-        @apply flex flex-row pl-[30px] my-[20px];
-        flex: 1;
-
-        .personal_image{
-            @apply px-[20px] py-[10px];
-
-
-            img{
-                @apply max-w-[230px] min-w-[230px] flex-1 min-h-[320px] shadow-xl;
-            }
-        }
-        .content_personal{
-            @apply flex flex-col px-[10px] justify-center;
-            
-            @apply py-[20px];
-            flex: 2;
-
-            .person_name{
-                @apply  text-2xl font-bold block mb-[10px];
-
-                span{
-                    @apply bg-base-300 px-[10px] py-[5px] ;
-                }
-            }
-
-            .title_italic{
-                @apply mb-[20px] italic;
-            }
-
-
-            .person_tals{
-                @apply w-[80%];
-            }
-
-        }
-
-
-        @media(max-width:684px){
-
-            .personal_image{
-                @apply p-[0px] m-[0px] gap-[20px];
-            }
-
-            @apply flex-col justify-center items-center pl-[0px];
-
-            .content_personal{
-                @apply  items-center justify-center;
-
-                .person_name{
-                    margin-top: 20px;
-                }
-                .person_tals{
-                    @apply  text-justify;
-                }
-            }
-        }
-    }
-
-
-}
-
-
-.container_layout_i{
-    @apply flex flex-row min-h-screen relative;
-
-    .layout_ab{
-        @apply flex flex-row min-h-screen relative flex flex-row;
-        flex: 2.60;
-
-        .layouts_a{
-            @apply flex-[2];
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .layouts_b{
-            @apply bg-base-300 w-[80px] flex flex-col;
-
-            div{
-                flex: 1;
-                @apply flex flex-col py-[10px] justify-center items-center overflow-hidden;
-
-                span{
-                    transform: rotate(-90deg);
-                    text-transform: uppercase;
-                    letter-spacing: 4px;
-                    @apply text-4xl font-bold overflow-hidden;
-                }
-
-
-                .linedes{
-                    @apply w-1 h-[60%] bg-warning;
-                }
-            }
-        }
-
-
-    }
- 
-    .layouts_c{
-        
-        @apply p-[20px] flex flex-col justify-between flex-3; 
-
-
-        .content_holder{
-            @apply flex flex-col gap-[30px] mt-[20px];
-
-    
-            & :is(h1){
-                @apply text-5xl font-bold;
-            }
-
-      
-            & :is(p > span){
-                @apply  font-bold text-2xl;
-            }
-
-    
-            & :is(.clickbite){
-                @apply flex flex-row justify-start items-start w-full py-[10px];
-                button{
-                    @apply bg-base-300  px-[20px] py-[5px] font-bold;
-                    font-family: 'Courier New', Courier, monospace
-                }
-            }
-
-        }
-
-
-
-        .btnarea{
-            @apply flex relative flex-row justify-between mt-[40px] items-center p-[10px] w-full mb-[10px];
-            
-            &::after{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 50%;
-                background-color: theme("colors.base.300");
-                z-index:.2;
-            }
-
-
-            & :is(h1){
-                @apply font-black z-[1]; 
-            }
-
-            & :is(.square_box){
-                @apply px-[20px] py-[10px] font-bold bg-warning;
-            }
-
-
-            @media(max-width:768px){
-                @apply  mt-[120px];
-            }
-        }
-
-    }
-
-
-    @media(max-width:768px){
-        @apply flex-col-reverse;
-    }
-
-}
-
-
-
-.container_layout_j{
-    @apply min-h-[30vh] w-full flex flex-row justify-center gap-[20px] py-[50px] items-center flex-wrap;
-
-    .laycards{
-        @apply max-w-[280px] p-[20px] bg-base-300 card italic;
-
-        h1{
-            @apply font-bold text-2xl mb-[10px];
-        }
-
-        & :is(p > span){
-            @apply font-bold text-4xl opacity-[.5];
-        }
-    }
-
-    .alayouts{
-        
-    }
-    .blayouts{
-        
-    }
-    .clayouts{
-        
-    }
-}
-
-
-
-.container_layout_k{
-    @apply w-full min-h-[100vh] relative flex flex-col;
-
-    .layout_a{
-        @apply flex flex-row flex-2;  
-
-        .a_lays{
-            @apply  flex-1 bg-base-200 flex relative pb-[20px] flex-col justify-start items-center;  
-            
-            .info_stick{
-                @apply  mt-[60px] sticky top-[5%] w-[70%] flex  flex-col justify-start items-center;  
-
-                h3{
-                    @apply mt-[10px] text-2xl mb-[10px]; 
-                }
-            }
-
-            @media(max-width:768px){
-                    @apply py-[80px] justify-center;
-            }
-        }
-        .b_lays{
-            @apply  flex-2 flex  bg-base-300 flex-col justify-center items-center;
-            
-            article{
-                @apply gap-[20px] w-[90%] flex flex-col my-[60px];
-
-                & :is(h1){
-                    @apply  font-bold text-3xl mb-[40px];
-                }
-
-                & :is(.subs){
-                    @apply  italic text-[21px];
-                }
-
-                .lists{
-                    @apply relative;
-                    content: "•";
-                    display: block;
-                    clear: both;
-                }
-
-
-                blockquote{
-                    @apply  border-base-content border-l-[3px] pl-[20px] italic bg-base-200 p-[10px];
-                }
-
-            }
-
-            
-            @media(max-width:768px){
-                @apply pb-[100px] pt-[40px];
-            }
-            
-        }
-
-        @media(max-width:768px){
-            @apply flex-col;
-        }
-    }
-}
-
-
-
-
-.container_layout_l{
-    @apply w-full min-h-[100vh] relative flex flex-row bg-base-200;
-    
-
-    .layout_a{
-        @apply flex flex-col relative;
-        flex:2;
-
-        .box_style{
-            @apply absolute top-[0] left-[0] w-[170px] h-[170px] bg-base-300; 
-        }
-
-        .alays{
-            @apply flex flex-col justify-center items-center; 
-            flex: 1;
-            @media(max-width:412px){
-                @apply p-[10px];
-            }
-
-                            
-            @media(max-width:836px){
-                @apply py-[40px];
-            }
-
-            img{
-                @apply border w-[400px] z-[1] relative h-[200px] object-cover;
-
-                @media(max-width:412px){
-                    @apply w-full;
-                }
-            }
-
-        }
-        .blays{
-            @apply flex flex-col justify-center items-center; 
-            flex: 1;
-
-            h1{
-                @apply text-5xl text-center font-bold line-clamp-3;
-
-                @media(max-width:836px){
-                    @apply py-[30px];
-                }
-            }
-        }
-
-    }
-    .layout_b{
-        @apply flex flex-col justify-center items-center; 
-        @apply flex-2;
-
-        article{
-            @apply flex-1 flex flex-col justify-center items-center gap-[10px] p-[20px] py-[30px]; 
-
-            p{
-                text-align: justify
-            }
-        }
-
-        .layoffb{
-            @apply flex-2 p-[20px] flex flex-row relative justify-start items-end w-full card;
-
-            .image_view{
-                @apply w-[180px] h-[240px] shadow-xl flex flex-col; 
-
-                .tagtitle{
-                    @apply  p-[10px] flex-1 bg-base-300;
-
-                    p{
-                        @apply line-clamp-2; 
-                    }
-
-                }
-
-                .imgs{
-                    @apply flex-5;
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                }
-            }
-        }
-    }
-
-
-    @media(max-width:836px){
-        @apply flex-col;
-    }
-
-
-}
-
-
-
-
-.container_layout_m{
-    @apply w-full min-h-[100vh] relative flex flex-row overflow-x-hidden;
-
-    & :is(.layouts_a){
-        @apply relative  flex flex-row justify-start items-start;
-        flex: 2;
-
-        & :is(.center_point){
-
-            @apply mt-[20px] flex flex-col gap-[20px] w-full p-[20px];  
-
-            .outlay_a{
-                @apply mt-[20px] flex flex-row gap-[20px] w-full;  
-
-                flex:1;
-                width:100%;
-
-                .tag_badge{
-                    @apply px-[13px] py-[7px]  rounded-[15px] border border-[2px];
-                }
-            }
-            .outlay_b{
-                flex:1;
-                padding:10px;
-                width:100%;
-                word-wrap: break-word;
-
-                h1{
-                    @apply text-6xl font-bold;
-
-                    @media(max-width:425px){
-                        @apply text-4xl font-bold;
-                    }
-                }
-            }
-            .outlay_c{
-                @apply mt-[100px];
-                @apply flex flex-row gap-[25px] w-full justify-start items-center; 
-                flex:1;
-                width:100%;
-
-                .rd{
-                    @apply rounded-full w-15 h-15 bg-base-content; 
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                }
-
-                .mini_tag{
-                    @apply p-[10px] bg-success font-bold;
-                }
-            }
-        }
-
-
-    }
-    & :is(.layouts_b){
-        @apply  p-[10px] flex flex-row gap-[20px] justify-center items-start;
-
-        .cardholder{
-            @apply min-w-[270px] shadow-xl max-w-[270px] bg-base-300 min-h-[430px] mt-[30px] card sticky top-[10%] flex flex-col;
-            /* border: 1px solid red; */
-
-            .carlayera{
-                @apply h-[222px] card shadow-xl;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            .carlayerb{
-                @apply flex-1  flex flex-col;
-
-                .conten_a{
-                    @apply   flex flex-row mt-[5px];
-                    
-                    .laya{
-                        @apply flex-1 flex justify-center items-center;
-
-                        span{
-                            @apply text-2xl font-bold;
-                        }
-                    }
-
-                    .layb{
-                        @apply flex-2 flex justify-start items-start flex-col p-[10px];
-
-                        p{
-                            @apply text-center mb-[10px] line-clamp-2 text-left;
-                        }
-
-                    }
-                }
-
-                .conten_b{
-                    @apply flex-1  flex flex-row p-[10px];
-                    p{
-                        @apply px-[5px] mt-[5px] text-sm;
-                        line-height: 15px
-                    }
-                }
-
-                
-                .conten_c{
-                    @apply flex-1  flex flex-row px-[10px] py-[10px] pb-[13px];
-
-                    .cercle_avart{
-                        @apply w-[40px] h-[40px] flex flex-col justify-between items-center rounded-full relative;
-                        background-position: center;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-
-                        span{
-                            @apply absolute top-[50%] left-[50%];
-                            transform: translate(-50%, -50%);
-                        }
-                    }
-
-                    & :is(.cercle_avart:nth-child(2)){
-                        @apply left-[-15px] bg-base-300;
-                    }
-
-                    & :is(.cercle_avart:nth-child(3)){
-                        @apply left-[-30px] bg-base-300;
-                    }
-
-                    & :is(.cercle_avart:nth-child(4)){
-                        @apply left-[-45px] bg-base-300;
-                    }
-
-                    & :is(.cercle_avart:nth-child(5)){
-                        @apply left-[-60px] bg-base-100;
-                    }
-                }
-            }
-
-
-            .image_tag{
-                @apply h-[286px] card;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-
-            .conetnt_area{
-                @apply flex-1 flex flex-col items-center justify-center;
-
-                h1{
-                    @apply font-bold text-2xl text-center mb-[10px];
-                }
-
-                p{
-                    @apply text-center;
-                    line-height: 16px;
-                }
-            }
-
-        } 
-
- 
-
-        @media(max-width:608px){
-            @apply flex-col  justify-center items-center;
-        }
-    }
-
-
-
-    @media(max-width:1034px){
-        @apply flex-col;
-    }
-}
-
-
-
-
-.container_layout_n{
-    @apply w-full min-h-[100vh] relative flex flex-col overflow-x-hidden;
-
-    .layout_a{
-        @apply w-full relative flex gap-[30px] flex-row justify-center items-center py-[30px] p-[20px] flex-wrap;
-        flex: 1;
-
-        .notes{
-            @apply min-w-[300px] max-w-[400px]  min-h-[230px] p-[20px] bg-base-300 shadow-xl;
-
-            h1{
-                @apply font-bold text-2xl mb-[10px] line-clamp-2;
-            }
-
-            p{
-                @apply line-clamp-4;
-            }
-        }
-    }
-    .layout_b{
-        @apply p-[20px] flex flex-row;
-        flex: 3;
-
-        .y_lays{
-            @apply p-[20px] flex flex-row justify-center items-center;
-            flex:1;
-
-            h1{
-                @apply text-4xl font-black;
-            }
-
-            
-        @media(max-width:768px){
-            @apply p-[10px];
-        }
-
-
-        }
-
-        .x_lays{
-            @apply p-[10px] flex flex-col justify-center items-start gap-[20px];
-            flex:2;
-
-            p:first-child{
-                @apply mt-[70px];
-            }
-
-            .cent_col{
-                @apply mt-[20px] flex flex-row gap-[20px] mt-[40px] justify-center items-center;
-
-                .cer{
-                    @apply rounded-full bg-base-300 w-[50px] h-[50px];
-                }
-
-                .box_content{
-                    @apply p-[10px] bg-success font-bold;
-                }
-            }
-        }
-
-        @media(max-width:768px){
-            @apply flex-col;
-        }
-
-    }
-
-    @media(max-width:768px){
-        @apply flex-col;
-    }
-}
-
-
-
-.container_layout_o{
-    @apply w-full min-h-[100vh] py-[20px] relative flex flex-col overflow-x-hidden;
-
-    .layoutsa{
-        @apply relative flex flex-row;
-        flex:2;
-
-        .content_area{
-            @apply p-[30px];
-            flex: 1;
-
-            h1{
-                @apply font-black text-5xl mb-[40px] mt-[50px];
-            }
-
-            p{
-                @apply line-clamp-6;
-            }
-        }
-        .image_area{
-            @apply flex flex-row justify-end p-[20px] items-end ;
-            flex: 1;
-
-            img{
-                @apply w-[550px] h-[350px] mb-[40px] card object-cover;
-
-                @media(max-width:924px){
-                    @apply w-[450px];
-                }
-                
-                @media(max-width:822px){
-                    @apply w-full;
-                }
-            }
-        }
-
-        @media(max-width:822px){
-            @apply relative flex flex-col;
-        }
-    }
-
-    .layoutsb{
-        @apply flex flex-row min-h-[100px];
-
-        .lay_ab{
-            @apply flex flex-row;
-
-            .lay_a{
-                @apply flex flex-col px-[30px] flex-1;
-    
-                .offa{
-                    @apply flex flex-row px-[20px] py-[10px] gap-[20px];
-    
-                    .ver{
-                        h1{
-                            @apply font-bold text-2xl; 
-                        }
-    
-                        p{
-                            @apply line-clamp-2;
-                        }
-    
-                        .join{
-                            p{
-                                @apply font-bold;
-                            }
-                        }
-                    }
-                }
-    
-                .offb{
-                    word-wrap: break-word;
-                    p{
-                        @apply truncate w-[300px];
-                        @media(max-width:822px){
-                            @apply truncate w-[300px] w-auto;
-
-                        }
-                    }
-                }
-    
-               
-            }
-    
-            .lay_b{
-                @apply flex flex-row flex-1;
-                .dataholder{
-                    @apply text-center px-[20px] flex flex-col justify-center;
-    
-                    h1{
-                        @apply font-bold text-2xl mb-[10px];
-                    }
-                }
-    
-                .data_a{
-                    @apply  w-[180px] border-r-[1px] border-base-content;
-
-                    @media(max-width:415px){
-                        @apply   border-r-0 border-b-[1px];
-                    }
-                }
-                .data_b{
-                    @apply w-[180px];
-                }      
-                .data_c{
-                    @apply w-[180px] border-l-[1px] border-base-content relative;
-                    @media(max-width:415px){
-                        @apply   border-l-0 border-t-[1px];
-                    }
-                }  
-                
-                @media(max-width:415px){
-                    @apply  flex-col mt-[30px] p-[20px];
-
-                    .dataholder{
-                        @apply w-full py-[20px];
-                    }
-                }
-            }
-
-
-            @media(max-width:1136px){
-                @apply flex flex-col;
-            }
-
-        }
-
-
-
-        .lay_c{
-            @apply relative w-[290px] flex-1;
-
-            .cardholder{
-                @apply absolute flex flex-col bottom-[10%] p-[10px] z-9 right-[7%] w-[200px] h-[250px] card bg-base-300;
-
-                .overlapcard{
-                    @apply absolute bg-success px-[20px] py-[10px] flex flex-col justify-center items-center; 
-                    bottom:15%;
-                    left: -15%;
-
-                    h3{
-                        @apply font-bold ;
-                    }
-                }
-
-                .dscard{
-                    @apply text-center;
-                    h1{
-                        @apply text-2xl font-bold py-[10px];
-                    }
-
-                    p{
-                        @apply  py-[20px];
-                        line-height: 15px;
-                    }
-
-                    .lar{
-                        @apply my-[6px];
-                    }
-                }
-
-                /* @media(max-width:822px){
-                    @apply relative;
-                } */
-            }
-
-            @media(max-width:822px){
-                @apply w-full p-[20px] flex flex-row justify-end items-end
-            }
-        }
-
-        @media(max-width:822px){
-            @apply flex-col-reverse;
-        }
-    }
-
-
-}
-
-
-
-.container_layout_p{
-
-}
-
-
- 
-
-
-
-.widget_a{
-    @apply max-w-[300px]  flex flex-col p-[20px] card bg-base-300;
-
-    .layer_a{
-        @apply my-[20px];
-
-        span{
-            @apply text-5xl font-bold;
-        }
-
-        hr{
-            @apply mt-[20px] w-[10%] border-[2px] text-error;
-        }
-    }
-
-
-    .layer_b{
-        @apply mt-[20px];
-
-        h4{
-            @apply text-2xl line-clamp-1 max-w-[310px];
-        }
-
-        p{
-            @apply italic line-clamp-2 opacity-[.7]  max-w-[310px];
-        }
-
-        img{
-            @apply w-full h-[250px] mt-[20px] card object-cover;
-        }
-    }
-
-    .layer_c{
-        @apply my-[20px]  flex flex-row justify-start items-start gap-[20px] opacity-[.6];
-
-        button{
-            @apply cursor-pointer hover:text-error;
-        }
-    }
-}
-
-
-.widget_b{
-    @apply max-w-[300px] min-w-[300px] relative min-h-[320px] card flex flex-col  card  bg-base-content;
-
-    background-position: center;
+  }
+  .layout_b {
+    @apply flex flex-col h-[215px];
     background-size: cover;
-    background-repeat: no-repeat;
-
-
-    .topdesign{
-        @apply flex flex-row w-full bg-base-300 rounded-t-[8px];
-        
-        .layera{
-            @apply flex-1 p-[10px];
-
-            h3{
-                @apply font-bold text-2xl;
-                line-height: 25px
-            }
-        }
-        .layerb{
-            @apply p-[10px];
-
-            button{
-                @apply card text-base-content  px-[15px] font-semibold border border-base-content/50 flex flex-row justify-center items-center gap-[6px] cursor-pointer;
-            }
-        }
-    }
-
-
-    .btnarea{
-        @apply w-full flex-1 relative text-base-200;
-
-        .tagbtn{
-            @apply rounded-[10px] flex flex-row gap-[10px] justify-center items-center absolute px-[13px] text-[13px] py-[3px] bg-base-300 text-base-content font-bold cursor-pointer;
-        }
-
-    }
-
-}
-
-
-.widget_c{
-    @apply max-w-[300px] min-w-[300px] relative min-h-[160px] card flex flex-row  card bg-base-300;
-
- 
-
-    .layouts_a{
-        @apply flex-[1.20] p-[16px];
-
-        h3{
-            @apply mb-[10px] font-semibold line-clamp-1 flex flex-row justify-start items-center gap-[10px];
-        }
-
-        p{
-            @apply line-clamp-4 text-2xl;
-            line-height: 21px;
-        }
-    }
-    .layouts_b{
-        @apply  w-[137px] card; 
-    
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
-
-
-.widget_d{
-    @apply flex flex-col gap-[10px] ; 
-
-    .cardtags{
-        @apply max-w-[300px] min-w-[300px] relative p-[10px] px-[20px]  card flex flex-row gap-[20px] card shadow-xl bg-base-300;
-        
-        .icon{
-            @apply mt-[4px];
-        }
-        .content{
-            flex: 1;
-    
-            p{
-                @apply line-clamp-2;
-            }
-        }
-    
-    }
-}
-
-
-.widget_e{
-    @apply max-w-[300px] min-w-[300px] gap-[10px] relative h-[270px] flex flex-col  card;
-
-    .layouts{
-        @apply w-full flex flex-row gap-[10px] flex-1;
-
-        .box{
-            @apply flex-1 card bg-base-300 cursor-pointer border border-base-content/10 flex flex-col justify-between items-start p-[20px] hover:shadow-xl;
-            transition: .4s;
-            h3{
-                @apply font-semibold line-clamp-2;
-                word-break: break-all;
-                line-height: 17px;
-            }
-        }
-    }
-}
-
-
-.widget_f{
-    @apply max-w-[220px] relative min-w-[220px] gap-[10px] p-[20px] relative min-h-[270px] flex flex-col  card bg-base-300 hover:shadow-xl;
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
-
-    transition: .4s;
-
-
-    h1{
-        @apply font-semibold text-2xl line-clamp-2;
-        line-height: 22px;
-    }
-
-    .ave{
-        @apply mt-[10px] px-[10px] bg-base-200 p-[5px] card;
-    }
-
-    .btn_arrow{
-        transition: .7s;
-        @apply absolute bottom-[7%] cursor-pointer card right-[10%] opacity-[.8] blur-[20] px-[20px] py-[16px] bg-base-200 hover:shadow-xl; 
-    }
+  }
 }
-
-
-.widget_g{
-    @apply max-w-[425px] relative min-w-[220px] p-[10px] border border-base-content/10  relative min-h-[270px] flex flex-col  card bg-base-200 m-[10px];
-
-
-    .layer_a{
-        @apply flex flex-row;
-
-        .laya{
-            @apply p-[15px] flex-1;
-
-            span{
-                @apply italic;
-            }
-
-            h2{
-                @apply font-bold text-3xl;
-            }
-        }
-        .layb{
-            @apply p-[10px] flex flex-col justify-center items-center;
-
-            .date{
-                @apply flex flex-col bg-base-300 justify-center items-center rounded-[30px]; 
-
-                span{
-                    @apply flex justify-center items-center py-[8px] px-[10px] text-2xl;
-                }
-            }
-        }
+.container_layout_e {
+  @apply flex flex-col items-center justify-center min-h-screen;
+  .laytouts_a {
+    @apply flex flex-row w-full h-full overflow-hidden;
+    flex: 1.2;
+    width: 100%;
+    height: 100%;
+    .icon_area {
+      flex: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 300px;
     }
-
-    .layer_b{
+    .site_name_short_name {
+      @apply flex justify-center items-center overflow-hidden relative;
+      .shadow {
+        position: absolute;
+        top: -70px;
+        left: -30px;
+        opacity: 0.2;
+        color: rgba(255, 255, 255, 0.226);
+        @apply text-[370px];
+      }
+      h1 {
+        @apply text-9xl font-black px-[20px] py-[10px];
+      }
+      flex: 2;
+    }
+    @media (max-width: 768px) {
+      & {
+        @apply flex-col;
+      }
+    }
+  }
+  .laytouts_b {
+    @apply flex flex-row flex-[2] w-full h-full;
+    .alayouts {
+      @apply w-full flex-2 p-[10px] bg-base-300 flex justify-center items-center;
+      .cards_center {
+        @apply mt-[20px] flex flex-col w-[80%] gap-[30px] my-[20px];
+        h1 {
+          @apply text-5xl font-bold my-[20px];
+        }
+        p {
+          @apply my-[20px];
+        }
+        .btn_area {
+          @apply my-[20px] flex flex-row gap-[10px];
+          .btn_calla {
+            @apply py-[5px] px-[10px] bg-base-content text-base-300 font-bold;
+          }
+          .btn_callb {
+            @apply py-[5px] px-[10px] bg-base-200 hover:bg-base-100;
+          }
+        }
+      }
+    }
+    .blayouts {
+      @apply w-full flex-[2];
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @media (max-width: 768px) {
+      & {
+        @apply flex-col;
+        .blayouts {
+          min-height: 300px;
+        }
+        .alayouts {
+          @apply order-2 py-[30px] gap-[40px];
+        }
+      }
+    }
+  }
+}
+.container_layout_f {
+  @apply flex flex-row min-h-screen;
+  .layouts_a {
+    @apply flex-1 flex flex-col justify-center items-center;
+    .center_point {
+      @apply w-[80%];
+      h1 {
+        @apply text-6xl font-bold my-[40px] mb-[20px];
+        text-transform: uppercase;
+      }
+      p {
+        @apply my-[40px];
+      }
+      & :is(.divider_center) {
+        @apply flex justify-center items-center my-[10px];
+      }
+      & :is(.divider_center > .divider_line) {
+        @apply w-[.10px] bg-warning h-[96px];
+      }
+      & :is(.btn_center) {
+        @apply flex justify-center items-center mt-[30px] mb-[40px];
+        button {
+          @apply px-[15px] py-[5px] bg-base-content text-base-300 uppercase;
+        }
+      }
+    }
+  }
+  .layouts_b {
+    @apply flex-1 relative;
+    background-position: top;
+    background-size: cover;
+    .title_float {
+      bottom: 0;
+      left: 0;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      @apply bg-base-300 font-bold text-3xl p-[20px] absolute;
+    }
+  }
+  @media (max-width: 768px) {
+    & {
+      @apply flex flex-col-reverse;
+      .layouts_b {
+        min-height: 500px;
+      }
+    }
+  }
+}
+.container_layout_g {
+  @apply flex flex-col min-h-screen relative;
+  clear: both;
+  &::after {
+    content: '';
+    @apply p-[20px] h-[50%] w-full left-0 top-0 absolute bg-base-300;
+  }
+  &::before {
+    content: '';
+    @apply p-[20px] h-[50%] w-full left-0 bottom-0 absolute  bg-base-100;
+  }
+  .b_layoff {
+    @apply w-[100%] flex flex-col justify-center items-center;
+    flex: 1;
+    padding: 20px;
+    z-index: 99;
+    gap: 20px;
+    p {
+      @apply py-[20px] text-center italic;
+    }
+    h1 {
+      @apply py-[20px] mb-[20px] text-2xl font-bold text-center;
+    }
+    .center_image {
+      @apply min-h-[300px] w-[70%];
+      border: none;
+      outline: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.container_layout_h {
+  @apply flex flex-col min-h-screen relative my-[20px];
+  .alays {
+    @apply flex flex-row py-[10px];
+    flex: 1;
+    .text_sections {
+      flex: 1.35;
+      @apply flex flex-col justify-center items-center p-[5px];
+      h1 {
+        @apply text-7xl font-bold p-[0] m-[0] pl-[40px];
+        @media (max-width: 768px) {
+          @apply p-[0px];
+        }
+        @media (max-width: 556px) {
+          @apply text-5xl;
+        }
+      }
+    }
+    .teamdis {
+      flex: 1;
+      padding-right: 30px;
+      @apply flex flex-row gap-[20px] justify-center items-center;
+      .teambox {
+        @apply shadow-xl max-w-[230px] min-w-[230px] flex-1 min-h-[320px] relative;
+        img {
+          @apply h-[300px] w-[230px] object-cover object-top;
+        }
+        .namebox {
+          background-position: center;
+          background-size: cover;
+          @apply absolute bottom-0 w-full bg-base-300 flex flex-col justify-center items-center font-bold  left-0 p-[10px];
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      & {
+        @apply flex-col;
+      }
+      & :is(.text_sections) {
+        @apply my-[30px] p-[0px];
+      }
+      & :is(h1) {
+        @apply text-center p-[0px];
+      }
+      & :is(.teamdis) {
+        @apply p-[0px] flex-wrap;
+      }
+    }
+  }
+  .blays {
+    @apply flex flex-row pl-[30px] my-[20px];
+    flex: 1;
+    .personal_image {
+      @apply px-[20px] py-[10px];
+      img {
+        @apply max-w-[230px] min-w-[230px] flex-1 min-h-[320px] shadow-xl;
+      }
+    }
+    .content_personal {
+      @apply flex flex-col px-[10px] justify-center;
+      @apply py-[20px];
+      flex: 2;
+      .person_name {
+        @apply text-2xl font-bold block mb-[10px];
+        span {
+          @apply bg-base-300 px-[10px] py-[5px];
+        }
+      }
+      .title_italic {
+        @apply mb-[20px] italic;
+      }
+      .person_tals {
+        @apply w-[80%];
+      }
+    }
+    @media (max-width: 684px) {
+      .personal_image {
+        @apply p-[0px] m-[0px] gap-[20px];
+      }
+      @apply flex-col justify-center items-center pl-[0px];
+      .content_personal {
+        @apply items-center justify-center;
+        .person_name {
+          margin-top: 20px;
+        }
+        .person_tals {
+          @apply text-justify;
+        }
+      }
+    }
+  }
+}
+.container_layout_i {
+  @apply flex flex-row min-h-screen relative;
+  .layout_ab {
+    @apply flex flex-row min-h-screen relative flex flex-row;
+    flex: 2.6;
+    .layouts_a {
+      @apply flex-[2];
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .layouts_b {
+      @apply bg-base-300 w-[80px] flex flex-col;
+      div {
+        flex: 1;
+        @apply flex flex-col py-[10px] justify-center items-center overflow-hidden;
+        span {
+          transform: rotate(-90deg);
+          text-transform: uppercase;
+          letter-spacing: 4px;
+          @apply text-4xl font-bold overflow-hidden;
+        }
+        .linedes {
+          @apply w-1 h-[60%] bg-warning;
+        }
+      }
+    }
+  }
+  .layouts_c {
+    @apply p-[20px] flex flex-col justify-between flex-3;
+    .content_holder {
+      @apply flex flex-col gap-[30px] mt-[20px];
+      & :is(h1) {
+        @apply text-5xl font-bold;
+      }
+      & :is(p > span) {
+        @apply font-bold text-2xl;
+      }
+      & :is(.clickbite) {
+        @apply flex flex-row justify-start items-start w-full py-[10px];
+        button {
+          @apply bg-base-300  px-[20px] py-[5px] font-bold;
+          font-family: 'Courier New', Courier, monospace;
+        }
+      }
+    }
+    .btnarea {
+      @apply flex relative flex-row justify-between mt-[40px] items-center p-[10px] w-full mb-[10px];
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        background-color: theme('colors.base.300');
+        z-index: 0.2;
+      }
+      & :is(h1) {
+        @apply font-black z-[1];
+      }
+      & :is(.square_box) {
+        @apply px-[20px] py-[10px] font-bold bg-warning;
+      }
+      @media (max-width: 768px) {
+        @apply mt-[120px];
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    @apply flex-col-reverse;
+  }
+}
+.container_layout_j {
+  @apply min-h-[30vh] w-full flex flex-row justify-center gap-[20px] py-[50px] items-center flex-wrap;
+  .laycards {
+    @apply max-w-[280px] p-[20px] bg-base-300 card italic;
+    h1 {
+      @apply font-bold text-2xl mb-[10px];
+    }
+    & :is(p > span) {
+      @apply font-bold text-4xl opacity-[.5];
+    }
+  }
+  .alayouts {
+  }
+  .blayouts {
+  }
+  .clayouts {
+  }
+}
+.container_layout_k {
+  @apply w-full min-h-[100vh] relative flex flex-col;
+  .layout_a {
+    @apply flex flex-row flex-2;
+    .a_lays {
+      @apply flex-1 bg-base-200 flex relative pb-[20px] flex-col justify-start items-center;
+      .info_stick {
+        @apply mt-[60px] sticky top-[5%] w-[70%] flex  flex-col justify-start items-center;
+        h3 {
+          @apply mt-[10px] text-2xl mb-[10px];
+        }
+      }
+      @media (max-width: 768px) {
+        @apply py-[80px] justify-center;
+      }
+    }
+    .b_lays {
+      @apply flex-2 flex  bg-base-300 flex-col justify-center items-center;
+      article {
+        @apply gap-[20px] w-[90%] flex flex-col my-[60px];
+        & :is(h1) {
+          @apply font-bold text-3xl mb-[40px];
+        }
+        & :is(.subs) {
+          @apply italic text-[21px];
+        }
+        .lists {
+          @apply relative;
+          content: '•';
+          display: block;
+          clear: both;
+        }
+        blockquote {
+          @apply border-base-content border-l-[3px] pl-[20px] italic bg-base-200 p-[10px];
+        }
+      }
+      @media (max-width: 768px) {
+        @apply pb-[100px] pt-[40px];
+      }
+    }
+    @media (max-width: 768px) {
+      @apply flex-col;
+    }
+  }
+}
+.container_layout_l {
+  @apply w-full min-h-[100vh] relative flex flex-row bg-base-200;
+  .layout_a {
+    @apply flex flex-col relative;
+    flex: 2;
+    .box_style {
+      @apply absolute top-[0] left-[0] w-[170px] h-[170px] bg-base-300;
+    }
+    .alays {
+      @apply flex flex-col justify-center items-center;
+      flex: 1;
+      @media (max-width: 412px) {
         @apply p-[10px];
-    }
-
-    .buttonarea{
-        @apply p-[20px] flex flex-row justify-around items-center p-[20px];
-
-        button{
-            @apply rounded-[20px] py-[20px] px-[20px] bg-base-300;
+      }
+      @media (max-width: 836px) {
+        @apply py-[40px];
+      }
+      img {
+        @apply border w-[400px] z-[1] relative h-[200px] object-cover;
+        @media (max-width: 412px) {
+          @apply w-full;
         }
+      }
     }
-
+    .blays {
+      @apply flex flex-col justify-center items-center;
+      flex: 1;
+      h1 {
+        @apply text-5xl text-center font-bold line-clamp-3;
+        @media (max-width: 836px) {
+          @apply py-[30px];
+        }
+      }
+    }
+  }
+  .layout_b {
+    @apply flex flex-col justify-center items-center;
+    @apply flex-2;
+    article {
+      @apply flex-1 flex flex-col justify-center items-center gap-[10px] p-[20px] py-[30px];
+      p {
+        text-align: justify;
+      }
+    }
+    .layoffb {
+      @apply flex-2 p-[20px] flex flex-row relative justify-start items-end w-full card;
+      .image_view {
+        @apply w-[180px] h-[240px] shadow-xl flex flex-col;
+        .tagtitle {
+          @apply p-[10px] flex-1 bg-base-300;
+          p {
+            @apply line-clamp-2;
+          }
+        }
+        .imgs {
+          @apply flex-5;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+  @media (max-width: 836px) {
+    @apply flex-col;
+  }
 }
-
-
-.widget_h{
-    @apply max-w-[320px] relative min-w-[300px] gap-[20px] p-[15px] border border-base-content/10  relative min-h-[270px] flex flex-col  card bg-base-200 min-[320px]:m-[10px]  ;
-
-    .lay_a{
-        @apply min-h-[200px] card p-[20px] gap-[10px] justify-around items-start;
-        
-        h2{
-            @apply font-bold text-2xl p-[5px];
+.container_layout_m {
+  @apply w-full min-h-[100vh] relative flex flex-row overflow-x-hidden;
+  & :is(.layouts_a) {
+    @apply relative  flex flex-row justify-start items-start;
+    flex: 2;
+    & :is(.center_point) {
+      @apply mt-[20px] flex flex-col gap-[20px] w-full p-[20px];
+      .outlay_a {
+        @apply mt-[20px] flex flex-row gap-[20px] w-full;
+        flex: 1;
+        width: 100%;
+        .tag_badge {
+          @apply px-[13px] py-[7px]  rounded-[15px] border border-[2px];
         }
-        span{
-            @apply font-bold text-2xl p-[10px] rounded-[10px] bg-base-300/80;
+      }
+      .outlay_b {
+        flex: 1;
+        padding: 10px;
+        width: 100%;
+        word-wrap: break-word;
+        h1 {
+          @apply text-6xl font-bold;
+          @media (max-width: 425px) {
+            @apply text-4xl font-bold;
+          }
         }
-    
+      }
+      .outlay_c {
+        @apply mt-[100px];
+        @apply flex flex-row gap-[25px] w-full justify-start items-center;
+        flex: 1;
+        width: 100%;
+        .rd {
+          @apply rounded-full w-15 h-15 bg-base-content;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .mini_tag {
+          @apply p-[10px] bg-success font-bold;
+        }
+      }
+    }
+  }
+  & :is(.layouts_b) {
+    @apply p-[10px] flex flex-row gap-[20px] justify-center items-start;
+    .cardholder {
+      @apply min-w-[270px] shadow-xl max-w-[270px] bg-base-300 min-h-[430px] mt-[30px] card sticky top-[10%] flex flex-col;
+      .carlayera {
+        @apply h-[222px] card shadow-xl;
         background-position: center;
         background-size: cover;
-        background-repeat: no-repeat;        
+        background-repeat: no-repeat;
+      }
+      .carlayerb {
+        @apply flex-1  flex flex-col;
+        .conten_a {
+          @apply flex flex-row mt-[5px];
+          .laya {
+            @apply flex-1 flex justify-center items-center;
+            span {
+              @apply text-2xl font-bold;
+            }
+          }
+          .layb {
+            @apply flex-2 flex justify-start items-start flex-col p-[10px];
+            p {
+              @apply text-center mb-[10px] line-clamp-2 text-left;
+            }
+          }
+        }
+        .conten_b {
+          @apply flex-1  flex flex-row p-[10px];
+          p {
+            @apply px-[5px] mt-[5px] text-sm;
+            line-height: 15px;
+          }
+        }
+        .conten_c {
+          @apply flex-1  flex flex-row px-[10px] py-[10px] pb-[13px];
+          .cercle_avart {
+            @apply w-[40px] h-[40px] flex flex-col justify-between items-center rounded-full relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            span {
+              @apply absolute top-[50%] left-[50%];
+              transform: translate(-50%, -50%);
+            }
+          }
+          & :is(.cercle_avart:nth-child(2)) {
+            @apply left-[-15px] bg-base-300;
+          }
+          & :is(.cercle_avart:nth-child(3)) {
+            @apply left-[-30px] bg-base-300;
+          }
+          & :is(.cercle_avart:nth-child(4)) {
+            @apply left-[-45px] bg-base-300;
+          }
+          & :is(.cercle_avart:nth-child(5)) {
+            @apply left-[-60px] bg-base-100;
+          }
+        }
+      }
+      .image_tag {
+        @apply h-[286px] card;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .conetnt_area {
+        @apply flex-1 flex flex-col items-center justify-center;
+        h1 {
+          @apply font-bold text-2xl text-center mb-[10px];
+        }
+        p {
+          @apply text-center;
+          line-height: 16px;
+        }
+      }
     }
-
-
-    .lay_b{
-        @apply min-h-[50px] card bg-base-300 p-[10px] flex flex-row justify-around;
-
-        .ico{
-            @apply flex flex-col;
-
-            span{
-                @apply flex flex-col justify-center items-center gap-[10px];
-            }
-        }
+    @media (max-width: 608px) {
+      @apply flex-col  justify-center items-center;
     }
-
+  }
+  @media (max-width: 1034px) {
+    @apply flex-col;
+  }
 }
-
-
-
-
-.widget_i{
-    @apply 
-        max-w-[425px] 
-        min-w-[300px] 
-        overflow-hidden
-        relative 
-        border border-base-content/10  
-        min-h-[270px] 
-        flex flex-col  
-        card 
-        bg-base-200 
-        min-[320px]:m-[10px] ;
-
-        .section_a{
-            @apply bg-top bg-cover bg-no-repeat h-[120px];
+.container_layout_n {
+  @apply w-full min-h-[100vh] relative flex flex-col overflow-x-hidden;
+  .layout_a {
+    @apply w-full relative flex gap-[30px] flex-row justify-center items-center py-[30px] p-[20px] flex-wrap;
+    flex: 1;
+    .notes {
+      @apply min-w-[300px] max-w-[400px]  min-h-[230px] p-[20px] bg-base-300 shadow-xl;
+      h1 {
+        @apply font-bold text-2xl mb-[10px] line-clamp-2;
+      }
+      p {
+        @apply line-clamp-4;
+      }
+    }
+  }
+  .layout_b {
+    @apply p-[20px] flex flex-row;
+    flex: 3;
+    .y_lays {
+      @apply p-[20px] flex flex-row justify-center items-center;
+      flex: 1;
+      h1 {
+        @apply text-4xl font-black;
+      }
+      @media (max-width: 768px) {
+        @apply p-[10px];
+      }
+    }
+    .x_lays {
+      @apply p-[10px] flex flex-col justify-center items-start gap-[20px];
+      flex: 2;
+      p:first-child {
+        @apply mt-[70px];
+      }
+      .cent_col {
+        @apply mt-[20px] flex flex-row gap-[20px] mt-[40px] justify-center items-center;
+        .cer {
+          @apply rounded-full bg-base-300 w-[50px] h-[50px];
         }
-        .section_b{
-            @apply flex flex-col justify-center items-center h-[0px];
+        .box_content {
+          @apply p-[10px] bg-success font-bold;
         }
-        .section_c{
-            @apply py-[30px] flex-[1.1] flex flex-col justify-center items-center;
-
-            .block_holder{
-
-                @apply flex flex-col justify-center items-center;
-
-                .layey_title{
-                    @apply mt-[25px];
-                    h1{
-                        @apply text-2xl text-center;
-                    }
-                }
-
-                .layer_subs{
-                    @apply mt-[5px];
-                    p{
-                        @apply italic ;
-                    }
-                }
-
-                .layer_btn{
-                    @apply mt-[15px];
-
-                }
-            }
-        }
-        
+      }
+    }
+    @media (max-width: 768px) {
+      @apply flex-col;
+    }
+  }
+  @media (max-width: 768px) {
+    @apply flex-col;
+  }
 }
-
-
-
-
-
-.widget_j{
-    @apply 
-        max-w-[425px] 
-        min-w-[300px] 
-        overflow-hidden
-        relative 
-        border border-base-content/10  
-        min-h-[270px] 
-        p-[10px]
-        w-full
-        flex flex-col  
-        card 
-        bg-base-200 
-        min-[320px]:m-[10px];
-
-        .section_items{
-            @apply flex flex-row w-full p-[5px] card bg-base-300  border border-base-content/10  my-[1px];   
-
-            .layer_a{
-                @apply p-[10px];
-            }
-
-            .layer_b{
-
-                @apply px-[10px] w-full  flex flex-col justify-center items-start;
-                flex: 2;
-
-                .unit_title{
-                    @apply flex flex-row w-full justify-between items-center;
-                    
-                    h1{
-                        @apply font-bold line-clamp-1;
-                    }
-
-                    small{
-                        @apply italic opacity-[.7];
-                    }
-                }
-                .unit_subs{
-
-                    @apply flex flex-row w-full justify-between items-center;
-
-                    p{
-                        @apply text-xs line-clamp-1;
-                    }
-                }
-            }
-
+.container_layout_o {
+  @apply w-full min-h-[100vh] py-[20px] relative flex flex-col overflow-x-hidden;
+  .layoutsa {
+    @apply relative flex flex-row;
+    flex: 2;
+    .content_area {
+      @apply p-[30px];
+      flex: 1;
+      h1 {
+        @apply font-black text-5xl mb-[40px] mt-[50px];
+      }
+      p {
+        @apply line-clamp-6;
+      }
+    }
+    .image_area {
+      @apply flex flex-row justify-end p-[20px] items-end;
+      flex: 1;
+      img {
+        @apply w-[550px] h-[350px] mb-[40px] card object-cover;
+        @media (max-width: 924px) {
+          @apply w-[450px];
         }
-
-
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        @media (max-width: 822px) {
+          @apply w-full;
+        }
+      }
+    }
+    @media (max-width: 822px) {
+      @apply relative flex flex-col;
+    }
+  }
+  .layoutsb {
+    @apply flex flex-row min-h-[100px];
+    .lay_ab {
+      @apply flex flex-row;
+      .lay_a {
+        @apply flex flex-col px-[30px] flex-1;
+        .offa {
+          @apply flex flex-row px-[20px] py-[10px] gap-[20px];
+          .ver {
+            h1 {
+              @apply font-bold text-2xl;
+            }
+            p {
+              @apply line-clamp-2;
+            }
+            .join {
+              p {
+                @apply font-bold;
+              }
+            }
+          }
+        }
+        .offb {
+          word-wrap: break-word;
+          p {
+            @apply truncate w-[300px];
+            @media (max-width: 822px) {
+              @apply truncate w-[300px] w-auto;
+            }
+          }
+        }
+      }
+      .lay_b {
+        @apply flex flex-row flex-1;
+        .dataholder {
+          @apply text-center px-[20px] flex flex-col justify-center;
+          h1 {
+            @apply font-bold text-2xl mb-[10px];
+          }
+        }
+        .data_a {
+          @apply w-[180px] border-r-[1px] border-base-content;
+          @media (max-width: 415px) {
+            @apply border-r-0 border-b-[1px];
+          }
+        }
+        .data_b {
+          @apply w-[180px];
+        }
+        .data_c {
+          @apply w-[180px] border-l-[1px] border-base-content relative;
+          @media (max-width: 415px) {
+            @apply border-l-0 border-t-[1px];
+          }
+        }
+        @media (max-width: 415px) {
+          @apply flex-col mt-[30px] p-[20px];
+          .dataholder {
+            @apply w-full py-[20px];
+          }
+        }
+      }
+      @media (max-width: 1136px) {
+        @apply flex flex-col;
+      }
+    }
+    .lay_c {
+      @apply relative w-[290px] flex-1;
+      .cardholder {
+        @apply absolute flex flex-col bottom-[10%] p-[10px] z-9 right-[7%] w-[200px] h-[250px] card bg-base-300;
+        .overlapcard {
+          @apply absolute bg-success px-[20px] py-[10px] flex flex-col justify-center items-center;
+          bottom: 15%;
+          left: -15%;
+          h3 {
+            @apply font-bold;
+          }
+        }
+        .dscard {
+          @apply text-center;
+          h1 {
+            @apply text-2xl font-bold py-[10px];
+          }
+          p {
+            @apply py-[20px];
+            line-height: 15px;
+          }
+          .lar {
+            @apply my-[6px];
+          }
+        }
+      }
+      @media (max-width: 822px) {
+        @apply w-full p-[20px] flex flex-row justify-end items-end;
+      }
+    }
+    @media (max-width: 822px) {
+      @apply flex-col-reverse;
+    }
+  }
+}
+.container_layout_p {
+}
+.widget_a {
+  @apply max-w-[300px]  flex flex-col p-[20px] card bg-base-300;
+  .layer_a {
+    @apply my-[20px];
+    span {
+      @apply text-5xl font-bold;
+    }
+    hr {
+      @apply mt-[20px] w-[10%] border-[2px] text-error;
+    }
+  }
+  .layer_b {
+    @apply mt-[20px];
+    h4 {
+      @apply text-2xl line-clamp-1 max-w-[310px];
+    }
+    p {
+      @apply italic line-clamp-2 opacity-[.7]  max-w-[310px];
+    }
+    img {
+      @apply w-full h-[250px] mt-[20px] card object-cover;
+    }
+  }
+  .layer_c {
+    @apply my-[20px]  flex flex-row justify-start items-start gap-[20px] opacity-[.6];
+    button {
+      @apply cursor-pointer hover:text-error;
+    }
+  }
+}
+.widget_b {
+  @apply max-w-[300px] min-w-[300px] relative min-h-[320px] card flex flex-col  card  bg-base-content;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .topdesign {
+    @apply flex flex-row w-full bg-base-300 rounded-t-[8px];
+    .layera {
+      @apply flex-1 p-[10px];
+      h3 {
+        @apply font-bold text-2xl;
+        line-height: 25px;
+      }
+    }
+    .layerb {
+      @apply p-[10px];
+      button {
+        @apply card text-base-content  px-[15px] font-semibold border border-base-content/50 flex flex-row justify-center items-center gap-[6px] cursor-pointer;
+      }
+    }
+  }
+  .btnarea {
+    @apply w-full flex-1 relative text-base-200;
+    .tagbtn {
+      @apply rounded-[10px] flex flex-row gap-[10px] justify-center items-center absolute px-[13px] text-[13px] py-[3px] bg-base-300 text-base-content font-bold cursor-pointer;
+    }
+  }
+}
+.widget_c {
+  @apply max-w-[300px] min-w-[300px] relative min-h-[160px] card flex flex-row  card bg-base-300;
+  .layouts_a {
+    @apply flex-[1.20] p-[16px];
+    h3 {
+      @apply mb-[10px] font-semibold line-clamp-1 flex flex-row justify-start items-center gap-[10px];
+    }
+    p {
+      @apply line-clamp-4 text-2xl;
+      line-height: 21px;
+    }
+  }
+  .layouts_b {
+    @apply w-[137px] card;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.widget_d {
+  @apply flex flex-col gap-[10px];
+  .cardtags {
+    @apply max-w-[300px] min-w-[300px] relative p-[10px] px-[20px]  card flex flex-row gap-[20px] card shadow-xl bg-base-300;
+    .icon {
+      @apply mt-[4px];
+    }
+    .content {
+      flex: 1;
+      p {
+        @apply line-clamp-2;
+      }
+    }
+  }
+}
+.widget_e {
+  @apply max-w-[300px] min-w-[300px] gap-[10px] relative h-[270px] flex flex-col  card;
+  .layouts {
+    @apply w-full flex flex-row gap-[10px] flex-1;
+    .box {
+      @apply flex-1 card bg-base-300 cursor-pointer border border-base-content/10 flex flex-col justify-between items-start p-[20px] hover:shadow-xl;
+      transition: 0.4s;
+      h3 {
+        @apply font-semibold line-clamp-2;
+        word-break: break-all;
+        line-height: 17px;
+      }
+    }
+  }
+}
+.widget_f {
+  @apply max-w-[220px] relative min-w-[220px] gap-[10px] p-[20px] relative min-h-[270px] flex flex-col  card bg-base-300 hover:shadow-xl;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+  h1 {
+    @apply font-semibold text-2xl line-clamp-2;
+    line-height: 22px;
+  }
+  .ave {
+    @apply mt-[10px] px-[10px] bg-base-200 p-[5px] card;
+  }
+  .btn_arrow {
+    transition: 0.7s;
+    @apply absolute bottom-[7%] cursor-pointer card right-[10%] opacity-[.8] blur-[20] px-[20px] py-[16px] bg-base-200 hover:shadow-xl;
+  }
+}
+.widget_g {
+  @apply max-w-[425px] relative min-w-[220px] p-[10px] border border-base-content/10  relative min-h-[270px] flex flex-col  card bg-base-200 m-[10px];
+  .layer_a {
+    @apply flex flex-row;
+    .laya {
+      @apply p-[15px] flex-1;
+      span {
+        @apply italic;
+      }
+      h2 {
+        @apply font-bold text-3xl;
+      }
+    }
+    .layb {
+      @apply p-[10px] flex flex-col justify-center items-center;
+      .date {
+        @apply flex flex-col bg-base-300 justify-center items-center rounded-[30px];
+        span {
+          @apply flex justify-center items-center py-[8px] px-[10px] text-2xl;
+        }
+      }
+    }
+  }
+  .layer_b {
+    @apply p-[10px];
+  }
+  .buttonarea {
+    @apply p-[20px] flex flex-row justify-around items-center p-[20px];
+    button {
+      @apply rounded-[20px] py-[20px] px-[20px] bg-base-300;
+    }
+  }
+}
+.widget_h {
+  @apply max-w-[320px] relative min-w-[300px] gap-[20px] p-[15px] border border-base-content/10  relative min-h-[270px] flex flex-col  card bg-base-200 min-[320px]:m-[10px];
+  .lay_a {
+    @apply min-h-[200px] card p-[20px] gap-[10px] justify-around items-start;
+    h2 {
+      @apply font-bold text-2xl p-[5px];
+    }
+    span {
+      @apply font-bold text-2xl p-[10px] rounded-[10px] bg-base-300/80;
+    }
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .lay_b {
+    @apply min-h-[50px] card bg-base-300 p-[10px] flex flex-row justify-around;
+    .ico {
+      @apply flex flex-col;
+      span {
+        @apply flex flex-col justify-center items-center gap-[10px];
+      }
+    }
+  }
+}
+.widget_i {
+  @apply max-w-[425px] 
+min-w-[300px] 
+overflow-hidden
+relative 
+border border-base-content/10  
+min-h-[270px] 
+flex flex-col  
+card 
+bg-base-200 
+min-[320px]:m-[10px];
+  .section_a {
+    @apply bg-top bg-cover bg-no-repeat h-[120px];
+  }
+  .section_b {
+    @apply flex flex-col justify-center items-center h-[0px];
+  }
+  .section_c {
+    @apply py-[30px] flex-[1.1] flex flex-col justify-center items-center;
+    .block_holder {
+      @apply flex flex-col justify-center items-center;
+      .layey_title {
+        @apply mt-[25px];
+        h1 {
+          @apply text-2xl text-center;
+        }
+      }
+      .layer_subs {
+        @apply mt-[5px];
+        p {
+          @apply italic;
+        }
+      }
+      .layer_btn {
+        @apply mt-[15px];
+      }
+    }
+  }
+}
+.widget_j {
+  @apply max-w-[425px] 
+min-w-[300px] 
+overflow-hidden
+relative 
+border border-base-content/10  
+min-h-[270px] 
+p-[10px]
+w-full
+flex flex-col  
+card 
+bg-base-200 
+min-[320px]:m-[10px];
+  .section_items {
+    @apply flex flex-row w-full p-[5px] card bg-base-300  border border-base-content/10  my-[1px];
+    .layer_a {
+      @apply p-[10px];
+    }
+    .layer_b {
+      @apply px-[10px] w-full  flex flex-col justify-center items-start;
+      flex: 2;
+      .unit_title {
+        @apply flex flex-row w-full justify-between items-center;
+        h1 {
+          @apply font-bold line-clamp-1;
+        }
+        small {
+          @apply italic opacity-[.7];
+        }
+      }
+      .unit_subs {
+        @apply flex flex-row w-full justify-between items-center;
+        p {
+          @apply text-xs line-clamp-1;
+        }
+      }
+    }
+  }
+}
