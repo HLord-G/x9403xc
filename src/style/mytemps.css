@@ -9,12 +9,12 @@ body{
 }
 
 
-@layer utilities {
+/* @layer utilities {
     *[shadow] {
       @apply shadow-xl;
     }
   }
-
+ */
 
 .widget_holder{
     @apply w-full min-h-[50vh] relative flex flex-col justify-center items-center my-[120px];

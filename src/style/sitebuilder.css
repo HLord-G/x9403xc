@@ -73,7 +73,7 @@ html, body {
 
 
 .layout_3row{
-    @apply w-full flex flex-row justify-center flex-wrap items-center relative bg-base-300;
+    @apply w-full flex flex-row justify-center flex-wrap items-center relative bg-base-300 gap-[10px] p-[10px];
 
     .row{
         @apply flex-1 h-full min-w-[320px]  min-h-[var(--layout-height)] flex flex-col justify-center items-center;
