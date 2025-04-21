@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <input type="text" id="letter" placeholder="letter"><br>
+    <input type="text" id="name" placeholder="name"><br>
+    <input type="text" id="idname" placeholder="id"><br>
+    <select id="componentSelector">
+      <option>Article</option>
+      <option>Avatar</option>
+      <option>Banner</option>
+      <option>Blog</option>
+      <option>Breadcrumb</option>
+      <option>Button</option>
+      <option>Call to action</option>
+      <option>Card</option>
+      <option>Carousel</option>
+      <option>Contact</option>
+      <option>Error</option>
+      <option>Faq</option>
+      <option>Feature</option>
+      <option>Footer</option>
+      <option>Form</option>
+      <option>Gallery</option>
+      <option>Header</option>
+      <option>Hero</option>
+      <option>Input</option>
+      <option>Loading</option>
+      <option>Login</option>
+      <option>Modal</option>
+      <option>News</option>
+      <option>Pagination</option>
+      <option>Pricing</option>
+      <option>Profile</option>
+      <option>Review</option>
+      <option>Section</option>
+      <option>Shopping cart</option>
+      <option>Sidebar</option>
+      <option>Skeleton loader</option>
+      <option>Slider</option>
+      <option>Snackbar</option>
+      <option>Stats</option>
+      <option>Steps</option>
+      <option>Table</option>
+      <option>Tabs</option>
+      <option>Team</option>
+      <option>Testimonial</option>
+      <option>Timeline</option>
+      <option>Toggle</option>
+      <option>Weather</option>
+    </select><br>    
+
+    <textarea name="" id="a" style="width:100%; height: 40vh;"></textarea>
+    <textarea name="" id="b" style="width:100%; height: 40vh;"></textarea>
+
+    <button id="gen"> Generate</button>
+
+    <script>
+
+let srrr = "script"
+
+document.querySelector("#a").addEventListener("input", function(){
+    changes()
+})
+
+
+document.querySelector("#gen").addEventListener("click", function(){
+    changes()
+})
+ 
+
+ 
+function changes() {
+    document.querySelector("#b").value = `{
+            id: '${document.querySelector("#componentSelector").value.toLowerCase()}_${document.querySelector("#idname").value}_${document.querySelector("#letter").value}',
+            label: '${document.querySelector("#name").value.toLowerCase()} - ${document.querySelector("#letter").value.toLowerCase()}',
+            category: '${document.querySelector("#componentSelector").value.toLowerCase()}',
+            media: \`
+<svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>\`,
+            content: \` ${document.querySelector("#a").value} \`, 
+        },
+    `
+}
+ 
+
+
+    </script>
+</body>
+</html>

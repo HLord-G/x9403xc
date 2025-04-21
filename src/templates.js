@@ -1,11 +1,10 @@
-
  
 export const tempholder = () => {
     return  [
         {
             id: 'section-1',
             label: 'Section A',
-            category: 'Sections',
+            category: 'section',
             media: `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-union" viewBox="0 0 16 16">
   <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2z"/>
 </svg>`,
@@ -125,7 +124,7 @@ export const tempholder = () => {
           {
             id: 'section-3_b',
             label: 'Section - B',
-            category: 'Sections',
+            category: 'section',
             media: `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-union" viewBox="0 0 16 16">
   <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2z"/>
 </svg>`,
@@ -159,7 +158,7 @@ export const tempholder = () => {
           },{
             id: 'section-4_c',
             label: `Section - C`,
-            category: 'Sections',
+            category: 'section',
             media: `
 <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
             content: `<section id="sections_041825_c" class="flex flex-row min-h-screen relative max-[769px]:flex-col">
@@ -195,7 +194,7 @@ export const tempholder = () => {
         },{
             id: 'section-5_d',
             label: 'Section - D',
-            category: 'Sections',
+            category: 'section',
             media: `
 <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
             content: `<section id="sections_041825_d" class="flex flex-rcol relative justify-center items-center min-h-[30vh] p-[20px] relative before:contentcontent-[' '] before:absolute before:top-0 before:left-0 before:bg-[#ccfe00] before:p-[20px] before:h-full before:w-[20%]">
@@ -230,7 +229,7 @@ export const tempholder = () => {
         },{
             id: 'section-6_e',
             label: 'Section - E',
-            category: 'Sections',
+            category: 'section',
             media: `
 <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
             content: `<section id="sections_041825_e" class="flex flex-col relative justify-center items-center min-h-[100vh] relative">
@@ -276,7 +275,204 @@ export const tempholder = () => {
             </aside>
         </div>
     </section>`, 
-        },
+        },{
+          id: 'section_042125_f',
+          label: 'section - f',
+          category: 'section',
+          media: `
+<svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
+          content: ` <section id="sections_041825_f" class="flex flex-row relative min-h-[100vh] max-[852px]:flex-col">
+      <div class="flex-1 flex flex-col  items-center">
+          <header class="p-[30px] mt-[50px]">
+              <h2 class="text-4xl">
+                  Company Vision
+              </h2>
+              <p class="mt-[20px]">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eaque inventore delectus voluptatum recusandae quasi. Ratione, omnis sapiente? Dicta labore, distinctio sint blanditiis ratione ex praesentium sed repellat nesciunt asperiores? Quibusdam facere cum sed alias aut odio expedita magnam? Error.
+              </p>
+               
+
+               <aside class="items mt-[10px] max-[852px]:mt-[30px]">
+                      <main class="absolute left-[12%] bottom-[20%] flex-wrap flex flex-row gap-[20px] max-[852px]:gap-[10px] max-[852px]:relative max-[852px]:left-0">
+                          <div class="min-w-[200px] max-w-[200px] z-[1] text-white p-[10px] shadow-2xl min-h-[120px] flex flex-col items-start bg-[#8786d4] max-[852px]:w-full max-[852px]:max-w-[100%]">
+                              <h1 class="mt-[20px] font-bold text-xl"> +3743.3 </h1>
+                              <p class="font-bold italic line-clamp-2">Lorem ipsum dolor sit.</p>
+                          </div>
+                          <div class="min-w-[200px] max-w-[200px] z-[1]  p-[10px] shadow-2xl min-h-[120px] flex flex-col items-start bg-[#c8f409] max-[852px]:w-full max-[852px]:max-w-[100%]">
+                              <h1 class="mt-[20px] font-bold text-xl"> +3743.3 </h1>
+                              <p class="font-bold italic line-clamp-2">Lorem ipsum dolor sit.</p>
+                          </div>
+                          <div class="min-w-[200px] max-w-[200px] z-[1] bg-black text-white  p-[10px] shadow-2xl min-h-[120px] flex flex-col items-start max-[852px]:w-full max-[852px]:max-w-[100%]">
+                              <h1 class="mt-[20px] font-bold text-xl"> +3743.3 </h1>
+                              <p class="font-bold italic line-clamp-2">Lorem ipsum dolor sit.</p>
+                          </div>
+                      </main>
+               </aside>
+          </header>
+      </div>
+      <div class="flex-1 flex flex-col relative justify-center items-center">
+          <img src="https://images.pexels.com/photos/716276/pexels-photo-716276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class=" object-cover h-full w-full" alt="">
+      </div>
+  </section> `, 
+      },{
+        id: 'section_042125_g',
+        label: 'section - g',
+        category: 'section',
+        media: `
+<svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
+        content: `     <section id="sections_041825_g" class="flex flex-col p-[10px] min-h-[100vh] max-[600px]:flex-col-reverse">
+    <div class="p-[10px] italic flex flex-row justify-between items-center px-[20px] max-[600px]:flex-col max-[600px]:gap-[10px] max-[600px]:items-start max-[600px]:mt-[10px]">
+        <a href="#"><p>Lorem, ipsum.</p></a>
+        <a href="#"><p>Lorem, ipsum dolor.</p></a>
+        <a href="#"><p>Lorem, ip.</p></a>
+    </div>
+    <div class="flex flex-row flex-1 max-[912px]:flex-col">
+        <div class="flex-[1.40] flex flex-col justify-center items-start p-[30px] gap-[10px]">
+           <h1 class="text-3xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum?</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime alias quod tempora nesciunt reprehenderit corrupti facere incidunt eaque! Reiciendis repellat consectetur beatae similique architecto, omnis necessitatibus quia veritatis perspiciatis eligendi.</p>
+        
+            <div class="mt-[10px] px-[20px]">
+                <p class="italic">Lorem, ipsum.</p>
+                <h1 class="text-2xl"> Lorem, ipsum. </h1>
+                <p class="italic">Lorem, ipsum.</p>
+            </div>
+
+            <p class="italic mt-[30px]">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque velit, ex aliquid vitae officiis quasi eius fugit magni harum alias.
+            </p>
+
+        </div>
+        <div class="flex-1 flex flex-row">
+            <div class="flex-1 flex flex-col">
+                <aside class="flex-1 flex flex-col min-w-[173.75px] justify-center items-center gap-[5px] bg-[#c8f409] max-[370px]:min-w-[100px]">
+                    <p class="italic font-bold">Value One</p>
+                    <h2 class="text-2xl font-bold">$958</h2>
+                </aside>
+                <aside class="flex-1 flex flex-col text-white min-w-[173.75px] justify-center items-center gap-[10px] bg-[#8786d4] max-[370px]:min-w-[100px]">
+                    <p class="italic font-bold">Value Two</p>
+                    <h2 class="text-2xl font-bold">$958</h2>
+                </aside>
+                <aside class="flex-1 flex flex-col min-w-[173.75px] justify-center items-center gap-[10px] bg-[#c8f409] max-[370px]:min-w-[100px]">
+                    <p class="italic font-bold">Value Three</p>
+                    <h2 class="text-2xl font-bold">$958</h2>
+                </aside>
+            </div>
+            <div class="flex-2 flex flex-col">
+                <aside class="flex-1 flex flex-col justify-center items-start gap-[10px] p-[20px]">
+                    <h3 class="font-bold">+63</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, praesentium.
+                    </p>
+                </aside>
+                <aside class="flex-1 flex flex-col justify-center items-start gap-[10px] p-[20px]">
+                    <h3 class="font-bold">+63</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, praesentium.
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section> `, 
+    },{
+      id: 'section_042125_h',
+      label: 'section - h',
+      category: 'section',
+      media: `
+<svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
+      content: ` <section id="sections_041825_h" class="flex flex-row min-h-[100vh] p-[10px] max-[768px]:flex-col">
+      <div class="w-[375.75px] relative max-[768px]:min-h-[80vh] max-[768px]:w-full"> 
+          <img class="w-full h-full object-cover " src="https://images.pexels.com/photos/3194524/pexels-photo-3194524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      </div>
+      <div class="flex-3 p-[40px] flex flex-col gap-y-[15px] justify-center items-start max-[768px]:p-[10px]"> 
+      
+          <p class="text-sm italic">
+              The Mission
+          </p>
+          <h1 class="text-4xl font-bold">
+              We Produce the Content Focua on Every Details
+          </h1>
+
+          <p class="max-w-[750px]">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis perferendis necessitatibus magnam atque architecto cupiditate, quae exercitationem at eaque, esse ratione ut. Laborum, beatae autem harum veniam architecto vero exercitationem?
+          </p>
+
+          <div class="flex flex-row w-full gap-[10px] mt-[40px] flex-wrap">  
+              <aside class="flex-1 min-h-[180px] gap-[10px] text-base-300 bg-[#8786d4] min-w-[300px] p-[20px] flex flex-col items-center max-[362px]:min-w-full">
+                  <h1 class="text-2xl font-bold">
+                      Lorem ipsum dolor elit. Sit, exercitationem?
+                  </h1>
+                  <p class="italic">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto excepturi quas distinctio a suscipit delectus voluptatum quasi! Alias, dolorem!
+                  </p>
+              </aside>
+              <aside class="flex-1 min-h-[180px] gap-[10px] bg-[#c8f409] min-w-[300px] max-[362px]:min-w-full p-[20px] flex flex-col items-center">
+                  <h1 class="text-2xl font-bold">
+                      Lorem ipsum dolor elit. Sit, exercitationem?
+                  </h1>
+                  <p class="italic">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto excepturi quas distinctio a suscipit delectus voluptatum quasi! Alias, dolorem!
+                  </p>
+              </aside>
+          </div>
+          
+          
+      </div>
+</section> `, 
+  },{
+    id: 'section_042125_i',
+    label: 'section - i',
+    category: 'section',
+    media: `
+<svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
+    content: ` <section id="sections_041825_i" class="flex flex-row p-[20px] min-h-screen max-[876px]:flex-col">
+<div class="flex-[1.39] flex flex-col justify-center items-start px-[30px] p-[20px] gap-[20px] max-[876px]:px-[10px]">
+    <h3 class="text-xl">Lorem, ipsum dolor.</h3>
+    <h1 class="text-4xl">
+        80% Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, doloribus.
+    </h1>
+
+    <p class="mt-[40px]">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora animi in voluptas quis cum. Quibusdam placeat nihil, repellendus reprehenderit quas commodi odio similique quisquam laudantium dolor illo autem velit quod.
+    </p>
+
+    <div class="join">
+        <button class="btn btn-sm bg-black text-white font-bold">S+</button>
+        <button class="btn btn-sm ml-[10px] text-white bg-[#8786d4]">Digital Marketing Grade</button>
+    </div>
+</div>
+<main class="flex-1 flex flex-col gap-[20px] max-[876px]:mt-[30px]">
+    <aside class="flex flex-col items-start p-[20px] gap-[10px] flex-1 shadow bg-[#c8f409]">
+        <h1 class="text-2xl font-bold mt-[10px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, incidunt?
+        </h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, animi? Sint nihil, placeat rerum ullam dignissimos delectus blanditiis minima atque.
+        </p>
+    </aside>
+    <aside class="flex flex-col items-start p-[20px] gap-[10px] flex-1 text-white bg-black shadow">
+        <h1 class="text-2xl font-bold mt-[10px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, incidunt?
+        </h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, animi? Sint nihil, placeat rerum ullam dignissimos delectus blanditiis minima atque.
+        </p>
+    </aside>
+    <aside class="flex flex-col items-start p-[20px] gap-[10px] flex-1 text-white bg-[#8786d4] shadow">
+        <h1 class="text-2xl font-bold mt-[10px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, incidunt?
+        </h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, animi? Sint nihil, placeat rerum ullam dignissimos delectus blanditiis minima atque.
+        </p>
+    </aside>
+</main>
+</section> `, 
+},
+
+
+
+  
     ]
 }
 
@@ -285,7 +481,7 @@ export const tempholder = () => {
 {
     id: 'section-3_a',
     label: 'Section - B',
-    category: 'Sections',
+    category: 'section',
             media: `
 <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
     content: ` `
