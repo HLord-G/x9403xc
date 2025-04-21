@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlexBoy Web Design</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="/libs/lordgflexboy.js"></script>
+    <script type="module" defer src="/src/app.js"></script>
+    <link rel="stylesheet" href="/src/style/sitebuilder.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
@@ -14,104 +22,130 @@
 </head>
 <body data-theme="dark">
     
-    <main class="flex bg-base-300 flex-col justify-center items-center   min-h-screen mask-radial relative  mask-radial-at-bottom mask-b-from-65%" >
-        <div class="relative mx-auto border-gray-800 scale-[1.40] max-[510px]:scale-[1] dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
-            <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white dark:bg-gray-800">
-                <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen.png" class="dark:hidden h-[156px] md:h-[278px] w-full rounded-lg" alt="">
-                <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen-dark.png" class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg" alt="">
+    <span id="home" class="">
+        <main class="flex bg-base-300 flex-col justify-center items-center   min-h-screen mask-radial relative  mask-radial-at-bottom mask-b-from-65%" >
+            <div class="relative mx-auto border-gray-800 scale-[1.40] max-[510px]:scale-[1] dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
+                <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white dark:bg-gray-800">
+                    <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen.png" class="dark:hidden h-[156px] md:h-[278px] w-full rounded-lg" alt="">
+                    <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen-dark.png" class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg" alt="">
+                </div>
             </div>
-        </div>
-        <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]">
-            <div class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-gray-800"></div>
-        </div>
-        
-    </main>
-
-    <main class="flex flex-col justify-center items-center p-[10px] min-h-[50vh] mask-radial-at-top mask-t-from-85%">
+            <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]">
+                <div class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-gray-800"></div>
+            </div>
             
-            <h1 class="text-4xl text-center p-[20px]">
-                Welcome to Flexbox – The Fast & Free Website Builder!
-            </h1>
-
-            <h1 class="text-justif text-smy max-w-[900px] text-2xl p-[20px]">
-                Welcome to Flexboy, the all-in-one free website builder made for developers, freelancers, and business owners who want to launch websites fast and easy.
-<br><br>
-Whether you're creating a portfolio, an ad landing page, or a full website for your business, Flexboy gives you the tools you need — no extra setup, no hassle.
-            </h1> 
-
-            <p class="italic text-center">
-                Build Websites in Minutes. Free. Fast. Forever.
+        </main>
+    
+        <main class="flex flex-col justify-center items-center p-[10px] min-h-[50vh] mask-radial-at-top mask-t-from-85%">
+                
+                <h1 class="text-4xl text-center p-[20px]">
+                    Welcome to Flexbox – The Fast & Free Website Builder!
+                </h1>
+    
+                <h1 class="text-justif text-smy max-w-[900px] text-2xl p-[20px]">
+                    Welcome to Flexboy, the all-in-one free website builder made for developers, freelancers, and business owners who want to launch websites fast and easy.
+    <br><br>
+    Whether you're creating a portfolio, an ad landing page, or a full website for your business, Flexboy gives you the tools you need — no extra setup, no hassle.
+                </h1> 
+    
+                <p class="italic text-center">
+                    Build Websites in Minutes. Free. Fast. Forever.
+                </p>
+        </main>
+    
+        <section class="flex flex-col justify-center items-center my-[120px]">
+            <button class=" bg-base-300 btn btn-xl" id="viewbuilder">Start Building Now</button>
+            <p class="text-sm text-center px-[10px] text-gray-400 mt-2">No sign-up needed. Build your first section in under 1 minute.</p>
+        </section>
+    
+    
+        <section class="relative overflow-hidden mt-[90px]">
+            <div class="min-h-[30vh] gap-[20px] flex flex-row p-[20px] justify-start items-center overflow-x-auto scroll-loop-container" style="scroll-behavior: smooth;">
+                <!-- Original cards -->
+                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center gap-[10px]">
+                    <span class="icon my-[5px] mb-[20px]">
+                        <p class="font-black"><span class="text-blue-400">Tailwind</span> + <span class="text-gray-200">Daisy</span><span class="text-green-400">UI</span></p>
+                    </span>
+                    <p class="text-center text-sm">
+                        Built with Tailwind CSS + DaisyUI
+                    </p>
+                </div>
+                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+                    <span class="icon my-[5px] mb-[20px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M806-440H320v-80h486l-62-62 56-58 160 160-160 160-56-58 62-62ZM600-600v-160H200v560h400v-160h80v160q0 33-23.5 56.5T600-120H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h400q33 0 56.5 23.5T680-760v160h-80Z"/></svg>
+                    </span>
+                    <p class="text-center text-sm">
+                        Drag, drop, and style components in seconds
+                    </p>
+                </div>
+                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+                    <span class="icon my-[5px] mb-[20px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M666-440 440-666l226-226 226 226-226 226Zm-546-80v-320h320v320H120Zm400 400v-320h320v320H520Zm-400 0v-320h320v320H120Zm80-480h160v-160H200v160Zm467 48 113-113-113-113-113 113 113 113Zm-67 352h160v-160H600v160Zm-400 0h160v-160H200v160Zm160-400Zm194-65ZM360-360Zm240 0Z"/></svg>
+                    </span>
+                    <p class="text-center text-sm">
+                        Choose from ready-made templates and reusable components
+                    </p>
+                </div>
+                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+                    <span class="icon my-[5px] mb-[20px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M280-280h84l240-238-86-86-238 238v86Zm352-266 42-44q6-6 6-14t-6-14l-56-56q-6-6-14-6t-14 6l-44 42 86 86ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm280-590q13 0 21.5-8.5T510-820q0-13-8.5-21.5T480-850q-13 0-21.5 8.5T450-820q0 13 8.5 21.5T480-790ZM200-200v-560 560Z"/></svg>
+                    </span>
+                    <p class="text-center text-sm">
+                        Customize with utility-first classes or build your own blocks
+                    </p>
+                </div>
+                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+                    <span class="icon my-[5px] mb-[20px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M220-260q-92 0-156-64T0-480q0-92 64-156t156-64q37 0 71 13t61 37l68 62-60 54-62-56q-16-14-36-22t-42-8q-58 0-99 41t-41 99q0 58 41 99t99 41q22 0 42-8t36-22l310-280q27-24 61-37t71-13q92 0 156 64t64 156q0 92-64 156t-156 64q-37 0-71-13t-61-37l-68-62 60-54 62 56q16 14 36 22t42 8q58 0 99-41t41-99q0-58-41-99t-99-41q-22 0-42 8t-36 22L352-310q-27 24-61 37t-71 13Z"/></svg>
+                    </span>
+                    <p class="text-center text-sm">
+                        100% Free. Forever.
+                    </p>
+                </div>
+                
+       
+            </div>
+        </section>
+     
+    
+        <section class="my-[120px] min-h-[50vh] p-5 flex flex-col justify-center items-center text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">💬 Join the Flexboy Community</h2>
+            <p class="text-gray-400 max-w-xl mb-6">
+              Got questions, suggestions, or just want to hang out? Join our Discord server to chat with other users, get updates, and request features or components!
             </p>
-    </main>
+            <a href="https://discord.gg/your-invite-link" 
+               target="_blank" 
+               class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-md transition">
+              Join Our Discord Chat
+            </a>
+          </section>
+    
+    
+        <div class="h-screen"></div>
+    </span>
 
-    <div class="flex flex-col justify-center items-center my-[120px]">
-        <a class=" bg-base-300 btn btn-xl" href="builder.html">Start Building Now</a>
 
-        <p class="text-sm text-center px-[10px] text-gray-400 mt-2">No sign-up needed. Build your first section in under 1 minute.</p>
+    <div id="builder" class="hidden flex flex-col relative w-full">
+
+        <aside class="patalastas h-[95px] flex flex-col justify-center items-center">
+            <div class="ads border w-[728px] h-[90px]"> ads </div>
+        </aside>
+
+        <nav class="py-[2px] px-[10px] flex flex-row justify-between items-center">
+            <div class="join">
+                <button class="btn btn-xs" id="backhome">FlexBoy</button>
+            </div>
+            <div class="join">
+                <button class="btn btn-xs">Chat</button>
+                <button class="btn btn-xs">Tutorial</button>
+                <button class="btn btn-xs">About</button>
+            </div>
+        </nav>
+      
+          <main class="h-[100dvh]">
+            <div id="studio" class="h-full"></div> 
+          </main>
     </div>
-
-
-    <div class="relative overflow-hidden mt-[90px]">
-        <div class="min-h-[30vh] gap-[20px] flex flex-row p-[20px] justify-start items-center overflow-x-auto scroll-loop-container" style="scroll-behavior: smooth;">
-            <!-- Original cards -->
-            <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center gap-[10px]">
-                <span class="icon my-[5px] mb-[20px]">
-                    <p class="font-black"><span class="text-blue-400">Tailwind</span> + <span class="text-gray-200">Daisy</span><span class="text-green-400">UI</span></p>
-                </span>
-                <p class="text-center text-sm">
-                    Built with Tailwind CSS + DaisyUI
-                </p>
-            </div>
-            <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
-                <span class="icon my-[5px] mb-[20px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M806-440H320v-80h486l-62-62 56-58 160 160-160 160-56-58 62-62ZM600-600v-160H200v560h400v-160h80v160q0 33-23.5 56.5T600-120H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h400q33 0 56.5 23.5T680-760v160h-80Z"/></svg>
-                </span>
-                <p class="text-center text-sm">
-                    Drag, drop, and style components in seconds
-                </p>
-            </div>
-            <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
-                <span class="icon my-[5px] mb-[20px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M666-440 440-666l226-226 226 226-226 226Zm-546-80v-320h320v320H120Zm400 400v-320h320v320H520Zm-400 0v-320h320v320H120Zm80-480h160v-160H200v160Zm467 48 113-113-113-113-113 113 113 113Zm-67 352h160v-160H600v160Zm-400 0h160v-160H200v160Zm160-400Zm194-65ZM360-360Zm240 0Z"/></svg>
-                </span>
-                <p class="text-center text-sm">
-                    Choose from ready-made templates and reusable components
-                </p>
-            </div>
-            <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
-                <span class="icon my-[5px] mb-[20px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M280-280h84l240-238-86-86-238 238v86Zm352-266 42-44q6-6 6-14t-6-14l-56-56q-6-6-14-6t-14 6l-44 42 86 86ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm280-590q13 0 21.5-8.5T510-820q0-13-8.5-21.5T480-850q-13 0-21.5 8.5T450-820q0 13 8.5 21.5T480-790ZM200-200v-560 560Z"/></svg>
-                </span>
-                <p class="text-center text-sm">
-                    Customize with utility-first classes or build your own blocks
-                </p>
-            </div>
-            <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
-                <span class="icon my-[5px] mb-[20px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M220-260q-92 0-156-64T0-480q0-92 64-156t156-64q37 0 71 13t61 37l68 62-60 54-62-56q-16-14-36-22t-42-8q-58 0-99 41t-41 99q0 58 41 99t99 41q22 0 42-8t36-22l310-280q27-24 61-37t71-13q92 0 156 64t64 156q0 92-64 156t-156 64q-37 0-71-13t-61-37l-68-62 60-54 62 56q16 14 36 22t42 8q58 0 99-41t41-99q0-58-41-99t-99-41q-22 0-42 8t-36 22L352-310q-27 24-61 37t-71 13Z"/></svg>
-                </span>
-                <p class="text-center text-sm">
-                    100% Free. Forever.
-                </p>
-            </div>
-            
-   
-        </div>
-    </div>
- 
-
-    <section class="my-[120px] min-h-[50vh] p-5 flex flex-col justify-center items-center text-center">
-        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">💬 Join the Flexboy Community</h2>
-        <p class="text-gray-400 max-w-xl mb-6">
-          Got questions, suggestions, or just want to hang out? Join our Discord server to chat with other users, get updates, and request features or components!
-        </p>
-        <a href="https://discord.gg/your-invite-link" 
-           target="_blank" 
-           class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-md transition">
-          Join Our Discord Chat
-        </a>
-      </section>
-
 
     <!-- <div class="text-center mt-16 max-w-xl mx-auto">
         <h3 class="text-lg font-semibold text-white">💖 Like Flexboy?</h3>
@@ -137,7 +171,6 @@ Whether you're creating a portfolio, an ad landing page, or a full website for y
       </footer> -->
       
 
-    <div class="h-screen"></div>
 
 
 
