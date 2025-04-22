@@ -326,3 +326,29 @@ window.addEventListener("load", function () {
     })
   }
 });
+
+
+
+
+
+
+
+function isFullScreen() {
+  return document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+}
+
+// Example usage
+if (isFullScreen()) {
+  $("#jdh38d").hide()
+} else {
+  $("#jdh38d").show()
+}
+
+// You can also listen to the fullscreen change event
+document.addEventListener('fullscreenchange', function() {
+  if (isFullScreen()) {
+       $("#jdh38d").hide()
+  } else {
+      $("#jdh38d").show()
+  }
+});

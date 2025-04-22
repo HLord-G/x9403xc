@@ -131,10 +131,10 @@
             <p class="text-gray-400 max-w-xl mb-6">
               Got questions, suggestions, or just want to hang out? Join our Discord server to chat with other users, get updates, and request features or components!
             </p>
-            <a href="https://discord.gg/your-invite-link" 
+            <a id="disqusms" 
                target="_blank" 
                class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-md transition">
-              Join Our Discord Chat
+              Join Our Disqus Chat
             </a>
           </section>
     
@@ -240,16 +240,16 @@
 
     <section id="builder" class="hidden flex-col relative w-full">
 
-        <aside class="patalastas h-[95px] flex flex-col justify-center items-center">
+        <aside id="jdh38d" class="patalastas h-[95px] flex flex-col justify-center items-center">
             <div class="ads border w-[728px] h-[90px]"> ads </div>
         </aside>
 
         <nav class="py-[2px] px-[10px] flex flex-row justify-between items-center">
             <div class="join">
-                <a href="#home" class="btn btn-xs" id="backhome">💪FlexBoy</a>
+                <a href="#home" class="btn btn-xs" id="backhome">💪 FlexBoy</a>
             </div>
             <div class="join">
-                <button class="btn btn-xs">Discord Chat</button>
+                <button class="btn btn-xs">Disqus Chat</button>
                 <button class="btn btn-xs">Blog</button>
                 <button class="btn btn-xs">About</button>
                 <button class="btn btn-xs">Donate</button>
@@ -276,6 +276,30 @@
   
 
 
+
+    <aside class="top-0 right-0 z-[999] fixed w-full max-w-[950px] h-screen bg-base-300">
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://flexboy-webdesign.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </aside>
+
+
     <!-- <div class="text-center mt-16 max-w-xl mx-auto">
         <h3 class="text-lg font-semibold text-white">💖 Like Flexboy?</h3>
         <p class="text-gray-400 mt-2">
@@ -300,7 +324,7 @@
       </footer> -->
       
 
-
+ 
 
 
 </body>
