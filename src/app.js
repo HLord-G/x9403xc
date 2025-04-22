@@ -11,9 +11,9 @@ function startInactivityTimer() {
  
   timeoutID = setTimeout(() => {
     document.getElementById("popupdialog").style.display = "block";
-  }, 120000); // 3 minutes = 180000 milliseconds
+  }, 60000); // 3 minutes = 180000 milliseconds
 }
-// 2 * 60 * 1000
+// 120000
 // Mo-reset siya every time naay mouse movement
 document.addEventListener("mousemove", startInactivityTimer);
 
