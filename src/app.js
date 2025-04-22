@@ -1,6 +1,30 @@
 import "./style/lordggripes_ds.css";
 import { tempholder } from "./templates";
+ 
 
+
+let timeoutID;
+ 
+function startInactivityTimer() {
+  clearTimeout(timeoutID); // Reset the timer if naay movement
+
+ 
+  timeoutID = setTimeout(() => {
+    document.getElementById("popupdialog").style.display = "block";
+  }, 60000); // 3 minutes = 180000 milliseconds
+}
+// 2 * 60 * 1000
+// Mo-reset siya every time naay mouse movement
+document.addEventListener("mousemove", startInactivityTimer);
+
+// Initial call to start tracking inactivity
+startInactivityTimer();
+
+// Close button logic
+document.getElementById("popupclosediag").addEventListener("click", () => {
+  document.getElementById("popupdialog").style.display = "none";
+  startInactivityTimer(); // Resume watching for inactivity
+});
 
 
 
@@ -214,6 +238,7 @@ builder
  
 $(document).on("click", "#viewbuilder", ()=>{
     $("#home").hide()
+    $("#bmc-wbtn").hide()
     $("#builder").css({
       "display":"flex"
     })
@@ -222,6 +247,7 @@ $(document).on("click", "#viewbuilder", ()=>{
 
 $(document).on("click", "#backhome", () => {
   $("#home").show()
+  $("#bmc-wbtn").show()
   $("#builder").hide()
   
   // Scroll to top of the page
