@@ -11,7 +11,7 @@ function startInactivityTimer() {
  
   timeoutID = setTimeout(() => {
     document.getElementById("popupdialog").style.display = "block";
-  }, 60000); // 3 minutes = 180000 milliseconds
+  }, 120000); // 3 minutes = 180000 milliseconds
 }
 // 2 * 60 * 1000
 // Mo-reset siya every time naay mouse movement
@@ -263,4 +263,66 @@ setTimeout(() => {
 
 
 
+
+
+
+const scrollContainer = document.querySelector('.scroll-loop-container');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+scrollContainer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    scrollContainer.classList.add('active');
+    startX = e.pageX - scrollContainer.offsetLeft;
+    scrollLeft = scrollContainer.scrollLeft;
+});
+
+scrollContainer.addEventListener('mouseleave', () => {
+    isDown = false;
+    scrollContainer.classList.remove('active');
+});
+
+scrollContainer.addEventListener('mouseup', () => {
+    isDown = false;
+    scrollContainer.classList.remove('active');
+});
+
+scrollContainer.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 1.5; // 1.5 = scroll speed
+    scrollContainer.scrollLeft = scrollLeft - walk;
+});
+
+// For touch devices
+scrollContainer.addEventListener('touchstart', (e) => {
+    isDown = true;
+    startX = e.touches[0].pageX - scrollContainer.offsetLeft;
+    scrollLeft = scrollContainer.scrollLeft;
+});
+
+scrollContainer.addEventListener('touchend', () => {
+    isDown = false;
+});
+
+scrollContainer.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+    const x = e.touches[0].pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    scrollContainer.scrollLeft = scrollLeft - walk;
+});
  
+
+
+window.addEventListener("load", function () {
+  // Check kung ang URL hash kay #home
+  if (window.location.hash === "#builder") {
+    $("#home").hide()
+    $("#bmc-wbtn").hide()
+    $("#builder").css({
+      "display":"flex"
+    })
+  }
+});
