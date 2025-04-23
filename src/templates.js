@@ -1,5 +1,5 @@
  
-export const tempholder = () => {
+const tempholder = () => {
     return  [
         {
             id: 'section-1',
