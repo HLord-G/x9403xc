@@ -257,9 +257,9 @@ $(document).on("click", "#backhome", () => {
 
 
 
-setTimeout(() => {
-    console.clear()
-}, 1000);
+// setTimeout(() => {
+//     console.clear()
+// }, 1000);
 
 
 
@@ -351,4 +351,32 @@ document.addEventListener('fullscreenchange', function() {
   } else {
       $("#jdh38d").show()
   }
+});
+
+
+
+ 
+$(document).on("click", "#disqusms", function () {
+  const $chat = $("#disquschat");
+
+  $chat.removeClass("slide-out").show().addClass("slide-in");
+});
+
+
+$(document).on("click", "#viewchats", function () {
+  const $chat = $("#disquschat");
+
+  $chat.removeClass("slide-out").show().addClass("slide-in");
+});
+
+
+$(document).on("click", "#closechat", function () {
+  const $chat = $("#disquschat");
+
+  $chat.removeClass("slide-in").addClass("slide-out");
+
+  // Delay hiding until animation is done
+  setTimeout(() => {
+    $chat.hide();
+  }, 300); // match with animation duration
 });
