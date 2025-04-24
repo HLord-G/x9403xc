@@ -17,7 +17,7 @@ body{
  */
 
 .widget_holder{
-    @apply w-full min-h-[50vh] relative flex flex-col justify-center items-center my-[120px] ;
+    @apply w-full min-h-[50vh] relative flex flex-col justify-center items-center my-[120px] blur-3xl;
 }
 
 
