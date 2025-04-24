@@ -341,12 +341,36 @@ if (isFullScreen()) {
   $("#jdh38d").show()
 }
 
+
+/*
+jdh38d
+hideads
+*/ 
+
+let adshide = false
+$(document).on("click", "#hideads", function () {
+  const $target = $("#jdh38d");
+  const isVisible = $target.is(":visible");
+
+  if (isVisible) {
+    adshide= true
+    $target.hide();
+    $(this).text("Show Ads");
+  } else {
+    adshide = false
+    $target.show();
+    $(this).text("Hide Ads");
+  }
+});
+
 // You can also listen to the fullscreen change event
 document.addEventListener('fullscreenchange', function() {
   if (isFullScreen()) {
        $("#jdh38d").hide()
   } else {
+    if (!adshide) {
       $("#jdh38d").show()
+    }
   }
 });
 
@@ -355,25 +379,35 @@ document.addEventListener('fullscreenchange', function() {
  
 $(document).on("click", "#disqusms", function () {
   const $chat = $("#disquschat");
-
   $chat.removeClass("slide-out").show().addClass("slide-in");
 });
 
 
 $(document).on("click", "#viewchats", function () {
   const $chat = $("#disquschat");
-
   $chat.removeClass("slide-out").show().addClass("slide-in");
 });
 
 
-$(document).on("click", "#closechat", function () {
+function closeChat() {
   const $chat = $("#disquschat");
-
   $chat.removeClass("slide-in").addClass("slide-out");
-
-  // Delay hiding until animation is done
   setTimeout(() => {
     $chat.hide();
-  }, 300); // match with animation duration
+  }, 300); // same duration as animation
+}
+
+$(document).on("click", "#closechat", function () {
+  closeChat() 
+});
+
+
+// When clicking the close button
+$(document).on("click", "#closechat", closeChat);
+
+// When pressing the ESC key
+$(document).on("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeChat();
+  }
 });

@@ -6,23 +6,16 @@
     <title>FlexBoy Web Design</title>
 
     <script src="public/libs/lordgflexboy.js"></script>
-
     <link href="src/style/lordggripes_ds.css" rel="stylesheet" type="text/css" />
-
     <script src="src/templates.js"></script>
     <script defer src="src/app.js"></script>
-
- 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-    
-
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="hg_journey" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-
     <style>
         body{
             user-select: none;
@@ -67,7 +60,7 @@
             opacity: 0;
             }
         }
-</style>
+    </style>
  
  
 </head>
@@ -288,6 +281,7 @@
                 <a href="#home" class="btn btn-xs" id="backhome">💪 FlexBoy</a>
             </div>
             <div class="join">
+                <button id="hideads" class="btn btn-xs">Hide Ads</button>
                 <button id="viewchats" class="btn btn-xs">Disqus Chat</button>
                 <button class="btn btn-xs">Blog</button>
                 <button class="btn btn-xs">About</button>
@@ -316,11 +310,12 @@
 
 
 
-    <aside id="disquschat" class="top-0 right-0 z-[999] fixed w-full max-w-[950px] h-screen bg-base-300 flex flex-col p-[10px]" style="display: none;">
-        <div class="absolute top-[2px] left-[-27px] cursor-pointer" id="closechat"> 
+    <aside id="disquschat" class="top-0 right-0 z-[999] fixed w-full h-screen bg-base-300 flex flex-row p-[10px]" style="display: none;">
+        <div class="absolute top-[3%] right-[2%] cursor-pointer text-base-300 flex flex-row justify-center items-center gap-[10px]" id="closechat"> 
+            Esc
             <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor"><path d="m336-280 144-144 144 144 56-56-144-144 144-144-56-56-144 144-144-144-56 56 144 144-144 144 56 56ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
         </div>
-        <div class="p-[20px] h-[90px]">
+        <div class="p-[20px] w-[240px] h-full">
             
         </div>
         <iframe src="./discus.html" class="flex-1" frameborder="0"></iframe>
