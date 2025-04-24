@@ -195,8 +195,6 @@ templates: {
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <${scriptHolder} src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></${scriptHolder}>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-<link href="https://flexboy.vercel.app/public_temp/mytemps.css" rel="stylesheet" type="text/css" />
-
             `,
             // customCodeBody: '<div>de</div>',
           }
