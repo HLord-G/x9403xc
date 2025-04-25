@@ -38,9 +38,9 @@ GrapesJsStudioSDK.createStudioEditor({
   },
 
 
-  plugins: [
-    StudioSdkPlugins_flexComponent.init({ /* Plugin options: https://app.grapesjs.com/docs-sdk/plugins/components/flex */ })
-  ],
+  // plugins: [
+  //   StudioSdkPlugins_flexComponent.init({   })
+  // ],
 
 
   layout: {
