@@ -470,7 +470,7 @@ const tempholder = () => {
 </section> `, 
 },{
     id: 'article_042425_a',
-    label: 'mambaui - a',
+    label: 'Article - a',
     category: 'Article',
     media: `
 <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
@@ -522,7 +522,7 @@ const tempholder = () => {
 </article> `, 
 },{
     id: 'article_042425_b',
-    label: 'mambaui - b',
+    label: 'Article - b',
     category: 'Article',
     media: `
 <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
@@ -544,7 +544,7 @@ const tempholder = () => {
 </article>
 <div>
 <div class="flex flex-wrap py-6 gap-2 border-t border-dashed dark:border-gray-600">
-    <a rel="noopener noreferrer" href="#" class="px-3 py-1 rounded-sm hover:underline text-info/80">#MambaUI</a>
+    <a rel="noopener noreferrer" href="#" class="px-3 py-1 rounded-sm hover:underline text-info/80">#Article</a>
     <a rel="noopener noreferrer" href="#" class="px-3 py-1 rounded-sm hover:underline  text-info/80">#TailwindCSS</a>
     <a rel="noopener noreferrer" href="#" class="px-3 py-1 rounded-sm hover:underline  text-info/80">#Angular</a>
 </div>
@@ -567,7 +567,7 @@ const tempholder = () => {
 `, 
 },{
     id: 'article_042425_c',
-    label: 'mambaui - c',
+    label: 'Article - c',
     category: 'Article',
     media: `
 <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,
@@ -575,7 +575,7 @@ const tempholder = () => {
 <div class="w-full mx-auto space-y-4">
 <h1 class="text-5xl font-bold leading-none">Interdum et malesuada fames ac ante ipsum primis in faucibus?</h1>
 <div class="flex flex-wrap space-x-2 text-sm text-base-content/50">
-    <a rel="noopener noreferrer" href="#" class="p-1 hover:underline">#MambaUI</a>
+    <a rel="noopener noreferrer" href="#" class="p-1 hover:underline">#Article</a>
     <a rel="noopener noreferrer" href="#" class="p-1 hover:underline">#TailwindCSS</a>
     <a rel="noopener noreferrer" href="#" class="p-1 hover:underline">#Angular</a>
 </div>
@@ -592,7 +592,7 @@ const tempholder = () => {
 </article> `, 
 },{
     id: 'article_042425_d',
-    label: 'mambaui - d',
+    label: 'Article - d',
     category: 'Article',
     media: `
 <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45" fill="currentColor"><path d="M200-520q-33 0-56.5-23.5T120-600v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v160q0 33-23.5 56.5T760-520H200Zm0-80h560v-160H200v160Zm0 480q-33 0-56.5-23.5T120-200v-160q0-33 23.5-56.5T200-440h560q33 0 56.5 23.5T840-360v160q0 33-23.5 56.5T760-120H200Zm0-80h560v-160H200v160Zm0-400v-160 160Zm0 400v-160 160Z"/></svg>`,

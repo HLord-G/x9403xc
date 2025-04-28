@@ -400,3 +400,83 @@ $(document).on("keydown", function (e) {
     closeChat();
   }
 });
+
+
+
+// about
+
+$(document).on("click", ".about", function () {
+  let aboutMe = $("#aboutme");
+
+  if (aboutMe.hasClass("hidden")) {
+    $("body").css({
+      "overflow":"hidden"
+    })
+      aboutMe
+          .removeClass("hidden")
+          .css({ position: "fixed", left: "-100%", top: "0" }) // initial offscreen
+          .animate({ left: "0" }, 300); // slide in
+  } else {
+      aboutMe
+          .animate({ left: "-100%" }, 300, function() {
+              aboutMe.addClass("hidden").css("left", "0"); // hide after slide out
+          });
+          $("body").css({
+            "overflow":"auto"
+          })
+      }
+});
+
+
+
+
+$(document).on("click", ".term", function () {
+  let termme = $("#termsme");
+
+  if (termme.hasClass("hidden")) {
+    $("body").css({
+      "overflow":"hidden"
+    })
+      termme
+          .removeClass("hidden")
+          .css({ position: "fixed", left: "-100%", top: "0" }) // initial offscreen
+          .animate({ left: "0" }, 300); // slide in
+  } else {
+      termme
+          .animate({ left: "-100%" }, 300, function() {
+              termme.addClass("hidden").css("left", "0"); // hide after slide out
+          });
+          $("body").css({
+            "overflow":"auto"
+          })
+      }
+});
+
+
+
+
+$(document).on("click", ".privacy", function () {
+  let privacy = $("#privacyme");
+
+  if (privacy.hasClass("hidden")) {
+    $("body").css({
+      "overflow":"hidden"
+    })
+      privacy
+          .removeClass("hidden")
+          .css({ position: "fixed", left: "-100%", top: "0" }) // initial offscreen
+          .animate({ left: "0" }, 300); // slide in
+  } else {
+      privacy
+          .animate({ left: "-100%" }, 300, function() {
+              privacy.addClass("hidden").css("left", "0"); // hide after slide out
+          });
+          $("body").css({
+            "overflow":"auto"
+          })
+      }
+});
+
+
+
+//  

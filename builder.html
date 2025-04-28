@@ -1,31 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>FlexBoy Web Design</title>
-    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="/libs/lordgflexboy.js"></script>
-    <script type="module" defer src="/src/app.js"></script>
-    <link rel="stylesheet" href="/src/style/sitebuilder.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBoy Web Builder</title>
 
+    <script src="public/libs/lordgflexboy.js"></script>
+    <link href="src/style/lordggripes_ds.css" rel="stylesheet" type="text/css" />
+    <script src="src/templates.js"></script>
+    <script defer src="src/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-    <link href="https://flexboy.vercel.app/public_temp/mytemps.css" rel="stylesheet" type="text/css" />
+    <script src="public/libs/layouts.umd.js"></script>
+    
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="hg_journey" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <style>
+        body{
+            user-select: none;
+        }
+        .scroll-loop-container {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer and Edge */
+            user-select: none;
+        }
 
-    <link rel="stylesheet" href="/public_temp/mytemps.css">
-    <style> body { display: flex; flex-direction: column; height: 100dvh; padding: 0; margin: 0; } main { flex-grow: 1;} #studio {height: 100%;} .custom-class{   background-color: pink;} </style><body>
+        .scroll-loop-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+                /* Animation Classes */
+        .slide-in {
+            animation: slideIn 0.3s forwards;
+        }
+
+        .slide-out {
+            animation: slideOut 0.3s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+            transform: translateX(100%);
+            opacity: 0;
+            }
+            to {
+            transform: translateX(0);
+            opacity: 1;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+            transform: translateX(0);
+            opacity: 1;
+            }
+            to {
+            transform: translateX(100%);
+            opacity: 0;
+            }
+        }
+    </style>
+ 
+ 
 </head>
-    <body data-theme="dark">
-
-    <nav class="py-[2px] px-[10px]">
-      <button class="btn btn-xs">sdfe</button>
-    </nav>
-
-    <main>
-      <div id="studio"></div> 
-    </main>
+<body data-theme="dark">
+    
+ 
 
 
-  </body>
+
+
+    <section  id="builder" class="flex-col relative w-full">
+
+        <aside id="jdh38d" class="patalastas h-[95px] flex flex-col relative justify-center items-center">
+            <div id="particles-js" class="absolute top-0 left-0 w-full h-full">f</div>
+            <div class="ads border w-[728px] h-[90px] relative z-[9]"> ads </div>
+        </aside>
+
+        <nav class="py-[2px] px-[10px] flex flex-row justify-between items-center">
+            <div class="join">
+                <a href="#home" class="btn btn-xs" id="backhome">💪 FlexBoy</a>
+            </div>
+            <div class="join">
+                <button id="hideads" class="btn btn-xs">Hide Ads</button>
+                <button id="viewchats" class="btn btn-xs">Disqus Chat</button>
+                <button class="btn btn-xs">Blog</button>
+                <button class="btn btn-xs">About</button>
+                <button class="btn btn-xs">Donate</button>
+            </div>
+        </nav>
+      
+          <main class="h-[100dvh]">
+            <div id="studio" class="h-full"></div> 
+          </main>
+    </section>
+
+
+ 
+    <aside id="popupdialog" class="fixed bottom-[3%] left-[1%] card z-[999] bg-base-300  p-[10px] shadow" style="display:none;">
+            <div class="w-ful flex flex-row justify-end items-center">
+                <div id="popupclosediag" style="cursor: pointer;">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="Currentcolor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </div>
+            </div>
+            <main class="p-[6px]  flex flex-col justify-center items-center">
+                <div class="min-w-[300px] min-h-[250px] shadow bg-cover bg-center bg-no-repeat" style="background-image: url(./public/img/ads.png);"></div>
+            </main>
+    </aside>
+  
+
+
+
+    <aside id="disquschat" class="top-0 right-0 z-[999] fixed w-full h-screen bg-base-300 flex flex-row p-[10px]" style="display: none;">
+        <div class="absolute top-[3%] right-[2%] cursor-pointer text-base-300 flex flex-row justify-center items-center gap-[10px]" id="closechat"> 
+            Esc
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor"><path d="m336-280 144-144 144 144 56-56-144-144 144-144-56-56-144 144-144-144-56 56 144 144-144 144 56 56ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+        </div>
+        <div class="p-[20px] w-[240px] h-full">
+            
+        </div>
+        <iframe src="./discus.html" class="flex-1" frameborder="0"></iframe>
+    </aside>
+
+
+
+ 
+</body>
 </html>
