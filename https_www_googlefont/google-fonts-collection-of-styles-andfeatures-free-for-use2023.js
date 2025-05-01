@@ -1,5 +1,16 @@
- 
-const tempholder = () => {
+/*
+© 2023 Google Fonts & flexboy
+
+Google Fonts is free to use, with no fees for both personal and commercial projects. 
+You don’t have to worry about licensing issues because all the fonts are open-source. 
+It’s a great option if you're on a budget or want high-quality fonts that are easy to access. 
+Design-wise, it helps give your website personality and a more professional look.
+
+*/ 
+
+
+
+const _xx947xfee_ = () => {
     return  [
         {
             id: 'section-1',
