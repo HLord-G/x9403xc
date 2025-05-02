@@ -6,7 +6,7 @@ __mfdhe3.push({
     data: {
         pages: [
         {
-            name: 'Home',
+            name: 'Homes',
             component: '<h1 class="title">Template 5</h1><style>.title { color: blue; font-size: 10rem; text-align: center }</style>'
         }
         ]
