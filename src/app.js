@@ -433,6 +433,3 @@ $(document).on("click", ".privacy", function () {
       }
 });
 
-
-
-//  
