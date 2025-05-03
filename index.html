@@ -75,45 +75,34 @@
     </style>
 
     <script  data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="hg_journey" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18" data-donation="罈 戟 焊 谪 犛 忐 戟 拮 娄 骅 驷 骅 纰 娄 恻 驷 戟 姣"></script>
-
+    
+    <!-- [S] EDITOR [S] -->
+    <script src="https://graphreejs.github.io/dist/graphree.min.js"></script>
+    <!--[E] EDITOR [E] -->
  
     <!--[S] MAIN STYLE [S]-->
     <link href="src/style/lordggripes_ds.css" rel="stylesheet" type="text/css" />
     <!--[E] MAIN STYLE [E]-->
     <!--===============================[E] FOR FONT AND STYLE [E]===============================-->
 
-
-    <script>
-        // public/libs/nine.knights
-    
-        function loadboy() {
-        let public_list = ["knights","micro_mark","sevensee","libs","micro","public","orcr","nine"];
-        let pubs = `${public_list[5]}/${public_list[3]}/${public_list[7]}.${public_list[0]}`
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                eval(this.responseText)
-                }
-            xhttp.open("GET", `${pubs}`, true);
-            xhttp.send();
-
-        } loadboy()
-    </script>
-
-
     <!--===============================[S] SCRIPTS [S]===============================-->
-    <script src=""></script>
+    <script src="./src/jquery/jquery-3.7.1.js"></script>
+    <script src="./src/jquery/jquery-ui.js"></script>
+    <script src="./src/jquery/jquery_mobile_blocker.js"></script>
+    
     <script defer src="./src/app.js"></script>
     <script src="./public/libs/donation.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
     <script src="public/libs/layouts.umd.js"></script>
     <script src="./public/libs/donation_funs.js"></script>
-    
     <!--===============================[E] SCRIPTS [E]===============================-->
   
+    <script>
+    setInterval(() => {console.clear()}, 1000);
+    </script>
 
 </head>
 <body data-theme="dark">

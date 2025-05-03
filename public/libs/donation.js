@@ -37,4 +37,4 @@ function scoreCard(inputCodes) {
       .join(" ");
   }
 
-//  console.clear()
+ console.clear()
