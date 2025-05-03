@@ -42,9 +42,9 @@ function  coffee_donation_api(){
 
     } coffee_donation_api()
 
-    setInterval(() => {
-        console.clear()
-    }, 1000);
+    // setInterval(() => {
+    //     console.clear()
+    // }, 1000);
 
 
 
