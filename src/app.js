@@ -195,7 +195,8 @@ $(document).on("click", "#viewbuilder", ()=>{
 
 
 $(document).on("click", "#backhome", () => {
-  builder_click -=1
+  setTimeout(() => {
+    builder_click -=1
 
   $("#home").show()
   $("#bmc-wbtn").show()
@@ -203,6 +204,7 @@ $(document).on("click", "#backhome", () => {
   
   // Scroll to top of the page
   $('html, body').animate({ scrollTop: 0 }) // 'slow' can be replaced with a number like 500 (ms)
+  }, 200);
 })
 
 
@@ -222,6 +224,7 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
+// Drag to scroll (mouse)
 scrollContainer.addEventListener('mousedown', (e) => {
     isDown = true;
     scrollContainer.classList.add('active');
@@ -243,11 +246,11 @@ scrollContainer.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - scrollContainer.offsetLeft;
-    const walk = (x - startX) * 1.5; // 1.5 = scroll speed
+    const walk = (x - startX) * .5; // adjust scroll speed
     scrollContainer.scrollLeft = scrollLeft - walk;
 });
 
-// For touch devices
+// Touch to scroll (mobile)
 scrollContainer.addEventListener('touchstart', (e) => {
     isDown = true;
     startX = e.touches[0].pageX - scrollContainer.offsetLeft;
@@ -261,9 +264,16 @@ scrollContainer.addEventListener('touchend', () => {
 scrollContainer.addEventListener('touchmove', (e) => {
     if (!isDown) return;
     const x = e.touches[0].pageX - scrollContainer.offsetLeft;
-    const walk = (x - startX) * 1.5;
+    const walk = (x - startX) * .5;
     scrollContainer.scrollLeft = scrollLeft - walk;
 });
+
+// Horizontal scroll using mouse wheel
+scrollContainer.addEventListener('wheel', (e) => {
+    e.preventDefault(); // block default vertical scroll
+    scrollContainer.scrollLeft += e.deltaY; // scroll sideways instead
+}, { passive: false });
+
  
 
 

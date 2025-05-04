@@ -36,11 +36,17 @@
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* Internet Explorer and Edge */
             user-select: none;
+            cursor: grab;
+            scroll-behavior: smooth;
         }
 
         .scroll-loop-container::-webkit-scrollbar {
             display: none; /* Chrome, Safari, Opera */
         }
+
+        .scroll-loop-container.active {
+            cursor: grabbing;
+            }
 
                 /* Animation Classes */
         .slide-in {
@@ -108,57 +114,72 @@
 <body data-theme="dark">
     
     <span id="home" class="">
-        <main class="flex bg-base-300 flex-col justify-center items-center min-h-screen mask-radial relative  mask-radial-at-bottom mask-b-from-65% bg-cover bg-center bg-no-repeat" style="background-image: url(./public/img/bg.jpeg);">
-            <div class="relative mx-auto border-gray-800 scale-[1.40] max-[510px]:scale-[1] dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
-                <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white dark:bg-gray-800">
-                    <img src="./public/img/fleximage.png" class="dark:hidden h-[156px] md:h-[278px] w-full rounded-lg" alt="">
-                    <img src="./public/img/fleximage.png" class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg" alt="">
-                </div>
-            </div>
-            <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]">
-                <div class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-gray-800"></div>
-            </div>
-            
-        </main>
-    
-        <main class="flex flex-col justify-center items-center p-[10px] min-h-[50vh] mask-radial-at-top mask-t-from-85%">
-                
-                <h1 class="text-4xl text-center p-[20px] font-black">
+
+        <main class="flex flex-col justify-center items-center p-[10px] min-h-[100vh] mask-radial-at-top mask-b-from70%">
+                <div class="bg-cover bg-center bg-no-repeat absolute top-0 left-0 w-full h-full z-1 opacity-[.6]" style="filter: blur(100px); background-image: url(./public/img/flexads_background.png);"></div>
+                <h1 class="text-5xl text-center p-[20px] font-black relative z-[5] max-[769px]:text-4xl">
                     The Fast & Free Website Builder!
                 </h1>
     
-                <h1 class="text-justif text-smy max-w-[900px] text-2xl p-[20px]">
-                    <span class="font-black">Welcome to Flexboy</span>, the all-in-one free website builder made for developers, freelancers, and business owners who want to launch websites fast and easy.
-    <br><br>
-    Whether you're creating a portfolio, an ad landing page, or a full website for your business, Flexboy gives you the tools you need — no extra setup, no hassle.
+                <h1 class="text-center text-smy max-w-[900px] text-2xl p-[20px] relative z-[5]">
+                    <span class="font-black">Welcome to Flexboy</span> — the free website builder for developers, freelancers, and businesses who want to launch fast.
+                    <br><br>
+                    Build portfolios, landing pages, or full sites with zero setup and zero hassle.
                 </h1> 
     
-                <p class="italic text-center">
+                <p class="italic text-center relative z-[5]">
                     Build Websites in Minutes. Free. Fast. Forever.
                 </p>
+
+                <section class="flex flex-col justify-center items-center my-[60px] relative z-[5]" my-[120px]>
+                    <a href="#builder" class=" bg-base-300 btn btn-xl btn-warning text-base-content border-pink-500 max-[1000px]:hidden" id="viewbuilder">Get Start</a>
+        
+                    <div href="#builder" class=" bg-base-300 btn-warning text-base-content min-[1000px]:hidden mx-[20px]"> <div role="alert" class="alert alert-error">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Sorry, this screen size is not supported. Please use a larger screen.</span>
+                          </div>
+        
+                    </div>
+                    <p class="text-sm text-center px-[10px] text-gray-400 mt-2">No sign-up needed. Build your first section in under 8 minute.</p>
+                </section>
+            
         </main>
-    
-        <section class="flex flex-col justify-center items-center my-[120px]">
-            <a href="#builder" class=" bg-base-300 btn btn-xl btn-warning text-base-content border-pink-500 max-[1000px]:hidden" id="viewbuilder">Start Building Now</a>
 
-            <div href="#builder" class=" bg-base-300 btn-warning text-base-content min-[1000px]:hidden mx-[20px]"> <div role="alert" class="alert alert-error">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Sorry, this screen size is not supported. Please use a larger screen.</span>
-                  </div>
 
-            </div>
-            <p class="text-sm text-center px-[10px] text-gray-400 mt-2">No sign-up needed. Build your first section in under 8 minute.</p>
+        <section class="mt-[60px] mb-[40px] flex flex-col justify-center items-center p-[20px] min-h-[80vh] mask-radial relative  mask-radial-at-bottom mask-b-from-30% max-[926px]:hidden">
+                    <img src="./public/img/fleximage.png" class="   w-[95%] max-[452px]:object-[right] h-[100vh] rounded-lg" alt="">
+        </section>
+
+
+        <article class="text-center p-[20px] mb-[150px] max-[926px]:hidden">
+            <h1 class="text-5xl font-bold">
+             <span>Flexboy lets you build websites fast</span> <br><span>no code needed.</span>
+            </h1>
+         </article>
+
+        <section class="my-[150px] min-h-screen  min-[926px]:hidden">
+            <aside class="overflow-x-hidden min-h-[80vh] relative flex flex-row mask-b-from-30%">
+                <div class="flex-1 "></div>
+                <div class="flex-2 bg-cover bg-left-top rounded-tl-3xl rounded-bl-3xl" style="background-image: url(./public/img/fleximage.png);"></div>
+            </aside>
+            <article class="text-center mt-[60px] p-[20px]">
+                <h1 class="text-3xl font-bold max-[560px]:text-2xl">
+                 <span>Flexboy lets you build websites fast</span> <br><span>no code needed.</span>
+                </h1>
+             </article>
         </section>
     
     
-        <section class="relative overflow-hidden mt-[90px] w-full flex flex-row justify-center items-center">
+
+    
+        <section class="relative overflow-hidden mt-[90px] w-full flex flex-row justify-center items-center mask-r-from-80% mask-l-from-80%">
             <div class="min-h-[30vh] gap-[20px] flex flex-row p-[20px] justify-start items-center overflow-x-auto scroll-loop-container" style="scroll-behavior: smooth;">
                 <!-- Original cards -->
                 <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center gap-[10px]">
                     <span class="icon my-[5px] mb-[20px]">
-                        <p class="font-black"><span class="text-blue-400">Tailwind</span> + <span class="text-gray-200">Daisy</span><span class="text-green-400">UI</span></p>
+                        <p class="font-black text-xl"><span class="text-blue-400">Tailwind</span> + <span class="text-gray-200">Daisy</span><span class="text-green-400">UI</span></p>
                     </span>
                     <p class="text-center text-sm">
                         Built with Tailwind CSS + DaisyUI
@@ -178,14 +199,6 @@
                     </span>
                     <p class="text-center text-sm">
                         Choose from ready-made templates and reusable components
-                    </p>
-                </div>
-                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
-                    <span class="icon my-[5px] mb-[20px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M280-280h84l240-238-86-86-238 238v86Zm352-266 42-44q6-6 6-14t-6-14l-56-56q-6-6-14-6t-14 6l-44 42 86 86ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm280-590q13 0 21.5-8.5T510-820q0-13-8.5-21.5T480-850q-13 0-21.5 8.5T450-820q0 13 8.5 21.5T480-790ZM200-200v-560 560Z"/></svg>
-                    </span>
-                    <p class="text-center text-sm">
-                        Customize with utility-first classes or build your own blocks
                     </p>
                 </div>
                 <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
@@ -227,39 +240,47 @@
             </div>
           </aside>
     
-          <section class=" min-h-screen p-5 flex flex-col mt-[140px] justify-center items-center text-center mb-[150px]">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-[90px]">🧠 Tutorials and Blog</h2>
+          <section class=" min-h-screen p-5 flex flex-col mt-[140px] justify-center items-center text-center mb-[90px]">
+            <h2 class="text-2xl md:text-5xl font-bold text-white mb-[50px]">🧠 Tutorials and vlog</h2>
 
                 
-                <a href="#">
-                    <aside class="flex flex-row card shadow mb-[40px] justify-around bg-base-200 p-[10px] items-center max-w-[800px] w-full max-[818px]:flex-col-reverse">
-                        <article class="p-[20px] px-[20px]">
-                            <h1 class="text-2xl text-left mb-[10px]">
+                <aside class="flex flex-row card shadow p-[20px] mb-[40px]  bg-base-200 min-h-[40vh] w-full max-w-[1000px] max-[818px]:flex-col-reverse">
+                    <div class="flex-1 text-left"> 
+                        <article class="p-[30px] max-[426px]:p-[10px]">
+                            <h1 class="text-2xl font-bold">
                                 How to Make & Host a Website in Minutes (No Code! & Free!)
-                            </h1>                        
-                            <p class="text-justify text-xs"> 
+                            </h1>
+                            <p class="mt-[15px] text-justify line-clamp-4 text-base-content/50 italic"> 
                                 Learn how to create a website in minutes using Flexboy — no coding needed, just drag and drop. Then I’ll show you how to host it online for free using GitHub Pages. Fast, simple, and perfect for beginners who want a live website today!
                             </p>
-                        </article>
-                        <div class="video-image w-full min-w-[345px] max-[560px]:min-w-full min-h-[220px] shadow max-[818px]:mt-[20px] card bg-cover bg-center" style="background-image:url(./public/img/blog1.png);">
-                        </div>
-                    </aside>
-                </a>
-
-               <a href="#">
-                <aside class="flex flex-row card shadow mb-[40px] justify-around bg-base-200 p-[10px] items-center max-w-[800px] w-full max-[818px]:flex-col">
-                    <div class="video-image w-full min-w-[345px] max-[560px]:min-w-full min-h-[220px] shadow max-[818px]:mt-[20px] card">
+                        </article>   
                     </div>
-                    <article class="p-[20px] px-[20px]">
-                        <h1 class="text-2xl text-left mb-[10px]">
-                            How to Add AI Chatbot to Your Website in Minutes – Fast & Easy Tutorial!
-                        </h1>                        
-                        <p class="text-justify text-xs"> 
-                            Add an AI chatbot to your website in minutes! 🤖 This quick tutorial covers setup with HTML and Tailwind CSS. Perfect for beginners! 🔥
-                        </p>
-                    </article>
+                    <div class="flex-1 flex flex-col justify-center items-center">
+                        <img class="card" src="./public/img/blog1.png" alt="">     
+                    </div>
                 </aside>
-               </a>
+
+
+                <aside class="flex flex-row card shadow p-[20px] mb-[40px]  bg-base-200 min-h-[40vh] w-full max-w-[1000px] max-[818px]:flex-col">
+                    
+                    <div class="flex-1 flex flex-col justify-center items-center">
+                        <img class="card" src="./public/img/blog1.png" alt="">     
+                    </div>
+
+                    <div class="flex-1 text-left"> 
+                        <article class="p-[30px] max-[426px]:p-[10px]">
+                            <h1 class="text-2xl font-bold">
+                                How to Add AI Chatbot to Your Website in Minutes – Fast & Easy Tutorial!
+                            </h1>
+                            <p class="mt-[15px] text-justify line-clamp-4 text-base-content/50 italic"> 
+                                Add an AI chatbot to your website in minutes! 🤖 This quick tutorial covers setup with HTML and Tailwind CSS. Perfect for beginners! 🔥
+                            </p>
+                        </article>   
+                    </div>
+     
+                </aside>
+
+ 
                 
 
                 <div class="mt-[20px] flex flex-col justify-center items-center">
@@ -360,7 +381,10 @@ Thanks a lot for the support!
           </main>
     </section>
 
-    <aside id="popupdialog" class="fixed bottom-[3%] left-[1%] card z-[999] bg-base-300  p-[10px] shadow" style="display:none;">
+
+
+    <!-- popups -->
+    <aside id="popupdialog" class="fixed bottom-[3%] left-[1%] card z-[999] bg-base-300  p-[10px] shadow mask-b-from-80%" style="display:none;">
             <div class="w-ful flex flex-row justify-end items-center">
                 <div id="popupclosediag" style="cursor: pointer;">
                         <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="Currentcolor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
