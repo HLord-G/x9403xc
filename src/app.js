@@ -177,17 +177,26 @@ home
 builder
 */ 
 
+
+let builder_click = 0
  
 $(document).on("click", "#viewbuilder", ()=>{
+  builder_click +=1
     $("#home").hide()
     $("#bmc-wbtn").hide()
     $("#builder").css({
       "display":"flex"
     })
+
+    if(builder_click >= 3){
+      alert("Builder won't open?")
+    }
 })
 
 
 $(document).on("click", "#backhome", () => {
+  builder_click -=1
+
   $("#home").show()
   $("#bmc-wbtn").show()
   $("#builder").hide()
@@ -261,11 +270,13 @@ scrollContainer.addEventListener('touchmove', (e) => {
 window.addEventListener("load", function () {
   // Check kung ang URL hash kay #home
   if (window.location.hash === "#builder") {
-    $("#home").hide()
-    $("#bmc-wbtn").hide()
-    $("#builder").css({
-      "display":"flex"
-    })
+    setTimeout(() => {
+      $("#home").hide()
+      $("#bmc-wbtn").hide()
+      $("#builder").css({
+        "display":"flex"
+      })
+    }, 100);
   }
 });
 
@@ -433,3 +444,10 @@ $(document).on("click", ".privacy", function () {
       }
 });
 
+
+
+
+window.addEventListener('beforeunload', function (e) {
+  e.preventDefault(); // Required for some browsers
+  e.returnValue = 'Sure ka? Ma-reload ang page, basin mawala imong mga changes.';
+});
