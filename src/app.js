@@ -37,12 +37,6 @@ GrapesJsStudioSDK.createStudioEditor({
   default: _xx947xfee_()
   },
 
-
-  // plugins: [
-  //   StudioSdkPlugins_flexComponent.init({   })
-  // ],
-
-
   layout: {
     default: {
       type: 'row',
@@ -172,6 +166,18 @@ templates: {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 home
 builder
@@ -179,18 +185,36 @@ builder
 
 
 let builder_click = 0
- 
+ let clickonce = false
 $(document).on("click", "#viewbuilder", ()=>{
-  builder_click +=1
+  if (!clickonce) {
+    clickonce = !clickonce
+    builder_click +=1
     $("#home").hide()
     $("#bmc-wbtn").hide()
     $("#builder").css({
       "display":"flex"
     })
+  
+      if(builder_click >= 2){
+        localStorage.clear();
+        builder_click =1
+        location.reload();
+  
+        setTimeout(() => {
+              $("#home").hide()
+              $("#bmc-wbtn").hide()
+              $("#builder").css({
+                "display":"flex"
+              })
+        }, 200);
+  
+      }
 
-    if(builder_click >= 3){
-      alert("Builder won't open?")
-    }
+      setTimeout(() => {
+        clickonce = !clickonce
+      }, 100);
+  }
 })
 
 
@@ -277,9 +301,14 @@ scrollContainer.addEventListener('wheel', (e) => {
  
 
 
+
 window.addEventListener("load", function () {
   // Check kung ang URL hash kay #home
   if (window.location.hash === "#builder") {
+
+    localStorage.clear();
+
+
     setTimeout(() => {
       $("#home").hide()
       $("#bmc-wbtn").hide()
