@@ -193,11 +193,11 @@ $(document).on("click", "#viewbuilder", ()=>{
     $("#home").hide()
     $("#bmc-wbtn").hide()
     $("#builder").css({
-      "display":"flex"
+      "visibility":"visible"
     })
   
       if(builder_click >= 2){
-        localStorage.clear();
+        // localStorage.clear();
         builder_click =1
         location.reload();
   
@@ -205,7 +205,7 @@ $(document).on("click", "#viewbuilder", ()=>{
               $("#home").hide()
               $("#bmc-wbtn").hide()
               $("#builder").css({
-                "display":"flex"
+                "visibility":"visible"
               })
         }, 200);
   
@@ -224,7 +224,9 @@ $(document).on("click", "#backhome", () => {
 
   $("#home").show()
   $("#bmc-wbtn").show()
-  $("#builder").hide()
+  $("#builder").css({
+    "visibility":"hidden"
+  })
   
   // Scroll to top of the page
   $('html, body').animate({ scrollTop: 0 }) // 'slow' can be replaced with a number like 500 (ms)
@@ -306,14 +308,14 @@ window.addEventListener("load", function () {
   // Check kung ang URL hash kay #home
   if (window.location.hash === "#builder") {
 
-    localStorage.clear();
+    // localStorage.clear();
 
 
     setTimeout(() => {
       $("#home").hide()
       $("#bmc-wbtn").hide()
       $("#builder").css({
-        "display":"flex"
+        "visibility":"visible"
       })
     }, 100);
   }
