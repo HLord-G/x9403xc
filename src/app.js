@@ -120,6 +120,8 @@ GrapesJsStudioSDK.createStudioEditor({
 },
 
 
+
+
 templates: {
   layout: {
     type: 'panelTemplates',
@@ -142,9 +144,13 @@ templates: {
             title: 'FlexBoy Web Design',
             description: 'FlexBoy description',
             customCodeHead: `
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<${scriptHolder} src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></${scriptHolder}>
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <${scriptHolder} src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></${scriptHolder}>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <${scriptHolder} src="https://code.jquery.com/jquery-3.7.1.js"></${scriptHolder}>
+    <${scriptHolder} src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></${scriptHolder}>
+    <${scriptHolder} src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></${scriptHolder}>
+    <${scriptHolder} src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></${scriptHolder}>
             `,
             // customCodeBody: '<div>de</div>',
           }
@@ -164,10 +170,7 @@ templates: {
   }
 });
 
-
-
-
-
+ 
 
 
 
@@ -492,3 +495,69 @@ window.addEventListener('beforeunload', function (e) {
   e.preventDefault(); // Required for some browsers
   e.returnValue = 'Sure ka? Ma-reload ang page, basin mawala imong mga changes.';
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).on("click", "#testcopy", function(){
+  let iframe = document.querySelector("iframe.gjs-frame");
+  let fullDoc = iframe.contentDocument.documentElement.outerHTML;
+
+  let newWindow = window.open("", "_blank");
+  newWindow.document.open();
+  newWindow.document.write(fullDoc);
+  newWindow.document.close();
+});
+
+
+
+// Kuhaa ang tanan buttons sulod sa toolbar gamit jQuery
+
+
+const targetNode = document.getElementById('studio');
+
+if (targetNode) {
+  const observer = new MutationObserver((mutationsList, observer) => {
+      if (targetNode.innerHTML.trim() !== '') {
+          observer.disconnect(); // stop observing
+
+          // Run your code here
+         
+          setTimeout(() => {
+            $(".gs-cmp-topbar-right").append(`<button id="testcopy"> g</button>`);
+
+          let $buttons = $('.gs-cmp-topbar-right .gs-cmp-tooltip button');
+          $buttons.eq(6).css({
+              "display":"none"
+          })
+
+
+
+          // if ($saveButton.length) {
+          //     $saveButton.on('click', function () {
+          //         console.log("Save button clicked!");
+          //         alert("Data Saved Successfully!");
+          //     });
+          // } else {
+          //     console.error("Save button not found");
+          // }
+          }, 1000);
+
+      }
+  });
+
+  observer.observe(targetNode, { childList: true, subtree: true });
+}
