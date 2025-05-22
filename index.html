@@ -104,6 +104,10 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
     <script src="public/libs/layouts.umd.js"></script>
     <script src="./public/libs/donation_funs.js"></script>
+    <script src="./public/libs/element_definer.js"></script>
+ 
+ 
+
     <!--===============================[E] SCRIPTS [E]===============================-->
   
     <script>
@@ -113,7 +117,18 @@
 </head>
 <body data-theme="dark">
     
+
+
+
     <span id="home" class="z-[99]">
+        <nav class="bg-base-300 fixed w-full z-[10] flex flex-row justify-between items-center px-[20px]">
+            <div id="flee" class="text-sm">FlexBoy</div>
+            <div class="join">
+                <button class="btn btn-sm">Free Template</button>
+                <button class="btn btn-sm">Vlog</button>
+                <button class="btn btn-sm">Editor</button>
+            </div>
+        </nav>
 
         <main class="flex flex-col justify-center items-center p-[10px] min-h-[100vh] mask-radial-at-top mask-b-from70%">
                 <div class="bg-cover bg-center bg-no-repeat absolute top-0 left-0 w-full h-full z-1 opacity-[.6]" style="filter: blur(100px); background-image: url(./public/img/flexads_background.png);"></div>
@@ -132,9 +147,9 @@
                 </p>
 
                 <section class="flex flex-col justify-center items-center my-[60px] relative z-[5]" my-[120px]>
-                    <a href="#builder" class=" bg-base-300 btn btn-xl btn-warning text-base-content border-pink-500 max-[1000px]:hidden" id="viewbuilder">Get Start</a>
+                    <a  class=" bg-base-300 btn btn-xl btn-warning text-base-content border-pink-500 max-[1000px]:hidden" id="viewbuilder">Get Start</a>
         
-                    <div href="#builder" class=" bg-base-300 btn-warning text-base-content min-[1000px]:hidden mx-[20px]"> <div role="alert" class="alert alert-error">
+                    <div  class=" bg-base-300 btn-warning text-base-content min-[1000px]:hidden mx-[20px]"> <div role="alert" class="alert alert-error">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
@@ -170,8 +185,6 @@
                 </h1>
              </article>
         </section>
-    
-    
 
     
         <section class="relative overflow-hidden mt-[90px] w-full flex flex-row justify-center items-center mask-r-from-80% mask-l-from-80%">
@@ -279,15 +292,10 @@
                     </div>
      
                 </aside>
-
- 
-                
-
                 <div class="mt-[20px] flex flex-col justify-center items-center">
-                        <button class="btn btn-lg"> View More </button>
+                        <button class="btn btn-lg text-3xl"> View More </button>
                 </div>
            </section>
-
 
 
            <section hidden class="min-h-[60vh] p-[10px] flex flex-col justify-center items-center">
@@ -296,14 +304,13 @@
            </section>
 
 
-
            <section class="min-h-[40vh] flex flex-row mask-radial relative max-[770px]:flex-col">
                     <img class="absolute top-[0] left-[0] h-full w-full object-cover blur-3xl" src="public/img/donbackground.jpg">
 
                 <main class=" px-[30px] flex-[.75] flex justify-center items-center z-[99] max-[770px]:py-[30px]">
                     <a href="https://www.buymeacoffee.com/hg_journey"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=hg_journey&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
                 </main>
-                <main class="flex-1 flex justify-center relative items-center p-[30px] z-[99] mask-radial-at-bottom mask-b-from-67% mask-t-from-75% bg-cover max-[770px]:py-[30px]">
+                <main class="flex-1 flex justify-center relative items-center p-[30px] z-[9] mask-radial-at-bottom mask-b-from-67% mask-t-from-75% bg-cover max-[770px]:py-[30px]">
                     <p class="max-w-[550px] relative font-semibold text-2xl">
                         If this site helped you out, consider sending a small thank you.
 I love coffee — but if you’re up for it, a donation works even better. ☕😉
@@ -311,7 +318,205 @@ Thanks a lot for the support!
                     </p>
                 </main>
            </section>
-           <br>
+
+
+           <!--=====================[] TEMPLATES []=====================-->
+           <section class="bg-base-300 py-[120px] min-h-screen p-5 flex flex-col  justify-start items-center text-center" style="zoom:.8;">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-[150px]">🆓 Free Templates and Components</h2>
+
+                <div class="w-full flex flex-row justify-center gap-[30px] items-center flex-wrap">
+                    <aside class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
+                        <fieldset>
+                            <img src="https://dummyimage.com/400x325" class="object-cover object-center w-full h-[400px] border" alt="">
+                        </fieldset>
+                        
+                        <div class="mt-[10px] font-bold">
+                            <h1 class="text-2xl"> route </h1>
+                        </div>
+                    </aside>
+
+                    <aside class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
+                        <fieldset>
+                            <img src="" class="w-full h-[400px] border" alt="">
+                        </fieldset>
+                        
+                        <div class="mt-[10px] font-bold">
+                            <h1 class="text-2xl"> degree </h1>
+                        </div>
+                    </aside>
+
+                    <aside class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
+                        <fieldset>
+                            <img src="" class="w-full h-[400px] border" alt="">
+                        </fieldset>
+                        
+                        <div class="mt-[10px] font-bold">
+                            <h1 class="text-2xl"> becoming </h1>
+                        </div>
+                    </aside>
+
+                    <aside class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
+                        <fieldset>
+                            <img src="" class="w-full h-[400px] border" alt="">
+                        </fieldset>
+                        
+                        <div class="mt-[10px] font-bold">
+                            <h1 class="text-2xl"> degree </h1>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="mt-[80px] flex flex-col justify-center items-center">
+                    <button class="btn btn-lg text-3xl" id="viewtemps"> View More </button>
+                </div>
+          </section>
+
+            <div id="tempaltes" class="fixed hidden top-0 left-0 w-full z-9 p-[10px] bg-base-300 h-[100vh]">
+                <div class="flex flex-col w-full h-full mt-[10px] overflow-x-hidden">
+                    <nav class="py-[20px] px-[30px] mb-[20px] w-full flex flex-row justify-between items-center">
+                        <div> 
+                            <h3 class="text-3xl font-bold max-[425px]:text-2xl">
+                                FlexBoy
+                            </h3>
+                        </div>
+                        <div> 
+                            <button id="tamplates_close" class="btn btn-md px-[10px]">Back</button>
+                        </div>
+                    </nav>
+
+                    <main id="template_views" class="w-full flex flex-row justify-center gap-[30px] items-center flex-wrap" style="zoom:.8;">
+                    </main>
+
+
+                    <div id="paginationBtns" class="flex flex-row flex-wrap justify-center items-center gap-2 my-[150px]"></div>
+                    <footer class="px-4 py-8 bg-base-300">
+                        <div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
+                            <div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
+                                <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full dark:bg-default-600">
+                                    <h1 class="text-xl">💪</h1>
+                                </div>
+                                <ul class="flex flex-wrap items-center space-x-4 sm:space-x-8">
+                                    <li>
+                                        <a rel="noopener noreferrer" class="term" href="#terms">Terms of Use</a>
+                                    </li>
+                                    <li>
+                                        <a rel="noopener noreferrer" class="privacy" href="#">Privacy</a>
+                                    </li>
+                                    <li>
+                                        <a rel="noopener noreferrer" class="about" href="#about">About</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
+                                <li class="text-sm text-center">
+                                    Made with 💻 + ☕ by LordG · Powered by TailwindCSS & DaisyUI · Flexboy is 100% Free Forever    
+                                </li>
+             
+            
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+ 
+            <aside id="template_discriptiom" class="hidden border border-base-content/40 fixed w-full h-full z-[99]  bg-base-300/70 shadow top-[50%] left-[50%]" style="transform: translate(-50%, -50%);">
+             
+
+                <main class="w-full h-full flex flex-row">
+                    <div class="flex-5 bg-base-300  p-[10px]  overflow-x-auto">
+
+                        <aside class=" bg-base-200 flex flex-row justify-center items-center py-[10px] min-h-[105px] bg-cover bg-no-repeat bg-center max-[1072px]:bg-left bg-[url('./public/img/flexads_background.png')] px-[10px] gap-[20px] max-[431px]:gap-[0px] my-[20px]">
+                            <div class="container flex flex-row justify-between items-center">
+                                <div class="flex-1 flex flex-row">
+                                    <div class="text-bold text-5xl mr-[10px] max-[768px]:text-4xl max-[458px]:text-3xl">💪</div>
+                                    <div class="text-bold text-6xl hammersmith-one-regular max-[768px]:text-4xl max-[458px]:text-3xl">FLEXBOY</div>
+                                </div>
+                                <div class="flex-1 text-bold text-right px-[30px] italic text-2xl max-[1027px]:text-[17px] max-[800px]:text-[13px] max-[431px]:text-[10px] max-[431px]:px-[20px]">
+                                    <p class="">BUILD WEBSITES IN MINUTES. FREE. FAST. FOREVER.</p>
+                                </div>
+                            </div>
+                        </aside>
+
+                        <div class="flex flex-row justify-center my-[40px] px-[20px] max-[620px]:mt-[230px] max-[620px]:mb-[230px]  items-center w-full h-full max-[620px]:flex-col" style="zoom:.8;">
+                            <button class="btn btn-circle absolute top-[3%] right-[2%] z-[99]" id="closeempview">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                  </svg>
+                              </button>
+                           
+                            <div class="w-[420px] max-[394px]:w-[310px] h-full max-[620px]:min-h-[430px] ">
+                                <img src="" class="w-full h-full object-cover object-center border" alt="">
+                            </div>
+                            <div class="flex-2 h-full p-[30px]">
+                                <h1 class="text-3xl font-bold mb-[20px]">title discriptoi</h1>   
+                                
+                                <p class="text-base-content/50 italic">
+                                    jungle successful negative around composed hearing traffic noise regular yet balance twice drive courage wet different quickly breathing finest happy continent factory plenty telephone
+                                </p>
+
+                                <br><hr class="border border-base-content/10">
+                                <div class="mt-[30px]">
+                                    <div class="badge badge-lg m-[3px]">Tailwind</div>
+                                    <div class="badge badge-lg m-[3px]">DaisyUI</div>
+                                    <div class="badge badge-lg m-[3px]">Gsap</div>
+                                    <div class="badge badge-lg m-[3px]">Swipejs</div>
+                                </div>
+                                <br><hr class="border border-base-content/10">
+                                <div class="join mt-[25px] gap-[10px]">
+                                    <a href="#" target="_blank" class="btn btn-md">View Template</a>
+
+                                    <button class="btn btn-md">Save</button>
+                                    
+                                    <div class="indicator">
+                                        <span class="indicator-item badge badge-sm">12</span>
+                                        <button class="btn btn-md btn-secondary text-2xl">🤍</button>
+                                    </div>
+                                </div>
+
+
+                                <div class="more mt-[80px]">
+                                    <h5 class="italic text-base-content/40">More</h5>
+
+                                    <div class="mt-[10px] flex flex-row justify-around items-center flex-wrap gap-[5px]">
+                                        <aside class="min-w-[120px] text-lg font-bold px-[10px] py-[5px] bg-secondary/80 flex-1">
+                                            case
+                                        </aside>
+                                        <aside class="min-w-[120px] text-lg font-bold px-[10px] py-[5px] bg-secondary/80 flex-1">
+                                            stand
+                                        </aside>
+                                        <aside class="min-w-[120px] text-lg font-bold px-[10px] py-[5px] bg-secondary/80 flex-1">
+                                            book
+                                        </aside>
+                                        <aside class="min-w-[120px] text-lg font-bold px-[10px] py-[5px] bg-secondary/80 flex-1">
+                                            book
+                                        </aside>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <aside class="max-[690px]:mt-[220px] max-[620px]:mt-[360px] bg-base-200 flex flex-row justify-center items-center py-[10px] min-h-[105px] bg-cover bg-no-repeat bg-center max-[1072px]:bg-left bg-[url('./public/img/flexads_background.png')] px-[10px] gap-[20px] max-[431px]:gap-[0px] my-[20px]">
+                            <div class="container flex flex-row justify-between items-center">
+                                <div class="flex-1 flex flex-row">
+                                    <div class="text-bold text-5xl mr-[10px] max-[768px]:text-4xl max-[458px]:text-3xl">💪</div>
+                                    <div class="text-bold text-6xl hammersmith-one-regular max-[768px]:text-4xl max-[458px]:text-3xl">FLEXBOY</div>
+                                </div>
+                                <div class="flex-1 text-bold text-right px-[30px] italic text-2xl max-[1027px]:text-[17px] max-[800px]:text-[13px] max-[431px]:text-[10px] max-[431px]:px-[20px]">
+                                    <p class="">BUILD WEBSITES IN MINUTES. FREE. FAST. FOREVER.</p>
+                                </div>
+                            </div>
+                        </aside>
+
+                    </div>
+                </main>
+            </aside>
+           <!--=====================[] TEMPLATES []=====================-->
+
+          
+          
+
+
            <aside class="bg-base-200 flex flex-row justify-center items-center py-[10px] min-h-[105px] bg-cover bg-no-repeat bg-center max-[1072px]:bg-left bg-[url('./public/img/flexads_background.png')] px-[10px] gap-[20px] max-[431px]:gap-[0px]">
             <div class="container flex flex-row justify-between items-center">
                 <div class="flex-1 flex flex-row">
@@ -323,7 +528,7 @@ Thanks a lot for the support!
                 </div>
             </div>
           </aside>
-          <br>
+
 
            <footer class="px-4 py-8 bg-base-300">
             <div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
@@ -356,7 +561,7 @@ Thanks a lot for the support!
     </span>
 
 
-    <section data-theme="dark"  id="builder" class="absolute top-0 left-0 z-0 flex-col w-full" style="visibility: hidden;">
+    <section data-theme="dark"  id="builder" class="absolute top-0 left-0 z-0 flex-col w-full max-[734px]:hidden" style="visibility: hidden;">
 
         <aside id="jdh38d" class="patalastas h-[105px] flex flex-col relative justify-center items-center">
             <div class="absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center max-[1072px]:bg-left bg-[url('./public/img/flexads_background.png')]"></div>
@@ -365,7 +570,7 @@ Thanks a lot for the support!
 
         <nav class="py-[2px] px-[10px] flex flex-row justify-between items-center">
             <div class="join">
-                <a href="#home" class="btn btn-xs" id="backhome">💪 FlexBoy</a>
+                <a class="btn btn-xs" id="backhome">💪 FlexBoy</a>
             </div>
             <div class="join">
                 <button id="hideads" class="btn btn-xs">Hide Ads</button>
@@ -380,6 +585,19 @@ Thanks a lot for the support!
             <div id="studio" class="h-full"></div> 
           </main>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -583,4 +801,4 @@ Thanks a lot for the support!
  
  
 </body>
-</html>
+</html>  

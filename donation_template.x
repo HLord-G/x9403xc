@@ -743,15 +743,6 @@ __mfdhe3.push({
         <meta name="description" content="FlexBoy description"/>
         <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
         
-            <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-            <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-            <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-            <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-            <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-            <link rel="stylesheet" href="style.css">
-
         <style>* { box-sizing: border-box; } body {margin: 0;}</style>
 
         
