@@ -1,0 +1,21 @@
+{
+    "name": "FlexBoy Web Builder",
+    "short_name": "FlexBoy",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000",
+    "theme_color": "#0f172a",
+    "icons": [
+      {
+        "src": "/public/icon/apple-icon-180x180.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      },
+      {
+        "src": "/public/icon/apple-icon-152x152.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

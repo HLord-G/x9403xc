@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexBoy Web Builder</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FlexBoy 💪</title>
 
+        <meta name="description" content="FlexBoy is a free web builder that lets you design websites easily using Tailwind CSS templates and components. Fast, responsive, and beginner-friendly.">
+        <meta name="keywords" content="FlexBoy, web builder, Tailwind CSS, free website builder, HTML editor, CSS editor, drag and drop builder, Flexbox builder, Flexboy app, free templates, website templates, Tailwind components, responsive web design, web builder for beginners, custom web design, no-code website builder, free landing HTML template, landing page templates, free Tailwind landing pages, one page website builder, HTML CSS templates, portfolio templates, small business website builder, easy website builder, template editor online">
+        <meta name="author" content="Harold Guzman">
+        <!-- Apple Touch Icons -->
+        <link rel="apple-touch-icon" sizes="57x57" href="public/icon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="public/icon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="public/icon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="public/icon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="public/icon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="public/icon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="public/icon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="public/icon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="public/icon/apple-icon-180x180.png">
 
+        <!-- Android Icons -->
+        <link rel="icon" type="image/png" sizes="192x192" href="public/icon/android-icon-192x192.png">
+
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" sizes="32x32" href="public/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="public/icon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="public/icon/favicon-16x16.png">
+
+        <!-- Manifest (nasa root) -->
+        <link rel="manifest" href="/manifest.json">
+
+        <!-- Windows Tiles -->
+        <meta name="msapplication-TileColor" content="#000">
+        <meta name="msapplication-TileImage" content="public/icon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#000">
+
+    
+    <!-- Mobile & Browser Compatibility -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- Open Graph for Social Media Sharing -->
+        <meta property="og:title" content="FlexBoy Web Builder">
+        <meta property="og:description" content="Build beautiful websites faster with FlexBoy. Use Tailwind templates, drag-and-drop tools, and publish in no time.">
+        <meta property="og:image" content="https://flexboy.online/og-image.jpg">
+        <meta property="og:url" content="https://flexboy.online/">
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="FlexBoy Web Builder">
+        <meta name="twitter:description" content="Design and launch websites easily using Tailwind CSS. Free and beginner-friendly.">
+        <meta name="twitter:image" content="https://flexboy.online/og-image.jpg">
     <!--===============================[S] FOR FONT AND STYLE [S]===============================-->
     <!--[S] GOOGLE FONTS [S]-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,7 +151,37 @@
     <script src="./public/libs/donation_funs.js"></script>
     <script src="./public/libs/element_definer.js"></script>
  
- 
+    <!-- ✅ JSON-LD structured data for FlexBoy -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "FlexBoy Web Builder",
+        "applicationCategory": "WebDevelopmentTool",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "url": "https://flexboy.online",
+        "description": "FlexBoy is a free web builder that lets you drag, drop, and edit templates using Tailwind CSS. It's fast, responsive, and perfect for developers and beginners alike.",
+        "keywords": [
+            "flexboy",
+            "free website builder",
+            "HTML editor",
+            "CSS editor",
+            "tailwind builder",
+            "landing page template",
+            "web templates",
+            "drag and drop builder",
+            "responsive web builder",
+            "free HTML landing template"
+        ],
+        "creator": {
+            "@type": "Person",
+            "name": "Harold Guzman",
+            "url": "https://flexboy.online/"
+        }
+        }
+        </script>
+    
 
     <!--===============================[E] SCRIPTS [E]===============================-->
   
@@ -801,7 +876,15 @@ Thanks a lot for the support!
     </section>
     
 
-
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+              .then(reg => console.log('✅ Service Worker registered:', reg))
+              .catch(err => console.error('❌ SW registration failed:', err));
+          });
+        }
+      </script>
  
  
 </body>

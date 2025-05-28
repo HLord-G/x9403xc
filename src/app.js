@@ -510,27 +510,40 @@ $(document).on("click", ".privacy", function () {
 
 
 
-let previewWindow = null; // I-store nato ang reference sa window
+let previewWindow = null;
 
-$(document).on("click", "#previewcode", function(){
+$(document).on("click", "#previewcode", function() {
   let iframe = document.querySelector("iframe.gjs-frame");
-  let fullDoc = iframe.contentDocument.documentElement.outerHTML;
+  let iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-  // I-check kung ang window wala pa na-open o na-close na
+  // Kuhaon nato ang current document as clone para pwede nato ma-edit
+  let fullDoc = iframeDoc.documentElement.cloneNode(true);
+
+  // I-access ang <head> sa document
+  let head = fullDoc.querySelector("head");
+
+  // I-append nato ang custom meta tags ug title
+  head.innerHTML = `
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBoy Web Builder</title>
+  ` + head.innerHTML; // i-append before existing head contents
+
+  // Konvert nato balik sa outerHTML ang full document
+  let updatedHTML = '<!DOCTYPE html>\n' + fullDoc.outerHTML;
+
+  // I-check kung wala pa gi-open or na-close ang preview window
   if (previewWindow == null || previewWindow.closed) {
-    // Mag-open ug bagong window/tab nga adunay unique name
     previewWindow = window.open("", "gjsPreviewWindow");
   } else {
-    // Kung open pa, i-focus lang nato ang existing window
     previewWindow.focus();
   }
 
-  // I-write ang full HTML content sa window
+  // I-display ang updated HTML
   previewWindow.document.open();
-  previewWindow.document.write(fullDoc);
+  previewWindow.document.write(updatedHTML);
   previewWindow.document.close();
 });
-
 
 
 // Kuhaa ang tanan buttons sulod sa toolbar gamit jQuery
