@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FlexBoy 💪</title>
-
+        <meta http-equiv="Content-Security-Policy">
         <meta name="description" content="FlexBoy is a free web builder that lets you design websites easily using Tailwind CSS templates and components. Fast, responsive, and beginner-friendly.">
         <meta name="keywords" content="FlexBoy, web builder, Tailwind CSS, free website builder, HTML editor, CSS editor, drag and drop builder, Flexbox builder, Flexboy app, free templates, website templates, Tailwind components, responsive web design, web builder for beginners, custom web design, no-code website builder, free landing HTML template, landing page templates, free Tailwind landing pages, one page website builder, HTML CSS templates, portfolio templates, small business website builder, easy website builder, template editor online">
         <meta name="author" content="Harold Guzman">
@@ -52,6 +52,7 @@
         <meta name="twitter:description" content="Design and launch websites easily using Tailwind CSS. Free and beginner-friendly.">
         <meta name="twitter:image" content="https://flexboy.online/og-image.jpg">
     <!--===============================[S] FOR FONT AND STYLE [S]===============================-->
+
     <!--[S] GOOGLE FONTS [S]-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,8 +71,13 @@
             font-weight: 400;
             font-style: normal;
             }
-
-        </style>
+            img{
+            -webkit-user-drag: none; /* Safari/Chrome */
+            user-drag: none;
+            pointer-events: auto; /* Still allow click */
+        }
+                </style>
+ 
     <!--[E] GOOGLE FONTS [E]-->
     <style>
         body{
@@ -180,7 +186,7 @@
             "url": "https://flexboy.online/"
         }
         }
-        </script>
+    </script>
     
 
     <!--===============================[E] SCRIPTS [E]===============================-->
@@ -239,7 +245,7 @@
 
 
         <section class="mt-[60px] mb-[40px] flex flex-col justify-center items-center p-[20px] min-h-[80vh] mask-radial relative  mask-radial-at-bottom mask-b-from-30% max-[926px]:hidden">
-                    <img src="./public/img/fleximage.png" class="   w-[95%] max-[452px]:object-[right] h-[100vh] rounded-lg" alt="">
+                    <img loading="lazy"  src="./public/img/fleximage.png" class="   w-[95%] max-[452px]:object-[right] h-[100vh] rounded-lg" alt="">
         </section>
 
 
@@ -262,46 +268,65 @@
         </section>
 
     
-        <section class="relative overflow-hidden mt-[90px] w-full flex flex-row justify-center items-center mask-r-from-80% mask-l-from-80%">
-            <div class="min-h-[30vh] gap-[20px] flex flex-row p-[20px] justify-start items-center overflow-x-auto scroll-loop-container" style="scroll-behavior: smooth;">
-                <!-- Original cards -->
-                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center gap-[10px]">
-                    <span class="icon my-[5px] mb-[20px]">
-                        <p class="font-black text-xl"><span class="text-blue-400">Tailwind</span> + <span class="text-gray-200">Daisy</span><span class="text-green-400">UI</span></p>
-                    </span>
-                    <p class="text-center text-sm">
-                        Built with Tailwind CSS + DaisyUI
-                    </p>
-                </div>
-                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
-                    <span class="icon my-[5px] mb-[20px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M806-440H320v-80h486l-62-62 56-58 160 160-160 160-56-58 62-62ZM600-600v-160H200v560h400v-160h80v160q0 33-23.5 56.5T600-120H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h400q33 0 56.5 23.5T680-760v160h-80Z"/></svg>
-                    </span>
-                    <p class="text-center text-sm">
-                        Drag, drop, and style components in seconds
-                    </p>
-                </div>
-                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
-                    <span class="icon my-[5px] mb-[20px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M666-440 440-666l226-226 226 226-226 226Zm-546-80v-320h320v320H120Zm400 400v-320h320v320H520Zm-400 0v-320h320v320H120Zm80-480h160v-160H200v160Zm467 48 113-113-113-113-113 113 113 113Zm-67 352h160v-160H600v160Zm-400 0h160v-160H200v160Zm160-400Zm194-65ZM360-360Zm240 0Z"/></svg>
-                    </span>
-                    <p class="text-center text-sm">
-                        Choose from ready-made templates and reusable components
-                    </p>
-                </div>
-                <div class="items min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
-                    <span class="icon my-[5px] mb-[20px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M220-260q-92 0-156-64T0-480q0-92 64-156t156-64q37 0 71 13t61 37l68 62-60 54-62-56q-16-14-36-22t-42-8q-58 0-99 41t-41 99q0 58 41 99t99 41q22 0 42-8t36-22l310-280q27-24 61-37t71-13q92 0 156 64t64 156q0 92-64 156t-156 64q-37 0-71-13t-61-37l-68-62 60-54 62 56q16 14 36 22t42 8q58 0 99-41t41-99q0-58-41-99t-99-41q-22 0-42 8t-36 22L352-310q-27 24-61 37t-71 13Z"/></svg>
-                    </span>
-                    <p class="text-center text-sm">
-                        100% Free. Forever.
-                    </p>
-                </div>
-                
-       
-            </div>
-        </section>
-     
+        <swiper-container class="mySwiper min-h-[190px]" 
+        init="false"
+        space-between="30"
+        slides-per-view="1"
+        centered-slides="true"
+        autoplay-delay="2700"
+        loop="true">
+
+
+        <swiper-slide class="overflow-hidden items min-h-[190px] card shadow justify-center bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+            <p class="font-black text-6xl opacity-[.3] absolute z-0"><span class="text-black/50">DaisyUI</span></p>
+            <p class="font-black text-4xl relative z-1"><a href="https://daisyui.com/" target="_blank" ><span class="text-gray-200">Daisy</span><span class="text-green-400">UI</span></a></p>
+            <p class="text-center text-sm">
+                Built with Tailwind CSS + DaisyUI
+            </p>
+        </swiper-slide>
+        
+
+        <swiper-slide class="items min-h-[190px] justify-center card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+                <span class="icon my-[5px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M806-440H320v-80h486l-62-62 56-58 160 160-160 160-56-58 62-62ZM600-600v-160H200v560h400v-160h80v160q0 33-23.5 56.5T600-120H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h400q33 0 56.5 23.5T680-760v160h-80Z"></path></svg>
+                </span>
+                <p class="text-center text-sm font-semibold mt-[3px]">
+                    Drag, drop, and style components in seconds
+                </p>
+        </swiper-slide>
+        <swiper-slide class="items justify-center min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M666-440 440-666l226-226 226 226-226 226Zm-546-80v-320h320v320H120Zm400 400v-320h320v320H520Zm-400 0v-320h320v320H120Zm80-480h160v-160H200v160Zm467 48 113-113-113-113-113 113 113 113Zm-67 352h160v-160H600v160Zm-400 0h160v-160H200v160Zm160-400Zm194-65ZM360-360Zm240 0Z"></path></svg>
+                </span>
+                <p class="text-center text-sm font-semibold mt-[3px]">
+                    Choose from ready-made templates and reusable components
+                </p>
+        </swiper-slide>
+        <swiper-slide class="items justify-center min-h-[190px] card shadow bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="currentColor"><path d="M220-260q-92 0-156-64T0-480q0-92 64-156t156-64q37 0 71 13t61 37l68 62-60 54-62-56q-16-14-36-22t-42-8q-58 0-99 41t-41 99q0 58 41 99t99 41q22 0 42-8t36-22l310-280q27-24 61-37t71-13q92 0 156 64t64 156q0 92-64 156t-156 64q-37 0-71-13t-61-37l-68-62 60-54 62 56q16 14 36 22t42 8q58 0 99-41t41-99q0-58-41-99t-99-41q-22 0-42 8t-36 22L352-310q-27 24-61 37t-71 13Z"></path></svg>
+                </span>
+                <p class="text-center text-sm font-semibold mt-[3px]">
+                    100% Free. Forever.
+                </p>
+        </swiper-slide>
+        <swiper-slide class="overflow-hidden items min-h-[190px] card shadow justify-center bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+            <p class="font-black text-6xl opacity-[.3] absolute z-0"><span class="text-black/50">Tailblocks</span></p>
+            <p class="font-black text-4xl relative z-1"><span class="text-blue-400"><a href="https://tailblocks.cc" target="_blank" >Tailblocks</a></span></p>
+            <p class="text-center text-sm">
+                Built with Tailwind CSS + Tailblocks
+            </p>
+        </swiper-slide>
+        <swiper-slide class="overflow-hidden items min-h-[190px] card shadow justify-center bg-base-200 p-[30px] flex-shrink-0 w-[200px] md:w-[300px] flex flex-col items-center">
+            <p class="font-black text-5xl opacity-[.3] absolute z-0 text-center"><span class="text-black/50">MAMBA UI</span></p>
+            <p class="font-black text-4xl relative z-1"><span class="text-violet-500"><a  target="_blank" href="https://mambaui.com/">MAMBA UI</a></span></p>
+
+            <p class="text-center text-sm">
+                Built with Tailwind CSS + MAMBA UI
+            </p>
+        </swiper-slide>
+      </swiper-container>
+      
     
         <section class="mt-[120px] min-h-[50vh] p-5 flex flex-col justify-center items-center text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">💬 Join the Flexboy Community</h2>
@@ -344,7 +369,7 @@
                         </article>   
                     </div>
                     <div class="flex-1 flex flex-col justify-center items-center">
-                        <img class="card" src="./public/img/blog1.png" alt="">     
+                        <img loading="lazy"  class="card" src="./public/img/blog1.png" alt="">     
                     </div>
                 </aside>
 
@@ -352,7 +377,7 @@
                 <aside class="flex flex-row card shadow p-[20px] mb-[40px]  bg-base-200 min-h-[40vh] w-full max-w-[1000px] max-[818px]:flex-col">
                     
                     <div class="flex-1 flex flex-col justify-center items-center">
-                        <img class="card" src="./public/img/blog1.png" alt="">     
+                        <img loading="lazy"  class="card" src="./public/img/blog1.png" alt="">     
                     </div>
 
                     <div class="flex-1 text-left"> 
@@ -375,15 +400,15 @@
 
            <section hidden class="min-h-[60vh] p-[10px] flex flex-col justify-center items-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-[20px]">☕ Donation</h2>
-            <a href="https://www.buymeacoffee.com/hg_journey"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=hg_journey&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
+            <a href="https://www.buymeacoffee.com/hg_journey"><img loading="lazy"  src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=hg_journey&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
            </section>
 
 
            <section class="min-h-[40vh] flex flex-row mask-radial relative max-[770px]:flex-col">
-                    <img class="absolute top-[0] left-[0] h-full w-full object-cover blur-3xl" src="public/img/donbackground.jpg">
+                    <img loading="lazy"  class="absolute top-[0] left-[0] h-full w-full object-cover blur-3xl" src="public/img/donbackground.jpg">
 
                 <main class=" px-[30px] flex-[.75] flex justify-center items-center z-[6] max-[770px]:py-[30px]">
-                    <a href="https://www.buymeacoffee.com/hg_journey"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=hg_journey&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
+                    <a href="https://www.buymeacoffee.com/hg_journey"><img loading="lazy"  src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=hg_journey&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
                 </main>
                 <main class="flex-1 flex justify-center relative items-center p-[30px] z-[2] mask-radial-at-bottom mask-b-from-67% mask-t-from-75% bg-cover max-[770px]:py-[30px]">
                     <p class="max-w-[550px] relative font-semibold text-2xl">
@@ -402,7 +427,7 @@ Thanks a lot for the support!
                 <div class="w-full flex flex-row justify-center gap-[30px] items-center flex-wrap">
                     <aside class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
                         <fieldset>
-                            <img src="https://dummyimage.com/400x325" class="object-cover object-center w-full h-[400px] border" alt="">
+                            <img loading="lazy"  src="https://dummyimage.com/400x325" class="object-cover object-center w-full h-[400px] border" alt="">
                         </fieldset>
                         
                         <div class="mt-[10px] font-bold">
@@ -412,7 +437,7 @@ Thanks a lot for the support!
 
                     <aside class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
                         <fieldset>
-                            <img src="" class="w-full h-[400px] border" alt="">
+                            <img loading="lazy"  src="" class="w-full h-[400px] border" alt="">
                         </fieldset>
                         
                         <div class="mt-[10px] font-bold">
@@ -422,7 +447,7 @@ Thanks a lot for the support!
 
                     <aside class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
                         <fieldset>
-                            <img src="" class="w-full h-[400px] border" alt="">
+                            <img loading="lazy"  src="" class="w-full h-[400px] border" alt="">
                         </fieldset>
                         
                         <div class="mt-[10px] font-bold">
@@ -432,7 +457,7 @@ Thanks a lot for the support!
 
                     <aside class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
                         <fieldset>
-                            <img src="" class="w-full h-[400px] border" alt="">
+                            <img loading="lazy"  src="" class="w-full h-[400px] border" alt="">
                         </fieldset>
                         
                         <div class="mt-[10px] font-bold">
@@ -494,101 +519,102 @@ Thanks a lot for the support!
                 </div>
             </div>
  
-            <aside id="template_discriptiom" class="hidden border border-base-content/40 fixed w-full h-full z-[99]  bg-base-300/70 shadow top-[50%] left-[50%]" style="transform: translate(-50%, -50%);">
-             
 
-                <main class="w-full h-full flex flex-row ">
-                    <div class="flex-5 bg-base-300  p-[10px]  overflow-x-auto">
 
-                        <aside class=" bg-base-200 flex flex-row justify-center items-center py-[10px] min-h-[105px] bg-cover bg-no-repeat bg-center max-[1072px]:bg-left bg-[url('./public/img/flexads_background.png')] px-[10px] gap-[20px] max-[431px]:gap-[0px] my-[20px]">
-                            <div class="container flex flex-row justify-between items-center">
-                                <div class="flex-1 flex flex-row">
-                                    <div class="text-bold text-5xl mr-[10px] max-[768px]:text-4xl max-[458px]:text-3xl">💪</div>
-                                    <div class="text-bold text-6xl hammersmith-one-regular max-[768px]:text-4xl max-[458px]:text-3xl">FLEXBOY</div>
-                                </div>
-                                <div class="flex-1 text-bold text-right px-[30px] italic text-2xl max-[1027px]:text-[17px] max-[800px]:text-[13px] max-[431px]:text-[10px] max-[431px]:px-[20px]">
-                                    <p class="">BUILD WEBSITES IN MINUTES. FREE. FAST. FOREVER.</p>
-                                </div>
+            <style>
+                .templategroup {
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: repeat(6, 1fr);
+                    grid-column-gap: 0px;
+                    grid-row-gap: 0px;
+
+                        .boy_box1 { grid-area: 1 / 1 / 7 / 3; }
+                        .boy_box2 { grid-area: 1 / 3 / 2 / 6; }
+                        .boy_box3 { grid-area: 2 / 3 / 5 / 6; }
+                        .boy_box4 { grid-area: 5 / 3 / 7 / 4; }
+                        .boy_box5 { grid-area: 5 / 4 / 7 / 5; }
+                        .boy_box6 { grid-area: 5 / 5 / 7 / 6; }
+                }
+
+                @media(max-width:768px){
+                    .templategroup {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-rows: repeat(16, 1fr);
+                        grid-column-gap: 0px;
+                        grid-row-gap: 0px;
+
+                        .boy_box1 { grid-area: 2 / 1 / 8 / 4; }
+                        .boy_box2 { grid-area: 1 / 1 / 2 / 4; }
+                        .boy_box3 { grid-area: 8 / 1 / 11 / 4; }
+                        .boy_box4 { grid-area: 11 / 1 / 13 / 4; }
+                        .boy_box5 { grid-area: 13 / 1 / 15 / 4; }
+                        .boy_box6 { grid-area: 15 / 1 / 17 / 4; }
+                    }
+                }
+              </style>
+
+ 
+
+
+            <aside id="template_discriptiom" class=" border hidden fixed border-base-content/40 w-full h-full z-[99] overflow-y-auto  bg-base-300 shadow top-[50%] max-[769px]:justify-normal left-[50%] overflow-auto" style="transform: translate(-50%, -50%);">
+                    
+                <div class="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center max-[769px]:justify-normal max-[769px]:pb-[30px]">
+                    <main class="templategroup bg-base-300 border w-[90vw] h-[90vh] max-[769px]:my-[50px] max-[769px]:h-[200vh]"> 
+                        <div class="boy_box1 border-0 border-r-1 p-[10px] max-[769px]:border-r-0 max-[769px]:border-b-1 flex flex-col justify-center items-center overflow-auto relative objectview_main ">
+                            <img src="https://static.wixstatic.com/media/4b9d2b_4ba75c826a1b4308a6757ee924271032~mv2.png" class="absolute object-center top-0 left-0 h-full min-w-[150%] objectview" alt="">
+                          </div>
+                          
+                        <div class="boy_box2 flex  border-0 border-b-1 flex-row justify-between items-center">
+                            <div class="flex-7 px-[20px] py-[10px]"> 
+                                <h3 class="text-2xl line-clamp-2 uppercase max-[426px]:text-lg">
+                                    moment which something 
+                                </h3>
                             </div>
-                        </aside>
-
-                        <div class="flex flex-row justify-center my-[40px] px-[20px] max-[620px]:mt-[230px] max-[620px]:mb-[230px]  items-center w-full h-full max-[620px]:flex-col" style="zoom:.8;">
-                            <button class="btn btn-circle absolute top-[3%] right-[2%] z-[99]" id="closeempview">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                                  </svg>
-                              </button>
-                           
-                            <div class="w-[420px] max-[394px]:w-[310px] h-full max-[620px]:min-h-[430px] ">
-                                <img src="" class="w-full h-full object-cover object-center border" alt="">
-                            </div>
-                            <div class="flex-2 h-full p-[30px]">
-                                <h1 class="text-3xl font-bold mb-[20px]">title discriptoi</h1>   
-                                
-                                <p class="text-base-content/50 italic">
-                                    jungle successful negative around composed hearing traffic noise regular yet balance twice drive courage wet different quickly breathing finest happy continent factory plenty telephone
-                                </p>
-
-                                <br><hr class="border border-base-content/10">
-                                <div class="mt-[30px]">
-                                    <div class="badge badge-lg m-[3px]">Tailwind</div>
-                                    <div class="badge badge-lg m-[3px]">DaisyUI</div>
-                                    <div class="badge badge-lg m-[3px]">Gsap</div>
-                                    <div class="badge badge-lg m-[3px]">Swipejs</div>
-                                </div>
-                                <br><hr class="border border-base-content/10">
-                                <div class="join mt-[25px] gap-[10px]">
-                                    <a href="#" target="_blank" class="btn btn-md">View Template</a>
-
-                                    <button class="btn btn-md">Save</button>
-                                    
-                                    <div class="indicator">
-                                        <span class="indicator-item badge badge-sm">12</span>
-                                        <button class="btn btn-md btn-secondary text-2xl">🤍</button>
-                                    </div>
-                                </div>
-
-
-                                <div class="more mt-[80px]">
-                                    <h5 class="italic text-base-content/40">More</h5>
-
-                                    <div class="mt-[10px] flex flex-row justify-around items-center flex-wrap gap-[5px]">
-                                        <aside class="min-w-[120px] flex flex-col text-lg font-bold px-[10px] py-[5px] bg-secondary/80 flex-1">
-                                            <span>case</span>
-                                            <span class="text-xs italic">case</span>
-                                        </aside>
-                                        <aside class="min-w-[120px] flex flex-col text-lg font-bold px-[10px] py-[5px] bg-secondary/80 flex-1">
-                                            <span>stand</span>
-                                            <span class="text-xs italic">stand</span>
-                                        </aside>
-                                        <aside class="min-w-[120px] flex flex-col text-lg font-bold px-[10px] py-[5px] bg-secondary/80 flex-1">
-                                            <span>book</span>
-                                            <span class="text-xs italic">book</span>
-                                        </aside>
-                                        <aside class="min-w-[120px] flex flex-col text-lg font-bold px-[10px] py-[5px] bg-secondary/80 flex-1">
-                                            <span>book</span>
-                                            <span class="text-xs italic">book</span>
-                                        </aside>
-                                    </div>
-                                </div>
+                            <div class="flex-1 px-[20px] py-[10px] h-full border-0 border-l-1 flex flex-row justify-center items-center"> 
+                                <button class="btn btn-circle" id="closeempview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                      </svg>
+                                </button> 
                             </div>
                         </div>
+                        <div class="boy_box3 p-[15px] px-[20px] text-xs border-0 border-b-1 overflow-y-auto">
+                            <article class="mb-[40px]">
+                                express feed husband rule nodded activity anything basic wish pen excitement bread animal fairly citizen speed term funny sun hunter distant degree carefully cross
+                            </article>
 
-                        <aside class="max-[690px]:mt-[220px] max-[620px]:mt-[360px] bg-base-200 flex flex-row justify-center items-center py-[10px] min-h-[105px] bg-cover bg-no-repeat bg-center max-[1072px]:bg-left bg-[url('./public/img/flexads_background.png')] px-[10px] gap-[20px] max-[431px]:gap-[0px] my-[20px]">
-                            <div class="container flex flex-row justify-between items-center">
-                                <div class="flex-1 flex flex-row">
-                                    <div class="text-bold text-5xl mr-[10px] max-[768px]:text-4xl max-[458px]:text-3xl">💪</div>
-                                    <div class="text-bold text-6xl hammersmith-one-regular max-[768px]:text-4xl max-[458px]:text-3xl">FLEXBOY</div>
-                                </div>
-                                <div class="flex-1 text-bold text-right px-[30px] italic text-2xl max-[1027px]:text-[17px] max-[800px]:text-[13px] max-[431px]:text-[10px] max-[431px]:px-[20px]">
-                                    <p class="">BUILD WEBSITES IN MINUTES. FREE. FAST. FOREVER.</p>
-                                </div>
+                            <div class="join">
+                                <div class="btn">Edit</div>
+                                <div class="btn">Save</div>
+                                <a href="#" class="btn">Preview</a>
                             </div>
-                        </aside>
 
-                    </div>
-                </main>
+                        </div>
+       
+                        <div class="boy_box4 relative z-[1] flex flex-col justify-center items-center">
+                            <article class="z-[3] relative">
+                                <h3 class="text-lg font-bold cursor-pointer text-center">sdfsef</h3>
+                            </article>
+                            <img src="https://dummyimage.com/245x190" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
+                        </div>
+                        <div class="boy_box5 relative z-[1] flex flex-col justify-center items-center border-0 border-l-1 max-[769px]:border-l-0 max-[769px]:border-t-1">
+                            <article class="z-[3] relative">
+                                <h3 class="text-lg font-bold cursor-pointer text-center">sdfsef</h3>
+                            </article>
+                            <img src="https://dummyimage.com/245x190" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
+                        </div>
+                        <div class="boy_box6 relative z-[1] flex flex-col justify-center items-center border-0 border-l-1 max-[769px]:border-l-0 max-[769px]:border-t-1">
+                            <article class="z-[3] relative">
+                                <h3 class="text-lg font-bold cursor-pointer text-center">sdfsef</h3>
+                            </article>
+                            <img src="https://dummyimage.com/245x190" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
+                        </div>
+                    </main>
+                </div>
+ 
             </aside>
            <!--=====================[] TEMPLATES []=====================-->
 
@@ -885,7 +911,87 @@ Thanks a lot for the support!
           });
         }
       </script>
- 
+       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      
+       <script>
+         const swiperEl = document.querySelector('swiper-container');
+     
+     const params = {
+      
+       breakpoints: {
+        463: {
+           slidesPerView: 2,
+         },
+
+         900: {
+           slidesPerView: 4,
+         },
+       } 
+     };
+     
+     Object.assign(swiperEl, params)
+     
+     swiperEl.initialize();
+     </script>
+
+
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector(".objectview_main");
+      const image = container.querySelector(".objectview");
+  
+      const wrapper = document.createElement("div");
+      wrapper.style.position = "absolute";
+      wrapper.style.top = "0";
+      wrapper.style.left = "0";
+      wrapper.style.height = "100%";
+      wrapper.style.width = "100%";
+      wrapper.style.overflow = "hidden";
+      wrapper.style.cursor = "grab";
+      wrapper.appendChild(image.cloneNode(true));
+  
+      image.remove();
+      container.appendChild(wrapper);
+  
+      const img = wrapper.querySelector("img");
+      img.style.transition = "transform 0.1s ease-out";
+  
+      let isDragging = false;
+      let startX;
+      let currentX = 0;
+  
+      const updateTransform = () => {
+        const maxDrag = 0;
+        const minDrag = -(img.scrollWidth - wrapper.offsetWidth);
+        currentX = Math.max(minDrag, Math.min(currentX, maxDrag));
+        img.style.transform = `translateX(${currentX}px)`;
+      };
+  
+      wrapper.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        startX = e.pageX;
+        wrapper.style.cursor = "grabbing";
+      });
+  
+      window.addEventListener("mouseup", () => {
+        isDragging = false;
+        wrapper.style.cursor = "grab";
+      });
+  
+      window.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        const dx = e.pageX - startX;
+        startX = e.pageX;
+        currentX += dx;
+        updateTransform();
+      });
+    });
+  </script>
+  
+  
+  
+
  
 </body>
 </html>  
