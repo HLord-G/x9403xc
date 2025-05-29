@@ -193,7 +193,7 @@ builder
 
 let builder_click = 0
  let clickonce = false
-$(document).on("click", "#viewbuilder", ()=>{
+$(document).on("click", ".viewbuilder", ()=>{
   if (!clickonce) {
     clickonce = !clickonce
     builder_click +=1
@@ -553,7 +553,8 @@ $(document).on("click", "#previewcode", function() {
 // Kuhaa ang tanan buttons sulod sa toolbar gamit jQuery
 
 
-const targetNode = document.getElementById('studio');
+setTimeout(() => {
+  const targetNode = document.getElementById('studio');
 
 if (targetNode) {
   const observer = new MutationObserver((mutationsList, observer) => {
@@ -592,3 +593,4 @@ if (targetNode) {
 
   observer.observe(targetNode, { childList: true, subtree: true });
 }
+}, 1300);

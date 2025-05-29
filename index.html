@@ -205,9 +205,9 @@
         <nav class="bg-base-300 fixed w-full z-[7] flex flex-row justify-between items-center px-[10px]">
             <div id="flee" class="text-sm">FlexBoy</div>
             <div class="join">
-                <button class="btn btn-sm">Free Template</button>
+                <button class="btn btn-sm viewtemps">Free Template</button>
                 <button class="btn btn-sm">Vlog</button>
-                <button class="btn btn-sm">Editor</button>
+                <button class="btn btn-sm viewbuilder">Editor</button>
             </div>
         </nav>
 
@@ -228,7 +228,7 @@
                 </p>
 
                 <section class="flex flex-col justify-center items-center my-[60px] relative z-[5]" my-[120px]>
-                    <a  class=" bg-base-300 btn btn-xl btn-warning text-base-content border-pink-500 max-[1000px]:hidden" id="viewbuilder">Get Start</a>
+                    <a  class=" bg-base-300 btn btn-xl btn-warning text-base-content border-pink-500 max-[1000px]:hidden viewbuilder">Get Start</a>
         
                     <div  class=" bg-base-300 btn-warning text-base-content min-[1000px]:hidden mx-[20px]"> <div role="alert" class="alert alert-error">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
@@ -427,47 +427,47 @@ Thanks a lot for the support!
                 <div class="w-full flex flex-row justify-center gap-[30px] items-center flex-wrap">
                     <aside template_view="0" class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
                         <fieldset>
-                            <img loading="lazy"  src="https://dummyimage.com/400x325" class="object-cover object-center w-full h-[400px] border" alt="">
+                            <img loading="lazy" src="" id="tempboarda" class="object-cover object-center w-full h-[400px] border border-base-content/30 hover:object-contain" alt="">
                         </fieldset>
                         
                         <div class="mt-[10px] font-bold">
-                            <h1 class="text-2xl"> route </h1>
+                            <h1 class="text-2xl" id="tempboard_title_a"> </h1>
                         </div>
                     </aside>
 
                     <aside template_view="1" class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
                         <fieldset>
-                            <img loading="lazy"  src="" class="w-full h-[400px] border" alt="">
+                            <img loading="lazy"  src=""id="tempboardb" class="w-full object-cover object-center hover:object-contain h-[400px] border border-base-content/30" alt="">
                         </fieldset>
                         
                         <div class="mt-[10px] font-bold">
-                            <h1 class="text-2xl"> degree </h1>
+                            <h1 class="text-2xl" id="tempboard_title_b"> </h1>
                         </div>
                     </aside>
 
                     <aside template_view="2" class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
                         <fieldset>
-                            <img loading="lazy"  src="" class="w-full h-[400px] border" alt="">
+                            <img loading="lazy"  src="" id="tempboardc" class="w-full object-cover object-center hover:object-contain h-[400px] border border-base-content/30" alt="">
                         </fieldset>
                         
                         <div class="mt-[10px] font-bold">
-                            <h1 class="text-2xl"> becoming </h1>
+                            <h1 class="text-2xl" id="tempboard_title_c"></h1>
                         </div>
                     </aside>
 
                     <aside template_view="3" class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
                         <fieldset>
-                            <img loading="lazy"  src="" class="w-full h-[400px] border" alt="">
+                            <img loading="lazy"  src="" id="tempboardd" class="w-full object-cover object-center hover:object-contain h-[400px] border border-base-content/30" alt="">
                         </fieldset>
                         
                         <div class="mt-[10px] font-bold">
-                            <h1 class="text-2xl"> degree </h1>
+                            <h1 class="text-2xl" id="tempboard_title_d"> </h1>
                         </div>
                     </aside>
                 </div>
 
                 <div class="mt-[80px] flex flex-col justify-center items-center">
-                    <button class="btn btn-lg text-3xl" id="viewtemps"> View More </button>
+                    <button class="btn btn-lg text-3xl viewtemps" id=""> View More </button>
                 </div>
           </section>
 
@@ -561,7 +561,7 @@ Thanks a lot for the support!
             <aside id="template_discriptiom" class=" border hidden fixed border-base-content/40 w-full h-full z-[99] overflow-y-auto  bg-base-300 shadow top-[50%] max-[769px]:justify-normal left-[50%] overflow-auto" style="transform: translate(-50%, -50%);">
                     
                 <div class="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center max-[769px]:justify-normal max-[769px]:pb-[30px]">
-                    <main class="templategroup bg-base-300 border w-[90vw] h-[90vh] max-[769px]:my-[50px] max-[769px]:h-[200vh]"> 
+                    <main class="templategroup bg-base-300 border w-[90vw] h-[80vh] max-[769px]:my-[50px] max-[769px]:h-[200vh]"> 
                         <div class="boy_box1 border-0 border-r-1 p-[10px] max-[769px]:border-r-0 max-[769px]:border-b-1 flex flex-col justify-center items-center overflow-auto relative objectview_main ">
                             <img src="https://static.wixstatic.com/media/4b9d2b_4ba75c826a1b4308a6757ee924271032~mv2.png" class="absolute object-center top-0 left-0 h-full min-w-[150%] objectview" alt="" id="imgdis">
                           </div>
@@ -581,16 +581,15 @@ Thanks a lot for the support!
                         </div>
                         <div class="boy_box3 p-[15px] px-[20px] text-xs border-0 border-b-1 overflow-y-auto">
                             <article class="mb-[40px]">
-                                <p id="description mb-[10px]"><!--- description --->
+                                <p id="description" class="mb-[10px]"><!--- description --->
                                     express feed husband rule nodded activity anything basic wish pen excitement bread animal fairly citizen speed term funny sun hunter distant degree carefully cross
                                 </p>
-                                <h3 class="italic text-lg mt-[20px]" id="tags"></h3>
+                                <h3 class="italic text-md font-bold mt-[20px]" id="tags"></h3>
                             </article>
 
                             <div class="join">
-                                <div class="btn">Edit</div>
-                                <div class="btn">Save</div>
-                                <a href="#" class="btn" target="_blank" id="link"><!--- link --->Preview</a>
+                                <div class="btn">Like</div>
+                                <a href="#" class="btn ml-[20px]" target="_blank" id="link"><!--- link --->Preview</a>
                             </div>
 
                         </div>
@@ -599,19 +598,19 @@ Thanks a lot for the support!
                             <article class="z-[3] relative">
                                 <h3 class="text-lg font-bold cursor-pointer text-center" id="othera">sdfsef</h3>
                             </article>
-                            <img src="https://dummyimage.com/245x190" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
+                            <img src="https://dummyimage.com/245x190" id="othernamea" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
                         </div>
                         <div class="boy_box5 relative z-[1] flex flex-col justify-center items-center border-0 border-l-1 max-[769px]:border-l-0 max-[769px]:border-t-1">
                             <article class="z-[3] relative">
                                 <h3 class="text-lg font-bold cursor-pointer text-center" id="otherb">sdfsef</h3>
                             </article>
-                            <img src="https://dummyimage.com/245x190" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
+                            <img src="https://dummyimage.com/245x190" id="othernameb" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
                         </div>
                         <div class="boy_box6 relative z-[1] flex flex-col justify-center items-center border-0 border-l-1 max-[769px]:border-l-0 max-[769px]:border-t-1">
                             <article class="z-[3] relative">
                                 <h3 class="text-lg font-bold cursor-pointer text-center" id="otherc">sdfsef</h3>
                             </article>
-                            <img src="https://dummyimage.com/245x190" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
+                            <img src="https://dummyimage.com/245x190" id="othernamec" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
                         </div>
                     </main>
                 </div>

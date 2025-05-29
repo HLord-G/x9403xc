@@ -1,7 +1,7 @@
 
 let tampview = false;
 
-  $(document).on("click", "#viewtemps", function () {
+  $(document).on("click", ".viewtemps", function () {
   if (!tampview) {
       $("#tempaltes").show(); // show container
 
@@ -28,7 +28,7 @@ let tampview = false;
 
 
 const data = [
-  { title: "telor", tags:"Landing Page", img: "https://dummyimage.com/400x325", link: "www.sample.com", discription:"* step high stretch colony phrase later any is spell brother bad mirror quarter till lion molecular long unit future coffee rhyme heard ocean variety", date:"10-05-95"},
+  { title: "Tela Bords", tags:"Landing Page", img: "public/img_temp/temp1.webp", link: "https://www.sample.com", discription:"* step high stretch colony phrase later any is spell brother bad mirror quarter till lion molecular long unit future coffee rhyme heard ocean variety", date:"10-05-95"},
   { title: "compine", tags:"Landing Page", img: "https://dummyimage.com/400x325", link: "www.sample.com", discription:"* movement secret nervous hot pine cabin unhappy wore walk cost happened partly writer managed herself activity older charge window raw crack garage build straw", date:"10-05-95"},
   { title: "side walker", tags:"Landing Page", img: "https://dummyimage.com/400x325", link: "www.sample.com", discription:"* stairs greatly chart married taught glass crop pure edge yellow dress hit whom pine comfortable start boy many weight blood cross cloud song bottle", date:"10-05-95"},
   { title: "degree", tags:"Landing Page", img: "https://dummyimage.com/400x325", link: "www.sample.com", discription:"* simple that terrible claws nuts bark visit city special pictured sort difficulty damage good sugar society trap count receive feel giving stems hand closer", date:"10-05-95"},
@@ -57,7 +57,7 @@ function renderCards(page = 1) {
     container.innerHTML += `
         <aside template_view="${index}" class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
           <fieldset>
-            <img src="${item.img}" class="w-full object-cover object-center h-[400px] border" alt="${item.title}">
+            <img src="${item.img}" class="w-full object-cover object-center hover:object-contain h-[400px] border border-base-content/30" alt="${item.title}">
           </fieldset>
           <div class="mt-[10px] font-bold">
             <h1 class="text-2xl">${item.title}</h1>
@@ -118,14 +118,18 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-function randomNums(max, count) {
+
+function randomNums(max, count, exclude = []) {
   const nums = [];
+  const excludeSet = new Set(Array.isArray(exclude) ? exclude : [exclude]);
+
   while (nums.length < count) {
-    const rand = Math.floor(Math.random() * max); // 0 to max-1
-    if (!nums.includes(rand)) {
+    const rand = Math.floor(Math.random() * max);
+    if (!nums.includes(rand) && !excludeSet.has(rand)) {
       nums.push(rand);
     }
   }
+
   return nums;
 }
 
@@ -136,18 +140,27 @@ function randomNums(max, count) {
 
 $(document).on("click", "[template_view]", function(){
 let idnumber = $(this).attr("template_view")
-let picker = randomNums(data.length, 3);
+let picker = randomNums(data.length, 3, Number(idnumber));
+ 
  
   $("#imgdis").attr("src",data[idnumber].img)
   $("#title").text(data[idnumber].title)
   $("#tags").text(data[idnumber].tags)
   $("#description").text(data[idnumber].discription)
   $("#link").attr("href",data[idnumber].link)
- 
 
   $("#othera").text(data[picker[0]].title)
   $("#otherb").text(data[picker[1]].title)
   $("#otherc").text(data[picker[2]].title)
+
+  $("#othernamea").attr("src", data[picker[0]].img)
+  $("#othernameb").attr("src", data[picker[1]].img)
+  $("#othernamec").attr("src", data[picker[2]].img)
+  
+  $("#othera").attr("template_view",picker[0])
+  $("#otherb").attr("template_view",picker[1])
+  $("#otherc").attr("template_view",picker[2])
+ 
 
 
   $("#template_discriptiom").show()
@@ -157,3 +170,23 @@ $(document).on("click", "#closeempview", function(){
   $("#template_discriptiom").hide()
 
 })
+
+
+
+
+
+
+
+
+setTimeout(() => {
+  $("#tempboarda").attr("src", data[0].img)
+  $("#tempboardb").attr("src", data[1].img)
+  $("#tempboardc").attr("src", data[2].img)
+  $("#tempboardd").attr("src", data[3].img)
+
+  $("#tempboard_title_a").text(data[0].title)
+  $("#tempboard_title_b").text(data[1].title)
+  $("#tempboard_title_c").text(data[2].title)
+  $("#tempboard_title_d").text(data[3].title)
+
+}, 700);
