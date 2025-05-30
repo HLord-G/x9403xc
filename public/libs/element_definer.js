@@ -157,11 +157,10 @@ let picker = randomNums(data.length, 3, Number(idnumber));
   $("#othernameb").attr("src", data[picker[1]].img)
   $("#othernamec").attr("src", data[picker[2]].img)
   
-  $("#othera").attr("template_view",picker[0])
-  $("#otherb").attr("template_view",picker[1])
-  $("#otherc").attr("template_view",picker[2])
- 
-
+  $("#othernamea").attr("template_view",picker[0])
+  $("#othernameb").attr("template_view",picker[1])
+  $("#othernamec").attr("template_view",picker[2])
+  
 
   $("#template_discriptiom").show()
 })

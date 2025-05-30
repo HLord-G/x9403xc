@@ -192,7 +192,7 @@
     <!--===============================[E] SCRIPTS [E]===============================-->
   
     <script>
-    setInterval(() => {console.clear()}, 1000);
+    // setInterval(() => {console.clear()}, 1000);
     </script>
 
 </head>
@@ -522,7 +522,7 @@ Thanks a lot for the support!
 
 
             <style>
-                .templategroup {
+                /* .templategroup {
                     display: grid;
                     grid-template-columns: repeat(5, 1fr);
                     grid-template-rows: repeat(6, 1fr);
@@ -535,7 +535,25 @@ Thanks a lot for the support!
                         .boy_box4 { grid-area: 5 / 3 / 7 / 4; }
                         .boy_box5 { grid-area: 5 / 4 / 7 / 5; }
                         .boy_box6 { grid-area: 5 / 5 / 7 / 6; }
-                }
+                } */
+
+
+                .templategroup {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(12, 1fr);
+                    grid-column-gap: 0px;
+                    grid-row-gap: 0px;
+
+                        .boy_box1 { grid-area: 2 / 1 / 7 / 6; }
+                        .boy_box2 { grid-area: 1 / 1 / 2 / 6; }
+                        .boy_box3 { grid-area: 7 / 1 / 11 / 4; }
+                        .boy_box4 { grid-area: 11 / 1 / 13 / 2; }
+                        .boy_box5 { grid-area: 11 / 2 / 13 / 3; }
+                        .boy_box6 { grid-area: 11 / 3 / 13 / 4; }
+                    }
+
+
 
                 @media(max-width:768px){
                     .templategroup {
@@ -558,61 +576,110 @@ Thanks a lot for the support!
  
 
 
-            <aside id="template_discriptiom" class=" border hidden fixed border-base-content/40 w-full h-full z-[99] overflow-y-auto  bg-base-300 shadow top-[50%] max-[769px]:justify-normal left-[50%] overflow-auto" style="transform: translate(-50%, -50%);">
-                    
-                <div class="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center max-[769px]:justify-normal max-[769px]:pb-[30px]">
-                    <main class="templategroup bg-base-300 border w-[90vw] h-[80vh] max-[769px]:my-[50px] max-[769px]:h-[200vh]"> 
-                        <div class="boy_box1 border-0 border-r-1 p-[10px] max-[769px]:border-r-0 max-[769px]:border-b-1 flex flex-col justify-center items-center overflow-auto relative objectview_main ">
-                            <img src="https://static.wixstatic.com/media/4b9d2b_4ba75c826a1b4308a6757ee924271032~mv2.png" class="absolute object-center top-0 left-0 h-full min-w-[150%] objectview" alt="" id="imgdis">
-                          </div>
-                          
-                        <div class="boy_box2 flex  border-0 border-b-1 flex-row justify-between items-center">
-                            <div class="flex-7 px-[20px] py-[10px]"> 
-                                <h3 class="text-2xl line-clamp-2 uppercase max-[426px]:text-lg" id="title"><!--- Title ---></h3>
-                            </div>
-                            <div class="flex-1 px-[20px] py-[10px] h-full border-0 border-l-1 flex flex-row justify-center items-center"> 
-                                <button class="btn btn-circle" id="closeempview">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                                      </svg>
-                                </button> 
-                            </div>
-                        </div>
-                        <div class="boy_box3 p-[15px] px-[20px] text-xs border-0 border-b-1 overflow-y-auto">
-                            <article class="mb-[40px]">
-                                <p id="description" class="mb-[10px]"><!--- description --->
-                                    express feed husband rule nodded activity anything basic wish pen excitement bread animal fairly citizen speed term funny sun hunter distant degree carefully cross
-                                </p>
-                                <h3 class="italic text-md font-bold mt-[20px]" id="tags"></h3>
-                            </article>
+            <aside id="template_discriptiom" class=" border hidden fixed border-base-content/40 w-full h-full z-[99] overflow-y-auto  bg-base-300 shadow top-[50%] max-[769px]:justify-normal left-[50%] overflow-auto p-[20px]  max-[425px]:p-[0px]" style="transform: translate(-50%, -50%);">
 
-                            <div class="join">
-                                <div class="btn">Like</div>
-                                <a href="#" class="btn ml-[20px]" target="_blank" id="link"><!--- link --->Preview</a>
+
+                <button class="btn btn-circle absolute top-[3%] right-[2%] z-[99]" id="closeempview">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                </button> 
+
+                <div class="w-full flex justify-center items-start flex-row gap-[10px] max-[1141px]:flex-col">
+                    <div class="flex flex-1 w-full justify-center items-center flex-col p-[20px] max-[425px]:p-[0px]">
+
+                        <img src="public/img_temp/temp1.webp" style="zoom:.5;" alt="" id="imgdis">
+                        <div class="breadcrumbs text-sm w-full px-[20px]">
+                            <ul>
+                              <li>
+                                <a>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    class="h-4 w-4 stroke-current">
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                                  </svg>
+                                  Home
+                                </a>
+                              </li>
+                              <li>
+                                <a>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    class="h-4 w-4 stroke-current">
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                                  </svg>
+                                  Template
+                                </a>
+                              </li>
+                              <li>
+                                <span class="inline-flex items-center gap-2">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    class="h-4 w-4 stroke-current">
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                                  </svg>
+                                  <span class="text-info">Add Document</span>
+                                </span>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-row justify-end items-center w-full px-[10px] overflow-hidden">
+                            <div class="join mt-[20px]">
+                                <a class="btn btn-lg btn-secondary">Like</a>
+                                <a class="btn btn-lg px-[20px]" id="link">Preview</a>
+                            </div>
+                        </div>
+
+                        <article class="mt-[10px] p-[20px]">
+                            <h1 class="text-3xl w-full uppercase font-bold" id="title">lion</h1>
+                            <i id="tags">Landing Page</i>
+
+                            <p id="description" class="mt-[30px]">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, dicta facere impedit aut voluptatum odio quasi sed pariatur corrupti quis.
+                            </p>
+
+                        </article>
+
+
+                    </div>
+                    <div class="flex w-[260px] flex-col justify-center gap-8 p-[20px] items-center max-[1141px]:w-full  max-[1140px]:flex-row max-[556px]:flex-col">
+                        <div class="ads w-full p-[10px] flex flex-col justify-center items-center relative">
+                            <div class="bg-cover bg-center bg-[url(public/img/donbackground.jpg)] absolute opacity-[.6] top-0 left-0 h-full w-full"></div>
+                            <div class="relative z-[9] w-[130px] h-[530px] bg-base-300 flex justify-center items-center">ads</div>
+                        </div>
+                        <div class="itemshere flex flex-col gap-[10px] [1141px]:flex-2">
+                            <div class="thembnels border-base-content/30 border">
+                                <img src="public/img_temp/temp1.webp" alt="" id="othernamea">
                             </div>
 
+                            <div class="thembnels border-base-content/30 border">
+                                <img src="public/img_temp/temp1.webp" alt="" id="othernameb">
+                            </div>
+
+                            <div class="thembnels border-base-content/30 border">
+                                <img src="public/img_temp/temp1.webp" alt="" id="othernamec">
+                            </div>
                         </div>
-       
-                        <div class="boy_box4 relative z-[1] flex flex-col justify-center items-center">
-                            <article class="z-[3] relative">
-                                <h3 class="text-lg font-bold cursor-pointer text-center" id="othera">sdfsef</h3>
-                            </article>
-                            <img src="https://dummyimage.com/245x190" id="othernamea" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
-                        </div>
-                        <div class="boy_box5 relative z-[1] flex flex-col justify-center items-center border-0 border-l-1 max-[769px]:border-l-0 max-[769px]:border-t-1">
-                            <article class="z-[3] relative">
-                                <h3 class="text-lg font-bold cursor-pointer text-center" id="otherb">sdfsef</h3>
-                            </article>
-                            <img src="https://dummyimage.com/245x190" id="othernameb" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
-                        </div>
-                        <div class="boy_box6 relative z-[1] flex flex-col justify-center items-center border-0 border-l-1 max-[769px]:border-l-0 max-[769px]:border-t-1">
-                            <article class="z-[3] relative">
-                                <h3 class="text-lg font-bold cursor-pointer text-center" id="otherc">sdfsef</h3>
-                            </article>
-                            <img src="https://dummyimage.com/245x190" id="othernamec" class="h-full absolute top-0 left-0 opacity-[.5] w-full object-cover object-center" alt="">
-                        </div>
-                    </main>
+                    </div>
                 </div>
  
             </aside>
