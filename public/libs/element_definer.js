@@ -55,16 +55,13 @@ function renderCards(page = 1) {
 
   slicedData.forEach((item, index) => {
     container.innerHTML += `
-        <aside class="card bg-base-100 w-96 shadow-sm z-[1] p-[10px]" style="zoom:.9;">
-            <figure>
-                <img loading="lazy" src="${item.img}" id="tempboarda"  alt="">
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title text-3xl">${item.title}</h2>
-              <div class="card-actions justify-end">
-                <button class="btn" template_view="0" template_view="${index}">Preview</button>
-              </div>
-            </div>
+        <aside class="p-[20px] h-[410px] w-3xl relative max-[489px]:h-[270px] cursor-pointer" template_view="${index}">
+            <article class="absolute bottom-[10%] left-[6%] z-[4] flex justify-start flex-col">
+                <h2 class="card-title text-3xl mb-[6px]">${item.title}</h2>
+                <div class="badge badge-secondary">${item.tags}</div>
+            </article>
+            <img src="${item.img}" class="absolute object-cover object-center top-0 left-0 z-1 w-full h-full" alt="">
+            <div class="filter absolute top-0 left-0 h-full w-full z-[2] bg-[rgba(15,14,14,0.00)] hover:bg-[rgba(15,14,14,0.56)]"></div>
         </aside>
 
     `;
@@ -144,7 +141,7 @@ function randomNums(max, count, exclude = []) {
 
 $(document).on("click", "[template_view]", function(){
 let idnumber = $(this).attr("template_view")
-let picker = randomNums(data.length, 3, Number(idnumber));
+let picker = randomNums(data.length, 4, Number(idnumber));
  
  
   $("#imgdis").attr("src",data[idnumber].img)
@@ -160,10 +157,24 @@ let picker = randomNums(data.length, 3, Number(idnumber));
   $("#othernamea").attr("src", data[picker[0]].img)
   $("#othernameb").attr("src", data[picker[1]].img)
   $("#othernamec").attr("src", data[picker[2]].img)
-  
-  $("#othernamea").attr("template_view",picker[0])
-  $("#othernameb").attr("template_view",picker[1])
-  $("#othernamec").attr("template_view",picker[2])
+  $("#othernamed").attr("src", data[picker[3]].img)
+
+
+$("#othernamea_title").html(data[picker[0]].title)
+$("#othernameb_title").html(data[picker[1]].title)
+$("#othernamec_title").html(data[picker[2]].title)
+$("#othernamed_title").html(data[picker[3]].title)
+
+
+$("#othernamea_tag").html(data[picker[0]].tags)
+$("#othernameb_tag").html(data[picker[1]].tags)
+$("#othernamec_tag").html(data[picker[2]].tags)
+$("#othernamed_tag").html(data[picker[3]].tags)
+
+  $("#othernamea_").attr("template_view",picker[0])
+  $("#othernameb_").attr("template_view",picker[1])
+  $("#othernamec_").attr("template_view",picker[2])
+  $("#othernamed_").attr("template_view",picker[3])
   
 
   $("#template_discriptiom").show()
