@@ -55,14 +55,18 @@ function renderCards(page = 1) {
 
   slicedData.forEach((item, index) => {
     container.innerHTML += `
-        <aside template_view="${index}" class="card w-[325px] cursor-pointer p-[5px] py-[10px]">
-          <fieldset>
-            <img src="${item.img}" class="w-full object-cover object-center hover:object-contain h-[400px] border border-base-content/30" alt="${item.title}">
-          </fieldset>
-          <div class="mt-[10px] font-bold">
-            <h1 class="text-2xl">${item.title}</h1>
-          </div>
+        <aside class="card bg-base-100 w-96 shadow-sm z-[1] p-[10px]" style="zoom:.9;">
+            <figure>
+                <img loading="lazy" src="${item.img}" id="tempboarda"  alt="">
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-3xl">${item.title}</h2>
+              <div class="card-actions justify-end">
+                <button class="btn" template_view="0" template_view="${index}">Preview</button>
+              </div>
+            </div>
         </aside>
+
     `;
   });
 
