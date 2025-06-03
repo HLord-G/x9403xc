@@ -216,13 +216,14 @@
         <nav class="bg-base-300 fixed w-full z-[7] flex flex-row justify-between items-center px-[10px]">
             <div id="flee" class="text-sm">FlexBoy</div>
             <div class="join">
-                <button class="btn btn-sm viewtemps">Free Template</button>
-                <button class="btn btn-sm">Vlog</button>
-                <button class="btn btn-sm viewbuilder">Editor</button>
+                <a  class="btn btn-sm viewtemps">Free Template</a>
+                <a href="#editors" class="btn btn-sm">Editor</a>
             </div>
         </nav>
 
-        <main class="flex flex-col justify-center items-center p-[10px] min-h-[100vh] mask-radial-at-top mask-b-from70%">
+
+        
+        <main id="editors" class="flex flex-col justify-center items-center p-[10px] min-h-[100vh] mask-radial-at-top mask-b-from70%">
                 <div class="bg-cover bg-center bg-no-repeat absolute top-0  left-0 w-full h-full z-1 opacity-[.6]" style="filter: blur(100px); background-image: url(./public/img/flexads_background.png);"></div>
                 <h1 class="text-5xl text-center p-[20px] font-black relative mt-[100px] z-[5] max-[769px]:text-4xl">
                     The Fast & Free Website Builder!
@@ -238,7 +239,7 @@
                     Build Websites in Minutes. Free. Fast. Forever.
                 </p>
 
-                <section class="flex flex-col justify-center items-center my-[60px] relative z-[5]" my-[120px]>
+                <section  class="flex flex-col justify-center items-center my-[60px] relative z-[5]" my-[120px]>
                     <a  class=" bg-base-300 btn btn-xl btn-warning text-base-content border-pink-500 max-[1000px]:hidden viewbuilder">Get Start</a>
         
                     <div  class=" bg-base-300 btn-warning text-base-content min-[1000px]:hidden mx-[20px]"> <div role="alert" class="alert alert-error">
@@ -262,7 +263,7 @@
 
         <article class="text-center p-[20px] mb-[150px] max-[926px]:hidden">
             <h1 class="text-5xl font-bold">
-             <span>Flexboy lets you build websites fast</span> <br><span>no code needed.</span>
+             <span>Flexboy lets you build websites fast</span> <br><span>less code needed.</span>
             </h1>
          </article>
 
@@ -395,7 +396,7 @@ Thanks a lot for the support!
 
 
            <!--=====================[] TEMPLATES []=====================-->
-           <section class="bg-base-300 py-[120px] min-h-screen p-5 flex flex-col  justify-start items-center text-center" style="zoom:.8;">
+           <section id="templates" class="bg-base-300 py-[120px] min-h-screen p-5 flex flex-col  justify-start items-center text-center" style="zoom:.8;">
             <h2 class="text-3xl md:text-5xl font-bold text-white mb-[80px]">🆓 Free Templates and Components</h2>
 
                 <div class="w-full flex flex-row justify-center items-center gap-[10px] flex-wrap">
@@ -507,7 +508,7 @@ Thanks a lot for the support!
                 <div class="w-full flex justify-center items-start flex-row gap-[10px] max-[1141px]:flex-col">
                     <div class="flex flex-1 w-full justify-center items-center flex-col p-[20px] max-[425px]:p-[0px]">
 
-                        <img src="public/img_temp/temp1.webp" style="zoom:.5;" alt="" id="imgdis">
+                        <img src="public/img_temp/temp1.webp" class="w-full" style="zoom:.5;" alt="" id="imgdis">
                         <!-- <div class="breadcrumbs text-sm w-full px-[90px]">
                             <ul>
                               <li>
@@ -567,7 +568,7 @@ Thanks a lot for the support!
                             </div>
                         </div>
 
-                        <article class="mt-[10px] p-[20px]">
+                        <article class="mt-[10px] w-full">
                             <h1 class="text-3xl w-full uppercase font-bold" id="title">lion</h1>
                             <i id="tags">Landing Page</i>
 
