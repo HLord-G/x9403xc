@@ -28,7 +28,7 @@ let tampview = false;
 
 
 const data = [
-  { title: "Tela Bords", tags:"Landing Page", img: "public/img_temp/temp1.webp", link: "https://www.sample.com", discription:"* step high stretch colony phrase later any is spell brother bad mirror quarter till lion molecular long unit future coffee rhyme heard ocean variety", date:"10-05-95"},
+  { title: "Tela Bords", tags:"Landing Page", img: "public/img_temp/temp1.webp", link: "https://hlord-g.github.io/temp_1.github.io/", discription:"* step high stretch colony phrase later any is spell brother bad mirror quarter till lion molecular long unit future coffee rhyme heard ocean variety", date:"10-05-95"},
   { title: "compine", tags:"Landing Page", img: "https://dummyimage.com/400x325", link: "www.sample.com", discription:"* movement secret nervous hot pine cabin unhappy wore walk cost happened partly writer managed herself activity older charge window raw crack garage build straw", date:"10-05-95"},
   { title: "side walker", tags:"Landing Page", img: "https://dummyimage.com/400x325", link: "www.sample.com", discription:"* stairs greatly chart married taught glass crop pure edge yellow dress hit whom pine comfortable start boy many weight blood cross cloud song bottle", date:"10-05-95"},
   { title: "degree", tags:"Landing Page", img: "https://dummyimage.com/400x325", link: "www.sample.com", discription:"* simple that terrible claws nuts bark visit city special pictured sort difficulty damage good sugar society trap count receive feel giving stems hand closer", date:"10-05-95"},
