@@ -36,91 +36,6 @@ $(document).on("click", "#tamplates_close", function () {
 
   tampview = !tampview; // toggle switch
 });
-var data = [{
-  title: "Tela Bords",
-  tags: "Landing Page",
-  img: "public/img_temp/temp1.webp",
-  link: "https://hlord-g.github.io/temp_1.github.io/",
-  discription: "* step high stretch colony phrase later any is spell brother bad mirror quarter till lion molecular long unit future coffee rhyme heard ocean variety",
-  date: "10-05-95"
-}, {
-  title: "compine",
-  tags: "Landing Page",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* movement secret nervous hot pine cabin unhappy wore walk cost happened partly writer managed herself activity older charge window raw crack garage build straw",
-  date: "10-05-95"
-}, {
-  title: "side walker",
-  tags: "Landing Page",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* stairs greatly chart married taught glass crop pure edge yellow dress hit whom pine comfortable start boy many weight blood cross cloud song bottle",
-  date: "10-05-95"
-}, {
-  title: "degree",
-  tags: "Landing Page",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* simple that terrible claws nuts bark visit city special pictured sort difficulty damage good sugar society trap count receive feel giving stems hand closer",
-  date: "10-05-95"
-}, {
-  title: "route",
-  tags: "Landing Page",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* touch organized welcome frequently dot can massage system had bell bottom made sets against uncle familiar clay same earlier material great on tired brown",
-  date: "10-05-95"
-}, {
-  title: "degree",
-  tags: "Landing Page",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* bone wonder impossible step shine prevent could independent thus attempt lost rays constantly hollow order gradually lunch fence nearby useful drop ancient speed joy",
-  date: "10-05-95"
-}, {
-  title: "becoming",
-  tags: "Landing Page",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* table wealth fourth pull stomach apart tongue sick north beneath cream bend half visitor height carefully missing door seven die waste bite frozen caught",
-  date: "10-05-95"
-}, {
-  title: "degree",
-  tags: "Store",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* thing silence parallel expression chicken western choice recent speech mighty until crack arrow shout is nice control read tiny consist note door cheese plate",
-  date: "10-05-95"
-}, {
-  title: "route",
-  tags: "Store",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* own bell all positive pan electric terrible anyway production diagram left milk different recall within fireplace want neighbor hit fact work eight shelf list",
-  date: "10-05-95"
-}, {
-  title: "degree",
-  tags: "Store",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* search conversation available saddle nation angle avoid grandfather halfway ship industry percent direction factory knife whether escape wrong darkness thought package last none remember",
-  date: "10-05-95"
-}, {
-  title: "becoming",
-  tags: "Store",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* treated teeth else bite two has worry tight street cook early musical useful most paragraph location met stronger tribe daughter surrounded joined hunt flat",
-  date: "10-05-95"
-}, {
-  title: "degree",
-  tags: "Store",
-  img: "https://dummyimage.com/400x325",
-  link: "www.sample.com",
-  discription: "* distant example solution since pool customs tone silent whatever fence airplane pot fly mass raise way why was now mine lot seems right elephant",
-  date: "10-05-95"
-}];
 var itemsPerPage = 12;
 var currentPage = 1;
 
@@ -132,7 +47,7 @@ function renderCards() {
   var container = document.querySelector('#template_views');
   container.innerHTML = '';
   slicedData.forEach(function (item, index) {
-    container.innerHTML += "\n        <aside class=\"p-[20px] h-[410px] w-3xl relative max-[489px]:h-[270px] cursor-pointer\" template_view=\"".concat(index, "\">\n            <article class=\"absolute bottom-[10%] left-[6%] z-[4] flex justify-start flex-col\">\n                <h2 class=\"card-title text-3xl mb-[6px]\">").concat(item.title, "</h2>\n                <div class=\"badge badge-secondary\">").concat(item.tags, "</div>\n            </article>\n            <img src=\"").concat(item.img, "\" class=\"absolute object-cover object-center top-0 left-0 z-1 w-full h-full\" alt=\"\">\n            <div class=\"filter absolute top-0 left-0 h-full w-full z-[2] bg-[rgba(15,14,14,0.00)] hover:bg-[rgba(15,14,14,0.56)]\"></div>\n        </aside>\n\n    ");
+    container.innerHTML += "\n        <aside class=\"p-[20px] h-[410px] w-3xl relative max-[489px]:h-[270px] cursor-pointer\" template_view=\"".concat(start + index, "\">\n            <article class=\"absolute bottom-[10%] left-[6%] z-[4] flex justify-start flex-col\">\n                <h2 class=\"card-title text-3xl mb-[6px]\">").concat(item.title, "</h2>\n                <div class=\"badge badge-secondary\">").concat(item.tags, "</div>\n            </article>\n            <img src=\"").concat(item.img, "\" class=\"absolute object-cover object-center top-0 left-0 z-1 w-full h-full\" alt=\"\">\n            <div class=\"filter absolute top-0 left-0 h-full w-full z-[2] bg-[rgba(15,14,14,0.00)] hover:bg-[rgba(15,14,14,0.56)]\"></div>\n        </aside>\n\n    ");
   });
   updateButtons();
 }
@@ -217,6 +132,7 @@ $(document).on("click", "[template_view]", function () {
   $("#tags").text(data[idnumber].tags);
   $("#description").text(data[idnumber].discription);
   $("#link").attr("href", data[idnumber].link);
+  $("#previewlinks").attr("href", data[idnumber].link);
   $("#othera").text(data[picker[0]].title);
   $("#otherb").text(data[picker[1]].title);
   $("#otherc").text(data[picker[2]].title);

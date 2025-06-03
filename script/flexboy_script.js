@@ -1,212 +1,14 @@
-/*
-
-
-> ========================================================== <
-
-====[*] Click Event for Class
-<button event-class-click="thisisanid2b" event-toggle="true">
-
-[A]:
-<div eventid="thisisanid2b" ev-do-update="p-[10] left-[15px]">
-
-[B]:
-<div event-id-list="{leftcall:'p-[20px]', rightcall:'bg-[green]'}">
-
-
-> ========================================================== <
-====[*] para sa SCREEN RESIZE
-
-attr_size_changer="('[loopers]', 570, 'nice'),('[loopers]', 530, 'none'), ('[loopers]', 330, 'sections')"
-
-
-> ========================================================== <
-
-
-====[*] para sa popup model 
-====[*] para sa div element
-popup="openpops" openview="false" popstyle="fixed" popindex="3"
-
-====[*] para sa button
-popup_cls="openpops" popup_cls_ani="scale-out-bl"
-
-popup_opn="openpops" popup_opn_ani="fade-in-right"
-
-
-> ========================================================== <
-
-====[*] PARA SA SCROLL LOGIC.
-
-====[*] WARNING [*]====
- BAWAL MAG SPACE ANI 
- PAG MAG SPACE KA
- DILI MO GANA
-====[!] WARNING [!]====
-
-scroll-logic-add: 'trigger,attr1|attr2|attr3,val1|val2|val3'
-scroll-logic-change: 'trigger,attr1|attr2|attr3,val1|val2|val3'
-scroll-logic-remove: 'trigger,attr1|attr2|attr3,val1|val2|val3'
-
-'432,attr1|attr2|attr3,val1|val2|val3'
-'center,attr1|attr2|attr3,val1|val2|val3'
-'10%,attr1|attr2|attr3,val1|val2|val3'
-
-'center, class, p-[20px]'
-
-
-scroll-logic-add-per: 'trigger,attr1|attr2|attr3,val1|val2|val3'
-scroll-logic-change-per: 'trigger,attr1|attr2|attr3,val1|val2|val3'
-scroll-logic-remove-per: 'trigger,attr1|attr2|attr3,val1|val2|val3'
-
-
-para sa debug
-<div class="scroll-info" id="scrollInfo">Scroll: 0</div>
-<div class="debug-info" id="debugInfo">Debug: Ready</div>
-
-> ========================================================== <
-
-=======[] ENTRANCE ANIMATION
-
-scale-in-center
-scale-in-bl
-scale-in-ver-center
-scale-in-top
-scale-in-left
-scale-in-ver-top
-scale-in-tr
-scale-in-tl
-scale-in-ver-bottom
-scale-in-right
-scale-in-hor-center
-scale-in-br
-scale-in-hor-left
-scale-in-bottom
-scale-in-hor-right
-rotate-in-center
-rotate-in-bl
-rotate-in-diag-2
-rotate-in-top
-rotate-in-left
-rotate-in-tr
-rotate-in-tl
-rotate-in-right
-rotate-in-hor
-rotate-in-br
-rotate-in-ver
-rotate-in-bottom
-rotate-in-diag-1
-rotate-in-2-cw
-rotate-in-2-tr-cw
-rotate-in-2-tl-cw
-rotate-in-2-ccw
-rotate-in-2-tr-ccw
-rotate-in-2-tl-ccw
-rotate-in-2-fwd-cw
-rotate-in-2-br-cw
-rotate-in-2-fwd-ccw
-rotate-in-2-br-ccw
-rotate-in-2-bck-cw
-rotate-in-2-bl-cw
-rotate-in-2-bck-ccw
-rotate-in-2-bl-ccw
-slide-in-blurred-top
-slide-in-blurred-left
-slide-in-blurred-tr
-slide-in-blurred-tl
-slide-in-blurred-right
-slide-in-blurred-bottom
-slide-in-blurred-br
-slide-in-blurred-bl
-slide-in-elliptic-top-fwd
-slide-in-elliptic-left-fwd
-slide-in-elliptic-top-bck
-slide-in-elliptic-left-bck
-slide-in-elliptic-right-fwd
-slide-in-elliptic-right-bck
-slide-in-elliptic-bottom-fwd
-swing-in-top-fwd
-swing-in-left-fwd
-swing-in-top-bck
-swing-in-left-bck
-swing-in-right-fwd
-swing-in-right-bck
-swing-in-bottom-fwd
-swing-in-bottom-bck
-fade-in
-fade-in-br
-fade-in-fwd
-fade-in-bottom
-fade-in-bck
-fade-in-bl
-fade-in-top
-fade-in-left
-fade-in-tr
-fade-in-tl
-fade-in-right
-
-
-
-=======[] EXIT ANIMATIONS
-
-scale-out-center
-scale-out-vertical
-scale-out-bl
-scale-out-top
-scale-out-ver-top
-scale-out-tr
-scale-out-tl
-scale-out-right
-scale-out-horizontal
-scale-out-br
-scale-out-hor-left
-scale-out-bottom
-scale-out-hor-right
-slide-out-top
-slide-out-left
-slide-out-tr
-slide-out-tl
-slide-out-right
-slide-out-br
-slide-out-bottom
-slide-out-bl
-slide-out-bck-center
-slide-out-bck-bl
-slide-out-bck-left
-slide-out-bck-top
-slide-out-bck-tr
-slide-out-bck-tl
-slide-out-bck-right
-slide-out-bck-br
-slide-out-bck-bottom
-slide-out-fwd-center
-slide-out-fwd-bl
-slide-out-fwd-top
-slide-out-fwd-left
-slide-out-fwd-tr
-slide-out-fwd-tl
-slide-out-fwd-right
-slide-out-fwd-br
-slide-out-fwd-bottom
-slide-out-blurred-top
-slide-out-blurred-left
-slide-out-blurred-tr
-slide-out-blurred-tl
-slide-out-blurred-br
-slide-out-blurred-bottom
-slide-out-blurred-bl
-
-*/ 
-
-
+ 
 
  
 
 //===========[] SCROLL LOGIC
 function setupScrollLogic() {
-    console.log('Setting up scroll logic...');
+    //console.log('Setting up scroll logic...');
     
     // Handle original scroll-toggle
     const toggleElements = document.querySelectorAll('[scroll-toggle]');
-    console.log('Found toggle elements:', toggleElements.length);
+    //console.log('Found toggle elements:', toggleElements.length);
     
     toggleElements.forEach(el => {
         const attr = el.getAttribute('scroll-toggle');
@@ -243,11 +45,11 @@ function setupScrollLogic() {
 
     // Handle scroll-logic-add with simple parsing
     const addElements = document.querySelectorAll('[scroll-logic-add]');
-    console.log('Found add elements:', addElements.length);
+    //console.log('Found add elements:', addElements.length);
     
     addElements.forEach((el, index) => {
         const attr = el.getAttribute('scroll-logic-add');
-        console.log(`Processing add element ${index}:`, attr);
+        //console.log(`Processing add element ${index}:`, attr);
         
         // Simple parsing: trigger,attr1|attr2|attr3,val1|val2|val3
         const parts = attr.split(',');
@@ -260,7 +62,7 @@ function setupScrollLogic() {
         const targetAttrs = parts[1].split('|');
         const values = parts[2].split('|');
         
-        console.log('Parsed:', {trigger, targetAttrs, values});
+        //console.log('Parsed:', {trigger, targetAttrs, values});
         
         let added = false;
 
@@ -268,7 +70,7 @@ function setupScrollLogic() {
             const shouldAdd = checkTrigger(el, trigger);
             
             if (shouldAdd && !added) {
-                console.log(`Adding to element ${index}`);
+                //console.log(`Adding to element ${index}`);
                 updateDebug(`Adding to element ${index}`);
                 
                 for (let i = 0; i < targetAttrs.length; i++) {
@@ -277,15 +79,15 @@ function setupScrollLogic() {
 
                     if (attrType === 'class') {
                         el.classList.add(value);
-                        console.log(`Added class: ${value}`);
+                        //console.log(`Added class: ${value}`);
                     } else {
                         el.setAttribute(attrType, value);
-                        console.log(`Set attribute ${attrType}: ${value}`);
+                        //console.log(`Set attribute ${attrType}: ${value}`);
                     }
                 }
                 added = true;
             } else if (!shouldAdd && added) {
-                console.log(`Removing from element ${index}`);
+                //console.log(`Removing from element ${index}`);
                 updateDebug(`Removing from element ${index}`);
                 
                 for (let i = 0; i < targetAttrs.length; i++) {
@@ -294,10 +96,10 @@ function setupScrollLogic() {
 
                     if (attrType === 'class') {
                         el.classList.remove(value);
-                        console.log(`Removed class: ${value}`);
+                        //console.log(`Removed class: ${value}`);
                     } else {
                         el.setAttribute(attrType, '');
-                        console.log(`Cleared attribute: ${attrType}`);
+                        //console.log(`Cleared attribute: ${attrType}`);
                     }
                 }
                 added = false;
@@ -311,11 +113,11 @@ function setupScrollLogic() {
 
     // Handle scroll-logic-add-per (PERMANENT) with simple parsing
     const addPerElements = document.querySelectorAll('[scroll-logic-add-per]');
-    console.log('Found add-per elements:', addPerElements.length);
+    //console.log('Found add-per elements:', addPerElements.length);
     
     addPerElements.forEach((el, index) => {
         const attr = el.getAttribute('scroll-logic-add-per');
-        console.log(`Processing add-per element ${index}:`, attr);
+        //console.log(`Processing add-per element ${index}:`, attr);
         
         const parts = attr.split(',');
         if (parts.length !== 3) {
@@ -327,7 +129,7 @@ function setupScrollLogic() {
         const targetAttrs = parts[1].split('|');
         const values = parts[2].split('|');
         
-        console.log('Parsed:', {trigger, targetAttrs, values});
+        //console.log('Parsed:', {trigger, targetAttrs, values});
         
         let executed = false;
 
@@ -335,7 +137,7 @@ function setupScrollLogic() {
             const shouldAdd = checkTrigger(el, trigger);
             
             if (shouldAdd && !executed) {
-                console.log(`PERMANENTLY adding to element ${index}`);
+                //console.log(`PERMANENTLY adding to element ${index}`);
                 updateDebug(`PERMANENTLY adding to element ${index}`);
                 
                 for (let i = 0; i < targetAttrs.length; i++) {
@@ -344,10 +146,10 @@ function setupScrollLogic() {
 
                     if (attrType === 'class') {
                         el.classList.add(value);
-                        console.log(`PERMANENTLY added class: ${value}`);
+                        //console.log(`PERMANENTLY added class: ${value}`);
                     } else {
                         el.setAttribute(attrType, value);
-                        console.log(`PERMANENTLY set attribute ${attrType}: ${value}`);
+                        //console.log(`PERMANENTLY set attribute ${attrType}: ${value}`);
                     }
                 }
                 executed = true;
@@ -364,11 +166,11 @@ function setupScrollLogic() {
 
     // Handle scroll-logic-remove-per (PERMANENT) with simple parsing
     const removePerElements = document.querySelectorAll('[scroll-logic-remove-per]');
-    console.log('Found remove-per elements:', removePerElements.length);
+    //console.log('Found remove-per elements:', removePerElements.length);
     
     removePerElements.forEach((el, index) => {
         const attr = el.getAttribute('scroll-logic-remove-per');
-        console.log(`Processing remove-per element ${index}:`, attr);
+        //console.log(`Processing remove-per element ${index}:`, attr);
         
         const parts = attr.split(',');
         if (parts.length !== 3) {
@@ -380,7 +182,7 @@ function setupScrollLogic() {
         const targetAttrs = parts[1].split('|');
         const values = parts[2].split('|');
         
-        console.log('Parsed:', {trigger, targetAttrs, values});
+        //console.log('Parsed:', {trigger, targetAttrs, values});
         
         let executed = false;
 
@@ -388,7 +190,7 @@ function setupScrollLogic() {
             const shouldRemove = checkTrigger(el, trigger);
             
             if (shouldRemove && !executed) {
-                console.log(`PERMANENTLY removing from element ${index}`);
+                //console.log(`PERMANENTLY removing from element ${index}`);
                 updateDebug(`PERMANENTLY removing from element ${index}`);
                 
                 for (let i = 0; i < targetAttrs.length; i++) {
@@ -397,10 +199,10 @@ function setupScrollLogic() {
 
                     if (attrType === 'class') {
                         el.classList.remove(value);
-                        console.log(`PERMANENTLY removed class: ${value}`);
+                        //console.log(`PERMANENTLY removed class: ${value}`);
                     } else {
                         el.removeAttribute(attrType);
-                        console.log(`PERMANENTLY removed attribute: ${attrType}`);
+                        //console.log(`PERMANENTLY removed attribute: ${attrType}`);
                     }
                 }
                 executed = true;
@@ -417,11 +219,11 @@ function setupScrollLogic() {
 
     // Handle scroll-logic-change-per (PERMANENT) with simple parsing
     const changePerElements = document.querySelectorAll('[scroll-logic-change-per]');
-    console.log('Found change-per elements:', changePerElements.length);
+    //console.log('Found change-per elements:', changePerElements.length);
     
     changePerElements.forEach((el, index) => {
         const attr = el.getAttribute('scroll-logic-change-per');
-        console.log(`Processing change-per element ${index}:`, attr);
+        //console.log(`Processing change-per element ${index}:`, attr);
         
         const parts = attr.split(',');
         if (parts.length !== 3) {
@@ -433,7 +235,7 @@ function setupScrollLogic() {
         const targetAttrs = parts[1].split('|');
         const values = parts[2].split('|');
         
-        console.log('Parsed:', {trigger, targetAttrs, values});
+        //console.log('Parsed:', {trigger, targetAttrs, values});
         
         let executed = false;
 
@@ -441,7 +243,7 @@ function setupScrollLogic() {
             const shouldChange = checkTrigger(el, trigger);
             
             if (shouldChange && !executed) {
-                console.log(`PERMANENTLY changing element ${index}`);
+                //console.log(`PERMANENTLY changing element ${index}`);
                 updateDebug(`PERMANENTLY changing element ${index}`);
                 
                 for (let i = 0; i < targetAttrs.length; i++) {
@@ -450,10 +252,10 @@ function setupScrollLogic() {
 
                     if (attrType === 'class') {
                         el.className = value;
-                        console.log(`PERMANENTLY changed class to: ${value}`);
+                        //console.log(`PERMANENTLY changed class to: ${value}`);
                     } else {
                         el.setAttribute(attrType, value);
-                        console.log(`PERMANENTLY set attribute ${attrType}: ${value}`);
+                        //console.log(`PERMANENTLY set attribute ${attrType}: ${value}`);
                     }
                 }
                 executed = true;
@@ -470,11 +272,11 @@ function setupScrollLogic() {
 
     // Handle scroll-logic-remove with simple parsing
     const removeElements = document.querySelectorAll('[scroll-logic-remove]');
-    console.log('Found remove elements:', removeElements.length);
+    //console.log('Found remove elements:', removeElements.length);
     
     removeElements.forEach((el, index) => {
         const attr = el.getAttribute('scroll-logic-remove');
-        console.log(`Processing remove element ${index}:`, attr);
+        //console.log(`Processing remove element ${index}:`, attr);
         
         // Simple parsing: trigger,attr1|attr2|attr3,val1|val2|val3
         const parts = attr.split(',');
@@ -487,7 +289,7 @@ function setupScrollLogic() {
         const targetAttrs = parts[1].split('|');
         const values = parts[2].split('|');
         
-        console.log('Parsed:', {trigger, targetAttrs, values});
+        //console.log('Parsed:', {trigger, targetAttrs, values});
         
         let removed = false;
 
@@ -495,7 +297,7 @@ function setupScrollLogic() {
             const shouldRemove = checkTrigger(el, trigger);
             
             if (shouldRemove && !removed) {
-                console.log(`Removing from element ${index}`);
+                //console.log(`Removing from element ${index}`);
                 updateDebug(`Removing from element ${index}`);
                 
                 for (let i = 0; i < targetAttrs.length; i++) {
@@ -504,15 +306,15 @@ function setupScrollLogic() {
 
                     if (attrType === 'class') {
                         el.classList.remove(value);
-                        console.log(`Removed class: ${value}`);
+                        //console.log(`Removed class: ${value}`);
                     } else {
                         el.removeAttribute(attrType);
-                        console.log(`Removed attribute: ${attrType}`);
+                        //console.log(`Removed attribute: ${attrType}`);
                     }
                 }
                 removed = true;
             } else if (!shouldRemove && removed) {
-                console.log(`Adding back to element ${index}`);
+                //console.log(`Adding back to element ${index}`);
                 updateDebug(`Adding back to element ${index}`);
                 
                 for (let i = 0; i < targetAttrs.length; i++) {
@@ -521,10 +323,10 @@ function setupScrollLogic() {
 
                     if (attrType === 'class') {
                         el.classList.add(value);
-                        console.log(`Added back class: ${value}`);
+                        //console.log(`Added back class: ${value}`);
                     } else {
                         el.setAttribute(attrType, value);
-                        console.log(`Added back attribute ${attrType}: ${value}`);
+                        //console.log(`Added back attribute ${attrType}: ${value}`);
                     }
                 }
                 removed = false;
@@ -538,11 +340,11 @@ function setupScrollLogic() {
 
     // Handle scroll-logic-change with simple parsing
     const changeElements = document.querySelectorAll('[scroll-logic-change]');
-    console.log('Found change elements:', changeElements.length);
+    //console.log('Found change elements:', changeElements.length);
     
     changeElements.forEach((el, index) => {
         const attr = el.getAttribute('scroll-logic-change');
-        console.log(`Processing change element ${index}:`, attr);
+        //console.log(`Processing change element ${index}:`, attr);
         
         // Simple parsing: trigger,attr1|attr2|attr3,val1|val2|val3
         const parts = attr.split(',');
@@ -555,7 +357,7 @@ function setupScrollLogic() {
         const targetAttrs = parts[1].split('|');
         const values = parts[2].split('|');
         
-        console.log('Parsed:', {trigger, targetAttrs, values});
+        //console.log('Parsed:', {trigger, targetAttrs, values});
         
         let changed = false;
         let originalValues = {};
@@ -572,13 +374,13 @@ function setupScrollLogic() {
 
         // Store in scroll-origin attribute
         el.setAttribute('scroll-origin', JSON.stringify(originalValues));
-        console.log(`Stored original values for element ${index}:`, originalValues);
+        //console.log(`Stored original values for element ${index}:`, originalValues);
 
         function handleChange() {
             const shouldChange = checkTrigger(el, trigger);
 
             if (shouldChange && !changed) {
-                console.log(`Changing element ${index}`);
+                //console.log(`Changing element ${index}`);
                 updateDebug(`Changing element ${index}`);
                 
                 for (let i = 0; i < targetAttrs.length; i++) {
@@ -587,15 +389,15 @@ function setupScrollLogic() {
 
                     if (attrType === 'class') {
                         el.className = value;
-                        console.log(`Changed class to: ${value}`);
+                        //console.log(`Changed class to: ${value}`);
                     } else {
                         el.setAttribute(attrType, value);
-                        console.log(`Set attribute ${attrType}: ${value}`);
+                        //console.log(`Set attribute ${attrType}: ${value}`);
                     }
                 }
                 changed = true;
             } else if (!shouldChange && changed) {
-                console.log(`Restoring element ${index}`);
+                //console.log(`Restoring element ${index}`);
                 updateDebug(`Restoring element ${index}`);
                 
                 const originData = JSON.parse(el.getAttribute('scroll-origin'));
@@ -605,10 +407,10 @@ function setupScrollLogic() {
 
                     if (attrType === 'class') {
                         el.className = originalValue;
-                        console.log(`Restored class to: ${originalValue}`);
+                        //console.log(`Restored class to: ${originalValue}`);
                     } else {
                         el.setAttribute(attrType, originalValue);
-                        console.log(`Restored attribute ${attrType}: ${originalValue}`);
+                        //console.log(`Restored attribute ${attrType}: ${originalValue}`);
                     }
                 }
                 changed = false;
@@ -678,7 +480,6 @@ function updateDebug(message) {
 
 window.addEventListener('scroll', updateScrollInfo);
 window.addEventListener('DOMContentLoaded', setupScrollLogic);
-
 
 
 
@@ -1013,9 +814,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `);
 
 
-
-
-
 //===========[] SCREEN RESIZE LOGIC
 const attrConditions = new Map();
 
@@ -1100,7 +898,6 @@ initAttrUpdaterFromHTML();
           
 
 
-
 // =========================================
 
 // Initialize all custom click events
@@ -1112,11 +909,11 @@ function initCustomClickEvents() {
         button.addEventListener('click', function() {
             const eventId = this.getAttribute('event-class-click');
             const isToggle = this.getAttribute('event-toggle') === 'true';
-            console.log('Button clicked with event-class-click:', eventId, 'Toggle:', isToggle);
+            //console.log('Button clicked with event-class-click:', eventId, 'Toggle:', isToggle);
             
             // Find all elements with matching eventid (original functionality)
             const targetElements = document.querySelectorAll(`[eventid="${eventId}"]`);
-            console.log('Found target elements:', targetElements.length);
+            //console.log('Found target elements:', targetElements.length);
             
             targetElements.forEach(element => {
                 const updateClasses = element.getAttribute('ev-do-update');
@@ -1125,7 +922,7 @@ function initCustomClickEvents() {
                     // Store original class data if not already stored
                     if (!element.hasAttribute('origin-data')) {
                         element.setAttribute('origin-data', element.className);
-                        console.log('Stored origin-data:', element.className);
+                        //console.log('Stored origin-data:', element.className);
                     }
                     
                     if (isToggle) {
@@ -1136,23 +933,23 @@ function initCustomClickEvents() {
                         if (currentClasses === updateClasses) {
                             // Currently showing updated classes, revert to original
                             element.className = originalClasses;
-                            console.log('Toggled back to original:', originalClasses);
+                            //console.log('Toggled back to original:', originalClasses);
                         } else {
                             // Currently showing original classes, apply update
                             element.className = updateClasses;
-                            console.log('Toggled to updated:', updateClasses);
+                            //console.log('Toggled to updated:', updateClasses);
                         }
                     } else {
                         // No toggle, just update the class attribute
                         element.className = updateClasses;
-                        console.log('Updated class to:', updateClasses);
+                        //console.log('Updated class to:', updateClasses);
                     }
                 }
             });
 
             // NEW: Find all elements with event-id-list attribute
             const eventIdListElements = document.querySelectorAll('[event-id-list]');
-            console.log('Found event-id-list elements:', eventIdListElements.length);
+            //console.log('Found event-id-list elements:', eventIdListElements.length);
             
             eventIdListElements.forEach(element => {
                 const eventIdListAttr = element.getAttribute('event-id-list');
@@ -1165,22 +962,22 @@ function initCustomClickEvents() {
                         // Replace single quotes with double quotes for valid JSON
                         jsonString = jsonString.replace(/'/g, '"');
                         
-                        console.log('Original event-id-list string:', eventIdListAttr);
-                        console.log('Converted JSON string:', jsonString);
+                        //console.log('Original event-id-list string:', eventIdListAttr);
+                        //console.log('Converted JSON string:', jsonString);
                         
                         const eventIdList = JSON.parse(jsonString);
-                        console.log('Parsed event-id-list:', eventIdList);
+                        //console.log('Parsed event-id-list:', eventIdList);
                         
                         // Check if the current eventId exists in the list
                         if (eventIdList.hasOwnProperty(eventId)) {
                             const targetClasses = eventIdList[eventId];
-                            console.log('Found matching eventId:', eventId, 'with classes:', targetClasses);
+                            //console.log('Found matching eventId:', eventId, 'with classes:', targetClasses);
                             
                             // Store original class data if not already stored (use a unique key for event-id-list)
                             const originKey = 'origin-data-' + eventId;
                             if (!element.hasAttribute(originKey)) {
                                 element.setAttribute(originKey, element.className);
-                                console.log('Stored origin data for', eventId, ':', element.className);
+                                //console.log('Stored origin data for', eventId, ':', element.className);
                             }
                             
                             if (isToggle) {
@@ -1191,19 +988,19 @@ function initCustomClickEvents() {
                                 if (currentClasses === targetClasses) {
                                     // Currently showing target classes, revert to original
                                     element.className = originalClasses;
-                                    console.log('Toggled back to original:', originalClasses);
+                                    //console.log('Toggled back to original:', originalClasses);
                                 } else {
                                     // Currently showing original or other classes, apply target
                                     element.className = targetClasses;
-                                    console.log('Toggled to target:', targetClasses);
+                                    //console.log('Toggled to target:', targetClasses);
                                 }
                             } else {
                                 // No toggle, just update the class attribute
                                 element.className = targetClasses;
-                                console.log('Updated class to:', targetClasses);
+                                //console.log('Updated class to:', targetClasses);
                             }
                         } else {
-                            console.log('EventId', eventId, 'not found in event-id-list');
+                            //console.log('EventId', eventId, 'not found in event-id-list');
                         }
                     } catch (error) {
                         console.error('Error parsing event-id-list JSON:', error);
@@ -1225,7 +1022,7 @@ function initCustomClickEvents() {
                                 }
                             });
                             
-                            console.log('Alternative parsing successful:', eventIdList);
+                            //console.log('Alternative parsing successful:', eventIdList);
                             
                             if (eventIdList.hasOwnProperty(eventId)) {
                                 const targetClasses = eventIdList[eventId];
@@ -1274,9 +1071,6 @@ function showDebugInfo() {
     
     document.getElementById('debug-output').textContent = debugInfo;
 }
-
-
-
 
 // ✅ Safe init for defer-loaded script
 document.addEventListener('DOMContentLoaded', () => {
