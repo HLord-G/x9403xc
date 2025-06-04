@@ -1084,3 +1084,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+//===========[] SCROLL UP NAV BAR
+// =========================================
+// scroll hide para sa navbar
+    // Auto-initialize navigation animations for elements with navAnimations attribute
+    function initNavAnimations() {
+        // Find all elements with navAnimations attribute
+        const elements = document.querySelectorAll('[navAnimations]');
+        
+        elements.forEach(element => {
+            const startOffset = parseInt(element.getAttribute('navAnimations')) || 120;
+            setupNavAnimation(element, startOffset);
+        });
+    }
+
+    function setupNavAnimation(navbar, startOffset) {
+        if (!navbar) return console.warn("Navbar element not found");
+        
+        // Add transition style via JavaScript
+        navbar.style.transition = "top 0.3s ease-in-out";
+        
+        let lastScrollTop = window.scrollY;
+        let scrollUpCounter = 0;
+        let ticking = false;
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const currentScrollTop = window.scrollY;
+                    
+                    if (currentScrollTop > startOffset) {
+                        if (currentScrollTop > lastScrollTop) {
+                            // Scroll down - hide navbar
+                            navbar.style.top = `-${navbar.offsetHeight}px`;
+                            scrollUpCounter = 0;
+                        } else {
+                            // Scroll up - show navbar after 2 scroll up events
+                            scrollUpCounter++;
+                            if (scrollUpCounter >= 2) {
+                                navbar.style.top = "0";
+                            }
+                        }
+                    } else {
+                        // Above start offset - always show navbar
+                        navbar.style.top = "0";
+                        scrollUpCounter = 0;
+                    }
+                    
+                    lastScrollTop = currentScrollTop;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    }
+
+    // Initialize - works with defer attribute
+    // Since defer waits for DOM to be parsed, we can run immediately
+    // but we'll also check DOM state to be extra safe
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initNavAnimations);
+    } else {
+        // DOM is already loaded (defer script runs after DOM parsing)
+        initNavAnimations();
+    }
