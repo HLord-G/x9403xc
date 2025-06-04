@@ -1069,7 +1069,11 @@ function showDebugInfo() {
         debugInfo += `  origin-data: "${el.getAttribute('origin-data') || 'not set'}"\n\n`;
     });
     
+   try {
     document.getElementById('debug-output').textContent = debugInfo;
+   } catch (error) {
+    
+   }
 }
 
 // ✅ Safe init for defer-loaded script

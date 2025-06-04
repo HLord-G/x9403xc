@@ -812,7 +812,10 @@ function showDebugInfo() {
     debugInfo += "  ev-do-update: \"".concat(el.getAttribute('ev-do-update') || 'not set', "\"\n");
     debugInfo += "  origin-data: \"".concat(el.getAttribute('origin-data') || 'not set', "\"\n\n");
   });
-  document.getElementById('debug-output').textContent = debugInfo;
+
+  try {
+    document.getElementById('debug-output').textContent = debugInfo;
+  } catch (error) {}
 } // ✅ Safe init for defer-loaded script
 
 
