@@ -1,0 +1,744 @@
+  // Create the popup container
+  const popup = document.createElement('div');
+  popup.id = 'imagePopup';
+
+  // ✅ Initial hidden style
+  popup.style.display = 'none';
+  popup.style.position = 'fixed';
+  popup.style.top = '0';
+  popup.style.left = '0';
+  popup.style.right = '0';
+  popup.style.bottom = '0';
+  popup.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+  popup.style.justifyContent = 'center';
+  popup.style.alignItems = 'center';
+  popup.style.zIndex = '9999';
+
+  // Create the image inside popup
+  const popupImg = document.createElement('img');
+  popupImg.style.maxWidth = '90%';
+  popupImg.style.maxHeight = '90%';
+  popupImg.style.border = '5px solid white';
+  popupImg.style.borderRadius = '10px';
+
+  popup.appendChild(popupImg);
+  document.body.appendChild(popup);
+
+  // Add event to thumbnails
+  document.querySelectorAll('.thumbnail').forEach(img => {
+    img.addEventListener('click', () => {
+      popupImg.src = img.src;
+      popup.style.display = 'flex';
+    });
+  });
+
+  // Click anywhere to close
+  popup.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+
+
+
+
+
+  let datacompiler = [
+ {
+    code:`    <menu popup="openpops" openview="false" popstyle="fixed" popindex="999" class="flex top-0 left-0 p-[20px] h-[100vh] overflow-hidden flex-col justify-center items-center w-full z-[9909] bg-base-300">
+        <button popup_cls="openpops" popup_cls_ani="slide-out-right" class="absolute top-[5%] right-[6%]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+        </button>
+
+        <main class="my-[120px] flex flex-col gap-[30px]">
+            <a class="text-4xl" href="#About">About</a>
+            <a class="text-4xl" href="#Classes">Classes</a>
+            <a class="text-4xl" href="#Subscribe">Subscribe</a>
+        </main>
+
+        <div>
+            
+        </div>
+    </menu>
+
+    <nav navAnimations="120" scroll-logic-add='520,class,bg-base-300' class=" fixed flex flex-row justify-between items-center top-0 left-0 w-full py-[20px] px-[25px] z-50">
+        <div>
+            <h2 class="pt-serif-regular text-3xl">
+                FlexBoy
+            </h2>
+        </div>
+        <div class="flex flex-row justify-center items-center gap-[30px] max-[908px]:hidden">
+            <a class="text-sm" href="#About">About</a>
+            <a class="text-sm" href="#Classes">Classes</a>
+            <a class="text-sm" href="#Subscribe">Subscribe</a>
+
+            <button class="ml-[30px]  btn rounded-2xl btn-neutral">
+                    Start Free Trail
+            </button>
+        </div>
+
+        <div class="hidden flex-row justify-center items-center gap-[30px] max-[908px]:flex">
+            <button popup_opn="openpops" popup_opn_ani="fade-in-right" class="navopen">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+            </button>
+        </div>
+    </nav>`
+ },{
+    code:`    <section class="flex flex-col justify-center items-center mask-b-from-90% overflow-hidden">
+
+        <main class=" mt-[100px] min-w-[70vw] flex flex-col justify-start items-center">
+            
+            <h1 class="text-5xl tracking-wide pt-serif-regular text-center max-[503px]:text-4xl max-[353px]:text-3xl">
+                Revolutionize Your Fitness.
+            </h1>
+
+            <p class="mt-[40px] max-w-[280px] text-center">
+                Start your journey to a healthier,
+                stronger you with our fitness app
+            </p>
+ 
+
+            <div attr_size_changer="('[style]',768,'zoom:.7;'),('[style]',524,'zoom:.5;'),('[style]',352,'zoom:.4;')" class="border-[10px] border-b-0 border-black mt-[50px] rounded-t-[40px] w-[420px] h-[600px] relative">
+                <img src="https://dummyimage.com/420x600" class="absolute top-0 rounded-t-[30px] left-0 h-full w-full" alt="">
+
+                <aside class="absolute top-[5%] left-[-26%] rounded-2xl z-[5] w-[165px] h-[165px] bg-base-300 shadow-lg flex flex-col justify-center items-center gap-[20px] opacity-[.8]" style="zoom:.8;">
+                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="26 26 148 148.1" viewBox="26 26 148 148.1" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" fill="currentColor"> 
+                        <g>
+                            <path d="M165.2 128.2c-7.7-2.2-12.4-9.7-12.4-34.6 0-25.9-18-47.4-42-53.2h.2c.1-.5.1-1 .1-1.5 0-7.1-5.8-12.9-12.9-12.9s-12.9 5.8-12.9 12.9c0 .5 0 1 .1 1.5h.2c-24.2 5.7-42.1 27.4-42.1 53.2 0 24.9-2.9 32.5-10.6 34.6-4.6 1.3-6.9 5.5-6.9 10.3v16.3h52.9c0 10.7 8.7 19.3 19.3 19.3s19.3-8.7 19.3-19.3H174v-16.3c-.1-4.8-4.2-9-8.8-10.3z" data-color="1"></path>
+                        </g>
+                    </svg>
+
+                    <svg preserveAspectRatio="xMidYMid meet" fill="currentColor" data-bbox="41.736 97.932 116.528 16.967" viewBox="41.736 97.932 116.528 16.967" height="30px" width="100px" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true">
+                        <g>
+                            <path d="M43.795 97.932h112.41a2.06 2.06 0 0 1 2.059 2.059v.124a2.06 2.06 0 0 1-2.059 2.059H43.795a2.06 2.06 0 0 1-2.059-2.059v-.124a2.06 2.06 0 0 1 2.059-2.059z"  data-color="1"></path>
+                            <path d="M67.121 110.657h64.391a2.06 2.06 0 0 1 2.059 2.059v.124a2.06 2.06 0 0 1-2.059 2.059H67.121a2.06 2.06 0 0 1-2.059-2.059v-.124a2.06 2.06 0 0 1 2.059-2.059z"   data-color="1"></path>
+                        </g>
+                    </svg>
+                </aside>
+                <aside class="absolute top-[33%] left-[-36%] rounded-2xl z-[5] w-[290px] h-[152px] bg-base-300 shadow-lg flex flex-row justify-center items-center gap-[30px]" style="zoom:.8;">
+                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="63.475 63.475 73.05 73.05" viewBox="63.475 63.475 73.05 73.05" height="90px" width="90px" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" fill="currentColor"> 
+                        <g>
+                            <path d="M100 136.525c-20.139 0-36.525-16.385-36.525-36.525h12.544c0 13.223 10.757 23.981 23.981 23.981s23.981-10.757 23.981-23.981S113.223 76.019 100 76.019V63.475c20.139 0 36.525 16.385 36.525 36.525S120.139 136.525 100 136.525z"  data-color="1"></path>
+                            <g opacity=".17">
+                                <path d="M76.019 100H63.475c0-20.139 16.385-36.525 36.525-36.525v12.544c-13.223 0-23.981 10.758-23.981 23.981z"  opacity=".8" data-color="1"></path>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="43.184 60.155 113.632 79.691" viewBox="43.184 60.155 113.632 79.691" height="90px" width="90px" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" fill="currentColor"> 
+                            <g>
+                                <path d="M51.301 60.155a8.117 8.117 0 0 1 8.117 8.117v63.457a8.117 8.117 0 1 1-16.234 0V68.272a8.117 8.117 0 0 1 8.117-8.117z" data-color="1"></path>
+                                <path d="M76.019 88.932a7.748 7.748 0 0 1 7.748 7.748v35.418a7.748 7.748 0 0 1-15.496 0V96.68a7.749 7.749 0 0 1 7.748-7.748z" data-color="1"></path>
+                                <path d="M100.369 69.01a7.748 7.748 0 0 1 7.748 7.748v55.34a7.748 7.748 0 0 1-15.496 0v-55.34a7.747 7.747 0 0 1 7.748-7.748z" data-color="1"></path>
+                                <path d="M124.719 94.097a7.748 7.748 0 0 1 7.748 7.748v30.253a7.748 7.748 0 0 1-15.496 0v-30.253a7.748 7.748 0 0 1 7.748-7.748z" data-color="1"></path>
+                                <path d="M149.068 107.379a7.748 7.748 0 0 1 7.748 7.748v16.971a7.748 7.748 0 0 1-15.496 0v-16.971a7.748 7.748 0 0 1 7.748-7.748z" data-color="2"></path>
+                            </g>
+                        </svg>
+
+                </aside>
+                <aside class="absolute top-[30%] right-[-26%] rounded-2xl z-[5] w-[165px] h-[165px] bg-base-300 shadow-lg" style="zoom:.9;"></aside>
+                <aside class="absolute top-[60%] right-[-36%] rounded-2xl z-[5] w-[290px] h-[152px] bg-base-300 shadow-lg" style="zoom:.8;"></aside>
+            </div>
+              
+
+        </main>
+        
+    </section>`
+ },{
+    code:` <section class="min-h-[90vh] bg-base-300 flex flex-col justify-start items-center mask-t-from-90% overflow-hidden">
+
+        <main class="flex flex-col justify-center items-end w-full px-[20px] mt-[127px] my-[20px]">
+            <div class="w-[60vw] max-[768px]:w-[80vw] max-[425px]:w-[90vw] max-[425px]:px-[4px]">
+                <p class="mb-[20px]">How FlexBoy fuels your fitness</p>
+                <h1 class="text-5xl pt-serif-regular max-[910px]:text-4xl max-[528px]:text-3xl max-[425px]:text-2xl">
+                    I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
+                </h1>
+            </div>
+        </main>
+
+        <main class="flex flex-col justify-center items-start w-full my-[90px]">
+            <div attr_size_changer="('[style]', 782, 'zoom:.8;'),('[style]', 580, 'zoom:.7;'),('[style]', 512, 'zoom:.6;'),('[style]', 432, 'zoom:.5;'),('[style]', 360, 'zoom:.4;')" class="border-[10px]  border-l-0 border-black rounded-br-[40px] rounded-tr-[40px] h-[450px] w-[700px] relative ">
+                <img src="https://dummyimage.com/700x450" class="absolute top-0 rounded-br-[30px] rounded-tr-[30px] h-full w-full" alt="">
+            </div>
+        </main>
+
+    </section>`
+ },
+ {
+    code:`<section class="w-full">
+        <div class="min-h-[40vh] flex flex-col justify-center items-start px-[40px] max-[428px]:px-[20px]">
+            <main class="w-[320px] my-[70px] break-words max-[364px]:w-full">
+                <h3 class="text-5xl mb-[90px] pt-serif-regular">
+                    Explore
+                    our classes
+                </h3>
+                <p class="text-sm mb-[29px]">
+                    Describe your service here. What makes it great? Use short catchy text to tell people what you offer, and the benefits they will receive. A great description gets readers in the mood, and makes them more likely to go ahead and book.
+                </p>
+    
+                <button class="btn btn-lg rounded-2xl px-[80px]">Start Now</button>
+            </main>
+        </div>
+    
+        <div>
+            <aside class="border border-r-0 border-l-0 border-base-content/20 w-full flex flex-row justify-between items-center px-[20px] py-[10px] gap-[10px] max-[903px]:flex-col max-[903px]:space-y-7 max-[903px]:py-[20px]">
+                <div class="flex-[.3] max-[903px]:w-[314px] max-[903px]:text-left  max-[354px]:w-full">
+                    <p class="text-xs text-base-content/60">
+                        01
+                    </p>
+                </div>
+                <div class="flex-2 flex flex-row gap-[20px] justify-center items-center max-[903px]:flex-col max-[903px]:w-[314px] max-[903px]:items-start max-[354px]:w-full">
+                    <h1 class="text-5xl pt-serif-regular">
+                        30-Day HIIT
+                    </h1>
+                    <p class="text-xs">
+                        Use this area to describe one of your services.
+                    </p>
+                </div>
+                <div class="flex-1 max-[410px]:w-full">
+                    <div class="w-full">
+                        <img src="https://dummyimage.com/382x209" class="w-full h-[209px] object-cover max-[903px]:w-[320px] max-[410px]:w-full" alt="">
+                    </div>
+                </div>
+            </aside>
+
+
+            <aside class="border border-r-0 border-l-0 border-base-content/20 w-full flex flex-row justify-between items-center px-[20px] py-[10px] gap-[10px] max-[903px]:flex-col max-[903px]:space-y-7 max-[903px]:py-[20px]">
+                <div class="flex-[.3] max-[903px]:w-[314px] max-[903px]:text-left  max-[354px]:w-full">
+                    <p class="text-xs text-base-content/60">
+                        02
+                    </p>
+                </div>
+                <div class="flex-2 flex flex-row gap-[20px] justify-center items-center max-[903px]:flex-col max-[903px]:w-[314px] max-[903px]:items-start max-[354px]:w-full">
+                    <h1 class="text-5xl pt-serif-regular">
+                        Cardio
+                    </h1>
+                    <p class="text-xs">
+                        Use this area to describe one of your services.
+                    </p>
+                </div>
+                <div class="flex-1 max-[410px]:w-full">
+                    <div class="w-full">
+                        <img src="https://dummyimage.com/382x209" class="w-full h-[209px] object-cover max-[903px]:w-[320px] max-[410px]:w-full" alt="">
+                    </div>
+                </div>
+            </aside>
+
+
+            <aside class="border border-r-0 border-l-0 border-base-content/20 w-full flex flex-row justify-between items-center px-[20px] py-[10px] gap-[10px] max-[903px]:flex-col max-[903px]:space-y-7 max-[903px]:py-[20px]">
+                <div class="flex-[.3] max-[903px]:w-[314px] max-[903px]:text-left  max-[354px]:w-full">
+                    <p class="text-xs text-base-content/60">
+                        03
+                    </p>
+                </div>
+                <div class="flex-2 flex flex-row gap-[20px] justify-center items-center max-[903px]:flex-col max-[903px]:w-[314px] max-[903px]:items-start max-[354px]:w-full">
+                    <h1 class="text-5xl pt-serif-regular">
+                        Pilates
+                    </h1>
+                    <p class="text-xs">
+                        Use this area to describe one of your services.
+                    </p>
+                </div>
+                <div class="flex-1 max-[410px]:w-full">
+                    <div class="w-full">
+                        <img src="https://dummyimage.com/382x209" class="w-full h-[209px] object-cover max-[903px]:w-[320px] max-[410px]:w-full" alt="">
+                    </div>
+                </div>
+            </aside>
+            <aside class="border border-r-0 border-l-0 border-base-content/20 w-full flex flex-row justify-between items-center px-[20px] py-[10px] gap-[10px] max-[903px]:flex-col max-[903px]:space-y-7 max-[903px]:py-[20px]">
+                <div class="flex-[.3] max-[903px]:w-[314px] max-[903px]:text-left  max-[354px]:w-full">
+                    <p class="text-xs text-base-content/60">
+                        04
+                    </p>
+                </div>
+                <div class="flex-2 flex flex-row gap-[20px] justify-center items-center max-[903px]:flex-col max-[903px]:w-[314px] max-[903px]:items-start max-[354px]:w-full">
+                    <h1 class="text-5xl pt-serif-regular">
+                        Yoga
+                    </h1>
+                    <p class="text-xs">
+                        Use this area to describe one of your services.
+                    </p>
+                </div>
+                <div class="flex-1 max-[410px]:w-full">
+                    <div class="w-full">
+                        <img src="https://dummyimage.com/382x209" class="w-full h-[209px] object-cover max-[903px]:w-[320px] max-[410px]:w-full" alt="">
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>`
+ },
+ {
+    code:`<section class="relative flex flex-col justify-center items-center bg-[url('https://dummyimage.com/1351x761')] bg-fixed bg-cover bg-center">
+        <main class="z-[9] w-[430px] min-h-[90vh] my-[60px] flex flex-col justify-around items-center max-[433px]:w-full">
+            
+            
+            <h1 class="text-5xl tracking-wide pt-serif-regular text-center max-[503px]:text-4xl max-[353px]:text-3xl">
+                Ready to transform your life?
+            </h1>
+
+            <div class="text-center max-w-[300px]">
+                <p>
+                    I'm a paragraph. Click here to add your own text and edit me.
+                </p>
+
+                <div attr_size_changer="('[style]', 439, 'zoom:.8;')" class="mt-[20px] flex flex-row justify-center items-center gap-[20px] w-full">
+                    <button class="btn bg-white text-black border-[#e5e5e5]">
+                        <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="m0 0H512V512H0" fill="#fff"></path><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path><path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path><path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path></g></svg>
+                        Login with Google
+                    </button>
+
+                    <button class="btn bg-black text-white border-black">
+                        <svg aria-label="Apple logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1195 1195"><path fill="white" d="M1006.933 812.8c-32 153.6-115.2 211.2-147.2 249.6-32 25.6-121.6 25.6-153.6 6.4-38.4-25.6-134.4-25.6-166.4 0-44.8 32-115.2 19.2-128 12.8-256-179.2-352-716.8 12.8-774.4 64-12.8 134.4 32 134.4 32 51.2 25.6 70.4 12.8 115.2-6.4 96-44.8 243.2-44.8 313.6 76.8-147.2 96-153.6 294.4 19.2 403.2zM802.133 64c12.8 70.4-64 224-204.8 230.4-12.8-38.4 32-217.6 204.8-230.4z"></path></svg>
+                        Login with Apple
+                    </button>
+                </div>
+            </div>
+
+        </main>
+    </section>`
+ },
+ {
+    code:`<section class="relative flex flex-col justify-start items-center">
+        <main class="w-[980px] my-[80px] min-h-[100vh]  max-[535px]:h-full max-[535px]:min-h-[20vh] flex flex-col justify-center items-center space-y-7 max-[984px]:w-full">
+            <h1 class="text-5xl tracking-wide pt-serif-regular text-center max-[503px]:text-4xl max-[353px]:text-3xl">Explore the app</h1>
+            <p class="px-[20px] text-center">
+                Discover personalized fitness plans, real-time progress tracking, community support and more.
+            </p>
+
+            <div class="w-full relative flex flex-row justify-center items-center">
+
+                <button class="absolute top-[40%] left-[0%] max-[535px]:shadow-xs  custom-prev z-[9] opacity-[.5]" style="transform: translate(50%, 50%);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+                        <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/>
+                    </svg>
+                </button>
+                <button class="absolute top-[40%] right-[0%] custom-next z-[9] opacity-[.5] max-[535px]:hidden" style="transform: translate(-50%, 50%);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+                        <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                    </svg>
+                </button>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                        <div class="w-full flex flex-row justify-center items-center max-[535px]:p-[10px]">
+                            <div attr_size_changer="('[style]', 535, 'display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); grid-column-gap: 5px; grid-row-gap: 5px;')" class="grid_grp1 w-[520px] my-[20px] min-h-[480px]" style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); grid-column-gap: 5px; grid-row-gap: 5px;">
+                                <div attr_size_changer="('[style]',535,'grid-area: 1 / 1 / 2 / 3;')" style="grid-area: 1 / 1 / 3 / 2;" class="box1 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden">
+                                    <img src="https://dummyimage.com/268x316"  class="object-cover object-center absolute top-0 left-0 h-full w-full"  alt="">
+                                </div>
+                                <div attr_size_changer="('[style]',535,'grid-area: 2 / 1 / 3 / 2;')" style="grid-area: 3 / 1 / 4 / 2;" class="box2 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden">
+                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="43.184 60.155 113.632 79.691" viewBox="43.184 60.155 113.632 79.691" fill="currentColor" height="80" width="80" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true"> 
+                                            <g>
+                                                <path d="M51.301 60.155a8.117 8.117 0 0 1 8.117 8.117v63.457a8.117 8.117 0 1 1-16.234 0V68.272a8.117 8.117 0 0 1 8.117-8.117z" data-color="1"></path>
+                                                <path d="M76.019 88.932a7.748 7.748 0 0 1 7.748 7.748v35.418a7.748 7.748 0 0 1-15.496 0V96.68a7.749 7.749 0 0 1 7.748-7.748z" data-color="1"></path>
+                                                <path d="M100.369 69.01a7.748 7.748 0 0 1 7.748 7.748v55.34a7.748 7.748 0 0 1-15.496 0v-55.34a7.747 7.747 0 0 1 7.748-7.748z" data-color="1"></path>
+                                                <path d="M124.719 94.097a7.748 7.748 0 0 1 7.748 7.748v30.253a7.748 7.748 0 0 1-15.496 0v-30.253a7.748 7.748 0 0 1 7.748-7.748z" data-color="1"></path>
+                                                <path d="M149.068 107.379a7.748 7.748 0 0 1 7.748 7.748v16.971a7.748 7.748 0 0 1-15.496 0v-16.971a7.748 7.748 0 0 1 7.748-7.748z"  data-color="2"></path>
+                                            </g>
+                                        </svg>
+                                </div>
+                                <div attr_size_changer="('[style]',535,'grid-area: 2 / 2 / 3 / 3;')" style="grid-area: 1 / 2 / 2 / 4;" class="box3 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden">
+                                    <div class="flex flex-row justify-around items-center w-full gap-[10px]">
+                                        <svg preserveAspectRatio="xMidYMid meet" fill="currentColor" data-bbox="52.039 64.213 95.922 71.573" viewBox="52.039 64.213 95.922 71.573" height="70px" width="70px" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true">
+                                                <g>
+                                                    <path d="M55.692 64.213h88.616a3.653 3.653 0 0 1 3.653 3.653v.072a3.653 3.653 0 0 1-3.653 3.653H55.692a3.653 3.653 0 0 1-3.653-3.653v-.072a3.653 3.653 0 0 1 3.653-3.653z" fill="gray" data-color="1"></path>
+                                                    <path d="M56.012 64.213h23.131a3.653 3.653 0 0 1 3.653 3.653v.072a3.653 3.653 0 0 1-3.653 3.653H56.012a3.653 3.653 0 0 1-3.653-3.653v-.072a3.653 3.653 0 0 1 3.653-3.653z" data-color="1"></path>
+                                                    <path d="M55.692 95.942h88.616a3.653 3.653 0 0 1 3.653 3.653v.072a3.653 3.653 0 0 1-3.653 3.653H55.692a3.653 3.653 0 0 1-3.653-3.653v-.072a3.652 3.652 0 0 1 3.653-3.653z" data-color="2"></path>
+                                                    <path d="M55.692 95.942h88.616a3.653 3.653 0 0 1 3.653 3.653v.072a3.653 3.653 0 0 1-3.653 3.653H55.692a3.653 3.653 0 0 1-3.653-3.653v-.072a3.652 3.652 0 0 1 3.653-3.653z" opacity=".4" data-color="3"></path>
+                                                    <path d="M56.197 95.942h56.078a3.689 3.689 0 1 1 0 7.378H56.197a3.689 3.689 0 0 1-3.689-3.689 3.688 3.688 0 0 1 3.689-3.689z" fill="gray" data-color="3"></path>
+                                                    <path d="M55.692 128.408h88.616a3.653 3.653 0 0 1 3.653 3.653v.072a3.653 3.653 0 0 1-3.653 3.653H55.692a3.653 3.653 0 0 1-3.653-3.653v-.072a3.653 3.653 0 0 1 3.653-3.653z" data-color="2"></path>
+                                                    <path d="M55.692 128.223h88.616a3.653 3.653 0 0 1 3.653 3.653v.072a3.653 3.653 0 0 1-3.653 3.653H55.692a3.653 3.653 0 0 1-3.653-3.653v-.072a3.653 3.653 0 0 1 3.653-3.653z" opacity=".5" data-color="4"></path>
+                                                    <path d="M55.828 128.592h56.816a3.32 3.32 0 0 1 0 6.64H55.828a3.32 3.32 0 1 1 0-6.64z" fill="gray" data-color="4"></path>
+                                                </g>
+                                            </svg>
+
+                                            <svg preserveAspectRatio="xMidYMid meet" data-bbox="48.442 48.426 103.115 103.148" viewBox="48.442 48.426 103.115 103.148" height="70px" width="70px" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true">
+                                                    <g>
+                                                        <path d="M125.619 74.477c-6.807-6.807-15.856-10.555-25.482-10.555S81.461 67.67 74.654 74.477L63.697 63.52c9.734-9.733 22.674-15.094 36.439-15.094s26.706 5.36 36.439 15.094l-10.956 10.957z" data-color="1"></path>
+                                                        <path d="M100.318 151.572c-.583 0-1.167-.009-1.752-.03l.532-15.487c9.815.331 19.196-3.462 26.433-10.699 14.05-14.051 14.05-36.914 0-50.965l10.957-10.956c20.092 20.093 20.092 52.785 0 72.879-9.88 9.879-22.665 15.258-36.17 15.258z" fill="gray" data-color="2"></path>
+                                                        <path d="M99.898 151.574c-13.786.001-26.636-5.292-36.362-15.018-9.733-9.734-15.094-22.674-15.094-36.439s5.36-26.706 15.094-36.439l10.957 10.957c-6.807 6.807-10.555 15.856-10.555 25.482s3.748 18.676 10.555 25.482c7.09 7.091 16.597 10.811 26.73 10.457l.532 15.487c-.62.02-1.24.031-1.857.031z" fill="pink" data-color="3"></path>
+                                                    </g>
+                                                </svg>
+                                    </div>
+                                </div>
+                                <div attr_size_changer="('[style]',535,'grid-area: 3 / 1 / 4 / 2;')" style="grid-area: 2 / 2 / 3 / 3;" class="box4 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden bg-base-300">
+                                    <div class="h-full w-full flex flex-col justify-end items-start">
+                                        <p class="text-lg font-bold">
+                                            4
+                                        </p>
+                                        <p class="text-xs">
+                                            4 Glasses of Water
+                                        </p>
+                                    </div>
+                                </div>
+                                <div attr_size_changer="('[style]',535,'grid-area: 3 / 2 / 4 / 3;')" style="grid-area: 2 / 3 / 3 / 4;" class="box5 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden">
+                                    <img src="https://dummyimage.com/268x316"  class="object-cover object-center absolute top-0 left-0 h-full w-full"  alt="">
+                                </div>
+                                <div attr_size_changer="('[style]',535,'grid-area: 4 / 1 / 5 / 2;')" style="grid-area: 3 / 2 / 4 / 3;" class="box6 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden">
+                                    <img src="https://dummyimage.com/268x316"  class="object-cover object-center absolute top-0 left-0 h-full w-full"  alt="">
+                                </div>
+                                <div attr_size_changer="('[style]',535,'grid-area: 4 / 2 / 5 / 3;')" style="grid-area: 3 / 3 / 4 / 4;" class="box7 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden bg-base-300">
+                                    <div class="h-full w-full flex flex-col justify-end items-start">
+                                        <p class="text-lg font-bold">
+                                            2K
+                                        </p>
+                                        <p class="text-xs">
+                                            Steps
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="w-full flex flex-row justify-center items-center max-[535px]:p-[10px]">
+                            <div attr_size_changer="('[style]', 535, 'display: grid; grid-template-columns: repeat(2, 1fr);  grid-template-rows: repeat(4, 1fr);  grid-column-gap: 5px;  grid-row-gap: 5px;')" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); grid-column-gap: 5px; grid-row-gap: 5px;" class="w-[520px] my-[20px] min-h-[480px]">
+                                <div attr_size_changer="('[style]', 535,'grid-area: 1 / 1 / 2 / 3')" style="grid-area: 1 / 1 / 4 / 2;" class="box1 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden bg-base-300"></div>
+                                <div attr_size_changer="('[style]', 535,'grid-area: 2 / 1 / 3 / 2')" style="grid-area: 4 / 1 / 5 / 2;" class="box2 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden">
+                                    You’re scheduled to
+                                    work out with Harold!
+                                </div>
+                                <div attr_size_changer="('[style]', 535,'grid-area: 2 / 2 / 3 / 3')" style="grid-area: 1 / 2 / 3 / 3;" class="box3 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden">
+                                    You’re scheduled to
+                                    work out with Harold!
+                                </div>
+                                <div attr_size_changer="('[style]', 535,'grid-area: 3 / 1 / 5 / 3')" style="grid-area: 3 / 2 / 5 / 3;" class="box4 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden bg-base-200">
+                                    <h3 class="text-4xl pt-serif-regular">
+                                        FlexBoy
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+
+         
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div  class="w-full flex flex-row justify-center items-center max-[535px]:p-[10px]">
+                            <div attr_size_changer="('[style]', 535, 'display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(6, 1fr); grid-column-gap: 5px; grid-row-gap: 5px;')" style="display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(4, 1fr); grid-column-gap: 5px; grid-row-gap: 5px;" class="grid_grp3 w-[520px] my-[20px] min-h-[480px] max-[535px]:h-[480px]">
+                                <div attr_size_changer="('[style]', 535, 'grid-area: 1 / 1 / 3 / 4;')" style="grid-area: 1 / 1 / 4 / 3;" class="box1 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                    <img src="https://dummyimage.com/268x316"  class="object-cover object-center absolute top-0 left-0 h-full w-full"  alt="">
+                                </div>
+                                <div attr_size_changer="('[style]', 535, 'grid-area: 3 / 1 / 4 / 2;')" style="grid-area: 4 / 1 / 5 / 3;" class="box2 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                    <img src="https://dummyimage.com/268x316"  class="object-cover object-center absolute top-0 left-0 h-full w-full"  alt="">  
+                                </div>
+                                <div attr_size_changer="('[style]', 535, 'grid-area: 3 / 2 / 4 / 3;')" style="grid-area: 2 / 3 / 5 / 6;" class="box3 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                    <img src="https://dummyimage.com/268x316"  class="object-cover object-center absolute top-0 left-0 h-full w-full"  alt="">
+                                </div>
+                                <div attr_size_changer="('[style]', 535, 'grid-area: 3 / 3 / 4 / 4;')" style="grid-area: 1 / 3 / 2 / 4;" class="box4 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                    <img src="https://dummyimage.com/268x316"  class="object-cover object-center absolute top-0 left-0 h-full w-full"  alt="">
+                                </div>
+                                <div attr_size_changer="('[style]', 535, 'grid-area: 4 / 1 / 7 / 3;')" style="grid-area: 1 / 4 / 2 / 5;" class="box5 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                    <img src="https://dummyimage.com/268x316"  class="object-cover object-center absolute top-0 left-0 h-full w-full"  alt="">
+                                </div>
+                                <div attr_size_changer="('[style]', 535, 'grid-area: 4 / 3 / 7 / 4;')" style="grid-area: 1 / 5 / 2 / 6;" class="box6 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                    <img src="https://dummyimage.com/268x316"  class="object-cover object-center absolute top-0 left-0 h-full w-full"  alt="">
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="w-full flex flex-row justify-center items-center max-[535px]:p-[10px]">
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); grid-column-gap: 5px; grid-row-gap: 5px;" class="grid_grp4 w-[520px] my-[20px] min-h-[480px]">
+                                <div style="grid-area: 1 / 1 / 2 / 2;" class="box1 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                You’re scheduled to
+                                    work out with Harold!     
+                                </div>
+                                <div style="grid-area: 2 / 1 / 4 / 2;" class="box2 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                You’re scheduled to
+                                    work out with Harold!     
+                                </div>
+                                <div style="grid-area: 1 / 2 / 3 / 3;" class="box3 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                You’re scheduled to
+                                    work out with Harold!     
+                                </div>
+                                <div style="grid-area: 3 / 2 / 4 / 3;" class="box4 border border-base-content/40 rounded-2xl p-[10px] flex flex-col justify-center items-center relative text-center overflow-hidden"> 
+                                You’re scheduled to
+                                    work out with Harold!     
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+            </div>
+        </main>
+    </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+           loop: true,
+           navigation: {
+             nextEl: ".custom-next",
+             prevEl: ".custom-prev",
+           },
+           pagination: {
+             el: ".swiper-pagination",
+             clickable: true,
+           } 
+         });
+     </script>`
+ },
+ {
+    code:`<section class="min-h-[110vh] relative">
+        <img src="https://dummyimage.com/1689x1026" class="top-0 object-cover object-center left-0 absolute h-full w-full z-[4]" alt="">
+        <div attr_size_changer="('[style]', 768, 'zoom:.9;'),('[style]', 606, 'zoom:.8;'),('[style]', 425, 'zoom:.7;'),('[style]', 360, 'zoom:.6;')" class="bg-base-200 absolute z-[19] bottom-[2%] right-[1%] p-[20px] px-[30px] min-h-[420px] w-[450px] border border-base-content/40 flex flex-col justify-around items-center">
+            <h1 class="text-4xl pt-serif-regular text-center">
+                Hear what our community has to say
+            </h1>
+            <div class="w-full">
+                <swiper-container class="miniSwiper" loop="true" pagination="true" pagination-clickable="true">
+                    <swiper-slide class="py-[20px]">
+                        <p class="pt-serif-italic text-lg italic">
+"I'm a testimonial. Click to edit me and add text that says something nice about you and your services. Let your customers review you and tell their friends how great you are."
+                        </p>
+                        <p class="text-sm italic mt-[20px]"> Harold G.</p>
+                    </swiper-slide>
+                    <swiper-slide class="py-[20px]">
+                        <p class="pt-serif-italic text-lg italic">
+"I'm a testimonial. Click to edit me and add text that says something nice about you and your services. Let your customers review you and tell their friends how great you are."
+                        </p>
+                        <p class="text-sm italic mt-[20px]"> Arnold B.</p>
+                    </swiper-slide>
+                    <swiper-slide class="py-[20px]">
+                        <p class="pt-serif-italic text-lg italic">
+"I'm a testimonial. Click to edit me and add text that says something nice about you and your services. Let your customers review you and tell their friends how great you are."
+                        </p>
+                        <p class="text-sm italic mt-[20px]"> Kim L.</p>
+                    </swiper-slide>
+                    <swiper-slide class="py-[20px]">
+                        <p class="pt-serif-italic text-lg italic">
+"I'm a testimonial. Click to edit me and add text that says something nice about you and your services. Let your customers review you and tell their friends how great you are."
+                        </p>
+                        <p class="text-sm italic mt-[20px]"> Deck K.</p>
+                    </swiper-slide>
+                </swiper-container>
+            </div>
+        </div>
+    </section>`
+ },
+ {
+    code:`<section class="flex flex-col justify-center items-center relative bg-base-200">
+        <main class="my-[90px] flex flex-col justify-center items-center w-[70vw] space-y-14">
+            <h2 class="text-5xl tracking-wide pt-serif-regular text-center max-[503px]:text-4xl max-[353px]:text-3xl">
+                Never miss a thing
+            </h2>
+
+            <p class="my-[40px]">
+                Get updates and info to keep you going on your fitness journey.
+            </p>
+
+            <form class="w-[450px] max-[500px]:w-full">
+                <fieldset class="fieldset ">
+                    <legend class="fieldset-legend">Enter your email address*</legend>
+                    <input type="text" class="input w-full rounded-2xl" placeholder="Type here" />
+                </fieldset>
+
+                <fieldset class="fieldset mt-[10px] gap-[20px] flex flex-row justify-start items-center">
+                    <input type="checkbox" class="checkbox" />
+                    <small>Yes, subscribe me to your newsletter.*</small> 
+                </fieldset>
+                <fieldset class="fieldset mt-[30px] gap-[20px] flex flex-row justify-center items-center">
+                   <button class="btn btn-wide rounded-2xl btn-neutral"> Submit</button>
+                </fieldset>
+            </form>
+        </main>
+    </section>`
+ },
+ 
+ {
+    code:`
+    <section class="min-h-[30vh] flex justify-center items-center">
+        <h1 class="text-[60px] sm:text-[100px] md:text-[150px] pt-serif-regular lg:text-[200px] xl:text-[150px]">
+          FlexBoy
+        </h1>
+    </section>
+    <section class="px-[20px] pt-[50px] mt-[20px]">
+        <footer class="flex flex-row justify-between items-start min-h-[20vh] max-[716px]:flex-col">
+            <div class="flex-[1] flex flex-row gap-28 px-[20px] py-[10px] min-h-[27vh] max-[595px]:gap-[50px] max-[595px]:flex-col">
+                <div class="flex-1 text-sm flex flex-col justify-between items-start">
+                    <div>
+                        <p class="font-bold">Address</p>
+                    </div>
+                    <div class="mt-[20px]">
+                        <p class=" ">
+                            041 San Roque Lapasan Cagayan de Oro City
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-1 text-sm flex flex-col justify-between items-start">
+                    <p class="font-bold">Legal</p>
+                    <div class="flex flex-col mt-[20px]">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms and </a>
+                        <a href="#">Conditions</a>
+                    </div>
+                </div>
+                <div class="flex-1 text-sm flex flex-col justify-between items-start">
+                    <p class="font-bold">Social</p>
+                    <div class="flex flex-col mt-[20px]">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">YouTube</a>
+                        <a href="#">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-[1] flex flex-row justify-end items-start px-[20px] max-[595px]:mt-[60px]">
+                <div class="py-[30px] flex flex-col gap-[10px]">
+                    <button class="btn bg-white text-black border-[#e5e5e5]">
+                        <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="m0 0H512V512H0" fill="#fff"></path><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path><path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path><path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path></g></svg>
+                        Login with Google
+                    </button>
+
+                    <button class="btn bg-black text-white border-black">
+                        <svg aria-label="Apple logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1195 1195"><path fill="white" d="M1006.933 812.8c-32 153.6-115.2 211.2-147.2 249.6-32 25.6-121.6 25.6-153.6 6.4-38.4-25.6-134.4-25.6-166.4 0-44.8 32-115.2 19.2-128 12.8-256-179.2-352-716.8 12.8-774.4 64-12.8 134.4 32 134.4 32 51.2 25.6 70.4 12.8 115.2-6.4 96-44.8 243.2-44.8 313.6 76.8-147.2 96-153.6 294.4 19.2 403.2zM802.133 64c12.8 70.4-64 224-204.8 230.4-12.8-38.4 32-217.6 204.8-230.4z"></path></svg>
+                        Login with Apple
+                    </button>
+                </div>
+            </div>
+        </footer>
+
+        <footer class="mt-[30px] min-h-[10vh] flex flex-row justify-start items-center px-[20px] text-center text-xs">
+        <p class="my-[20px]">
+            © 2035 by Harold Guzman. Powered and secured by <a href="#" class="link"> FlexBoy</a>
+        </p>
+        </footer>
+    </section>`
+ }
+]
+
+ 
+
+
+
+
+
+function extractCommentBlocksFromDOM() {
+    const result = [];
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_COMMENT, null, false);
+    let node;
+
+    while ((node = walker.nextNode())) {
+        const commentText = node.nodeValue.trim();
+
+        // Check kung nagsugod ug [x] ug nagtapos ug [x]
+        if (commentText.startsWith('[x]') || commentText.startsWith('[x]\n') || commentText.includes('<section')) {
+        const cleaned = commentText.replace(/^\[x\]|\[x\]$/g, '').trim();
+
+        // Split sections
+        const sections = cleaned.split(/(?=<section[\s>])/); // split by each <section>
+
+        sections.forEach((section, index) => {
+            const trimmed = section.trim();
+            if (trimmed) {
+            result.push({
+                content_name: `element ${index + 1}`,
+                code: trimmed
+            });
+            }
+        });
+        }
+    }
+
+    return result;
+    }
+
+    const extracted = extractCommentBlocksFromDOM();
+console.log(extracted);
+
+ 
+
+
+let iframeStation = document.querySelector("#iframeStation");
+
+datacompiler.forEach((item, index) => {
+  // Create wrapper div
+  let wrapper = document.createElement("div");
+  wrapper.className = "mb-[90px] shadow-2xl";
+
+  // Add menu with buttons and iframe
+  wrapper.innerHTML = `
+    <menu class="flex flex-row justify-between items-center mb-[5px]">
+      <div class="text-2xl font-bold">Component ${index + 1}</div>
+      <div class="join">
+        <button class="btn copy-btn" data-index="${index}">Copy</button>
+        <button class="btn theme-toggle" data-index="${index}">Dark</button>
+      </div>
+    </menu>
+    <iframe class="w-full h-[100vh] border border-base-content/30 iframe-preview" data-theme="dark" data-index="${index}" srcdoc=""></iframe>
+  `;
+  
+  iframeStation.appendChild(wrapper);
+
+  // Inject srcdoc content
+  const theme = "dark";
+  const htmlContent = `
+    <html data-theme="${theme}">
+      <head>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script defer src="https://www.flexboy.online/script/flexboy_script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      </head>
+      <body>
+        ${item.code}
+      </body>
+    </html>
+  `;
+  wrapper.querySelector("iframe").srcdoc = htmlContent;
+});
+
+// Handle Copy & Theme Toggle
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("copy-btn")) {
+    const index = e.target.dataset.index;
+    const iframe = document.querySelector(`iframe[data-index="${index}"]`);
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(iframe.srcdoc, "text/html");
+    const bodyContent = doc.body.innerHTML.trim();
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(bodyContent).then(() => {
+      e.target.innerText = "Copied!";
+      setTimeout(() => e.target.innerText = "Copy", 1000);
+    });
+  }
+
+  if (e.target.classList.contains("theme-toggle")) {
+    const index = e.target.dataset.index;
+    const iframe = document.querySelector(`iframe[data-index="${index}"]`);
+    const currentDoc = new DOMParser().parseFromString(iframe.srcdoc, "text/html");
+    let currentTheme = currentDoc.documentElement.getAttribute("data-theme");
+    let newTheme = currentTheme === "dark" ? "light" : "dark";
+    e.target.innerText = newTheme.charAt(0).toUpperCase() + newTheme.slice(1);
+
+    // Rebuild srcdoc with new theme
+    const htmlContent = `
+      <html data-theme="${newTheme}">
+        <head>
+          <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
+          <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+          <script defer src="https://www.flexboy.online/script/flexboy_script.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        </head>
+        <body>
+          ${datacompiler[index].code}
+        </body>
+      </html>
+    `;
+    iframe.srcdoc = htmlContent;
+  }
+});
